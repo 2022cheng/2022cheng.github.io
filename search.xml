@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>服务器部署hexo流程</title>
+      <link href="/2025/01/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2hexo%E6%B5%81%E7%A8%8B/"/>
+      <url>/2025/01/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2hexo%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="阿里云服务器部署hexo"><a href="#阿里云服务器部署hexo" class="headerlink" title="阿里云服务器部署hexo"></a>阿里云服务器部署hexo</h1><p>安装需要的依赖：<br>yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel<br>安装编译工具：<br>yum install -y gcc perl-ExtUtils-MakeMaker package<br>检查Git是否安装：<br>git –version<br>安装Git：已经安装过的可以跳过这一步<br>yum install git -y<br>添加用户并设置密码：<br>useradd git<br>passwd git<br>创建博客目录：<br>mkdir &#x2F;home&#x2F;blog<br>给博客目录增加相应读写权限：<br>chmod -R a+rw &#x2F;home&#x2F;blog<br>建立Git仓库：<br>cd &#x2F;home&#x2F;git<br>git init –bare blog.git<br>给Git目录增加相应读写权限：<br>chmod -R a+rw &#x2F;home&#x2F;git<br>新建钩子文件：<br>vim &#x2F;home&#x2F;git&#x2F;blog.git&#x2F;hooks&#x2F;post-receive<br>在文件中添加：<br>git –work-tree&#x3D;&#x2F;home&#x2F;blog –git-dir&#x3D;&#x2F;home&#x2F;git&#x2F;blog.git checkout -f<br>给钩子文件增加可执行权限：<br>chmod +x &#x2F;home&#x2F;git&#x2F;blog.git&#x2F;hooks&#x2F;post-receive<br>安装Nginx：<br>yum install nginx -y<br>启动Nginx：<br>systemctl start nginx.service<br>查看Nginx配置文件路径：<br>nginx -t<br>修改Nginx的配置文件：<br>vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf (自己主机上的Nginx的配置文件路径)<br>重启Nginx：<br>systemctl restart nginx.service<br>在Windows端博客目录下安装部署插件：<br>npm install hexo-deployer-git –save<br>修改Hexo的配置文件：<br>deploy:<br>type: git<br>repository: git用户名@服务器IP地址:&#x2F;home&#x2F;git&#x2F;blog.git</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一篇文章</title>
       <link href="/2024/12/30/2024-12-10-myblog/"/>
       <url>/2024/12/30/2024-12-10-myblog/</url>
@@ -21,7 +34,7 @@
       <link href="/2024/12/30/2024-12-31%E6%8E%92%E9%AA%A8%E7%82%96%E5%9C%9F%E8%B1%86/"/>
       <url>/2024/12/30/2024-12-31%E6%8E%92%E9%AA%A8%E7%82%96%E5%9C%9F%E8%B1%86/</url>
       
-        <content type="html"><![CDATA[<h1 id="制作教程"><a href="#制作教程" class="headerlink" title="制作教程"></a>制作教程</h1><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20241231115306130.jpg" alt="pic"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="制作教程"><a href="#制作教程" class="headerlink" title="制作教程"></a>制作教程</h1><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20241231115306130.jpg" alt="pic"></p><p>广泛的刚刚发给</p>]]></content>
       
       
       
@@ -46,17 +59,6 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>link</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
@@ -68,9 +70,20 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -90,9 +103,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
