@@ -19,27 +19,24 @@
 </div>
 
 
-<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0</p>
-<p>主题：Butterfly </p>
-<p>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a></p>
-<p>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名</p>
-<p>性别：♂</p>
-<p>生日：200X.04.24</p>
-<p>身份：某正在奋力考研的大四学生</p>
-<p>地点：暂时北方某地</p>
-<p>邮箱：<a href="mailto:&#51;&#50;&#48;&#x36;&#48;&#x36;&#51;&#49;&#52;&#x35;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#51;&#50;&#48;&#x36;&#48;&#x36;&#51;&#49;&#52;&#x35;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a></p>
+<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#x32;&#x30;&#54;&#48;&#54;&#x33;&#x31;&#52;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;">&#51;&#x32;&#x30;&#54;&#48;&#54;&#x33;&#x31;&#52;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;</a></p>
 <h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
 ]]></content>
   </entry>
   <entry>
-    <title>link</title>
-    <url>/link/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
+    <title>音乐</title>
+    <url>/music/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>link</title>
+    <url>/link/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -48,8 +45,8 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -91,11 +88,6 @@
     font-size:28px;
 }
 ]]></content>
-  </entry>
-  <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
