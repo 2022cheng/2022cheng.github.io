@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>枚举</title>
+    <url>/2025/01/13/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="计算机复试学习——枚举"><a href="#计算机复试学习——枚举" class="headerlink" title="计算机复试学习——枚举"></a>计算机复试学习——枚举</h1><h4 id="题目链接：https-leetcode-cn-problems-count-good-triplets-description-envType-problem-list-v2-envId-enumeration"><a href="#题目链接：https-leetcode-cn-problems-count-good-triplets-description-envType-problem-list-v2-envId-enumeration" class="headerlink" title="题目链接：https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration"></a>题目链接：<a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></h4><h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>考研，计算机机试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一篇博客</title>
     <url>/2025/01/10/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
     <content><![CDATA[<h1 id="这是第一篇blog"><a href="#这是第一篇blog" class="headerlink" title="这是第一篇blog"></a>这是第一篇blog</h1><p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
@@ -13,28 +27,6 @@
       </tags>
   </entry>
   <entry>
-    <title>about</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
-</div>
-
-
-<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#50;&#48;&#x36;&#x30;&#54;&#51;&#49;&#x34;&#x35;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#51;&#50;&#48;&#x36;&#x30;&#54;&#51;&#49;&#x34;&#x35;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a></p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>电影</title>
-    <url>/movies/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>link</title>
-    <url>/link/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>音乐</title>
     <url>/music/index.html</url>
     <content><![CDATA[]]></content>
@@ -45,28 +37,21 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/config/css/font.css</url>
-    <content><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
-    font-family: 'iconfont';  /* Project id 4808987 */
-    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),
-    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),
-    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');
-}
+    <title>link</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>about</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
+</div>
 
-.iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px; /* 字体大小自行修改 */
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
-.icon-github:before {
-    content: "\ea0b";
-    color: red; /* 图标颜色需要自行修改 */
-}]]></content>
+<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#50;&#48;&#x36;&#48;&#x36;&#51;&#x31;&#x34;&#x35;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#51;&#50;&#48;&#x36;&#48;&#x36;&#51;&#x31;&#x34;&#x35;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;</a></p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
+]]></content>
   </entry>
   <entry>
     <title>tags</title>
@@ -112,6 +97,35 @@
     font-size:28px;
 }
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/css/font.css</url>
+    <content><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';  /* Project id 4808987 */
+    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),
+    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px; /* 字体大小自行修改 */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+    content: "\ea0b";
+    color: red; /* 图标颜色需要自行修改 */
+}]]></content>
+  </entry>
+  <entry>
+    <title>电影</title>
+    <url>/movies/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
