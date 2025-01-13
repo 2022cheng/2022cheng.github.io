@@ -13,11 +13,6 @@
       </tags>
   </entry>
   <entry>
-    <title>电影</title>
-    <url>/movies/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
@@ -25,14 +20,9 @@
 
 
 <h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#x32;&#48;&#x36;&#48;&#x36;&#x33;&#x31;&#x34;&#x35;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;">&#x33;&#x32;&#48;&#x36;&#48;&#x36;&#x33;&#x31;&#x34;&#x35;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;</a></p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#50;&#x30;&#54;&#x30;&#x36;&#51;&#x31;&#x34;&#53;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#51;&#50;&#x30;&#54;&#x30;&#x36;&#51;&#x31;&#x34;&#53;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a></p>
 <h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>categories</title>
@@ -40,37 +30,23 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/config/css/font.css</url>
-    <content><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
-    font-family: 'iconfont';  /* Project id 4808987 */
-    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),
-    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),
-    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');
-}
-
-.iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px; /* 字体大小自行修改 */
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-github:before {
-    content: "\ea0b";
-    color: red; /* 图标颜色需要自行修改 */
-}]]></content>
-  </entry>
-  <entry>
     <title>link</title>
     <url>/link/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>电影</title>
+    <url>/movies/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>tags</title>
     <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>音乐</title>
+    <url>/music/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -144,5 +120,29 @@
     background: rgba(255, 255, 255, .1);
 }
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/css/font.css</url>
+    <content><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';  /* Project id 4808987 */
+    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),
+    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px; /* 字体大小自行修改 */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+    content: "\ea0b";
+    color: red; /* 图标颜色需要自行修改 */
+}]]></content>
   </entry>
 </search>
