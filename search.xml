@@ -47,6 +47,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Boss直聘反爬解决办法</title>
+    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Boss直聘反爬解决办法"><a href="#Boss直聘反爬解决办法" class="headerlink" title="Boss直聘反爬解决办法"></a>Boss直聘反爬解决办法</h1><h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
+<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
+<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
+<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
+<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
+]]></content>
+      <categories>
+        <category>毕业设计</category>
+      </categories>
+      <tags>
+        <tag>毕业设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vim基本用法</title>
     <url>/2025/01/15/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<h1 id="vim基本用法"><a href="#vim基本用法" class="headerlink" title="vim基本用法"></a>vim基本用法</h1><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
@@ -105,25 +124,6 @@
       </categories>
       <tags>
         <tag>一生一芯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Boss直聘反爬解决办法</title>
-    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Boss直聘反爬解决办法"><a href="#Boss直聘反爬解决办法" class="headerlink" title="Boss直聘反爬解决办法"></a>Boss直聘反爬解决办法</h1><h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
-<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
-<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
-<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
-<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
-<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
-]]></content>
-      <categories>
-        <category>毕业设计</category>
-      </categories>
-      <tags>
-        <tag>毕业设计</tag>
       </tags>
   </entry>
   <entry>
@@ -215,6 +215,18 @@
       </tags>
   </entry>
   <entry>
+    <title>第一篇博客</title>
+    <url>/2025/01/10/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
+    <content><![CDATA[<h1 id="这是第一篇blog"><a href="#这是第一篇blog" class="headerlink" title="这是第一篇blog"></a>这是第一篇blog</h1><p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一生一芯_PA0</title>
     <url>/2025/01/15/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF_PA0/</url>
     <content><![CDATA[<h2 id="一生一芯-PA0"><a href="#一生一芯-PA0" class="headerlink" title="一生一芯_PA0"></a>一生一芯_PA0</h2><h2 id="First-Exploration-with-GNU-Linux"><a href="#First-Exploration-with-GNU-Linux" class="headerlink" title="First Exploration with GNU&#x2F;Linux"></a>First Exploration with GNU&#x2F;Linux</h2><p>查看<code>Ubuntu</code> 占用了多少磁盘空间</p>
@@ -299,16 +311,9 @@
       </tags>
   </entry>
   <entry>
-    <title>第一篇博客</title>
-    <url>/2025/01/10/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
-    <content><![CDATA[<h1 id="这是第一篇blog"><a href="#这是第一篇blog" class="headerlink" title="这是第一篇blog"></a>这是第一篇blog</h1><p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
+    <title>友链</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>关于</title>
@@ -318,7 +323,7 @@
 
 
 <h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#50;&#48;&#54;&#x30;&#x36;&#x33;&#x31;&#x34;&#x35;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#109;">&#x33;&#50;&#48;&#54;&#x30;&#x36;&#x33;&#x31;&#x34;&#x35;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#109;</a></p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#x32;&#x30;&#54;&#x30;&#x36;&#x33;&#49;&#x34;&#x35;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#x33;&#x32;&#x30;&#54;&#x30;&#x36;&#x33;&#49;&#x34;&#x35;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a></p>
 <h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
 ]]></content>
   </entry>
@@ -335,8 +340,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>友链</title>
-    <url>/link/index.html</url>
+    <title>音乐</title>
+    <url>/music/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -347,16 +352,6 @@
   <entry>
     <title>电影</title>
     <url>/movies/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -400,6 +395,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/config/css/font.css</url>
     <content><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
@@ -422,6 +422,38 @@
     content: "\ea0b";
     color: red; /* 图标颜色需要自行修改 */
 }]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/css/transpancy.css</url>
+    <content><![CDATA[/* 文章页背景 */
+.layout_post>#post {
+    /* 以下代表透明度为0.7 可以自行修改*/
+    background: rgba(255, 255, 255, .7);
+}
+
+/* 所有页面背景 */
+#aside_content .card-widget,
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+    /* 以下代表透明度为0.9 */
+    background: rgba(255, 255, 255, .8);
+}
+
+/*侧边卡片的透明度 */
+:root {
+    --card-bg: rgba(255, 255, 255, .8);
+}
+
+/* 页脚透明 */
+#footer {
+    /* 以下代表透明度为0.1*/
+    background: rgba(255, 255, 255, .1);
+}
+]]></content>
   </entry>
   <entry>
     <title></title>
@@ -474,38 +506,6 @@
     }
 }
 document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/css/transpancy.css</url>
-    <content><![CDATA[/* 文章页背景 */
-.layout_post>#post {
-    /* 以下代表透明度为0.7 可以自行修改*/
-    background: rgba(255, 255, 255, .7);
-}
-
-/* 所有页面背景 */
-#aside_content .card-widget,
-#recent-posts>.recent-post-item,
-.layout_page>div:first-child:not(.recent-posts),
-.layout_post>#page,
-.layout_post>#post,
-.read-mode .layout_post>#post {
-    /* 以下代表透明度为0.9 */
-    background: rgba(255, 255, 255, .8);
-}
-
-/*侧边卡片的透明度 */
-:root {
-    --card-bg: rgba(255, 255, 255, .8);
-}
-
-/* 页脚透明 */
-#footer {
-    /* 以下代表透明度为0.1*/
-    background: rgba(255, 255, 255, .1);
-}
 ]]></content>
   </entry>
 </search>
