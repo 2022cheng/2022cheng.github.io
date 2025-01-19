@@ -1,71 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Ubuntu系统基础操作和使用</title>
-    <url>/2025/01/15/Ubuntu%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="Ubuntu系统基础操作和使用"><a href="#Ubuntu系统基础操作和使用" class="headerlink" title="Ubuntu系统基础操作和使用"></a>Ubuntu系统基础操作和使用</h1><h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p><a href="https://so.csdn.net/so/search?q=Ubuntu%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">Ubuntu系统</a> 是一种基于Linux的 <a href="https://so.csdn.net/so/search?q=%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">开源操作系统</a>，它由南非的商业人士马克·舍特尔沃斯创立，其目标是提供一个易于使用、免费且开放的操作系统</p>
-<p>这里省略安装教程，采用版本为22.04。</p>
-<h2 id="二、Ubuntu系统的基础操作"><a href="#二、Ubuntu系统的基础操作" class="headerlink" title="二、Ubuntu系统的基础操作"></a>二、Ubuntu系统的基础操作</h2><h3 id="2-1-页面介绍"><a href="#2-1-页面介绍" class="headerlink" title="2.1 页面介绍"></a>2.1 页面介绍</h3><p>页面很清晰易懂，任务栏——位于屏幕顶部的横条通常包含了应用程序启动器、系统菜单、通知区域等；通知区域——通常位于任务栏右侧，包含了系统通知、网络连接、音量控制等快捷操作……这里不做过多介绍</p>
-<h3 id="2-2-应用安装和卸载"><a href="#2-2-应用安装和卸载" class="headerlink" title="2.2 应用安装和卸载"></a>2.2 应用安装和卸载</h3><p>在Ubuntu系统中可以通过软件中心或命令行来安装和卸载应用程序。</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250115185353308.png" alt="下载界面"></p>
-<h3 id="2-3-如何打开中终端"><a href="#2-3-如何打开中终端" class="headerlink" title="2.3 如何打开中终端"></a>2.3 如何打开中终端</h3><ol>
-<li>在Ubuntu系统中可以通过在应用程序菜单中搜索“终端”或使用快捷键<code>Ctrl+Alt+T</code>来打开终端。</li>
-<li>常用命令：</li>
-</ol>
-<ul>
-<li>cd：用于切换当前工作目录。例如，<code>cd Documents</code> 将当前目录更改为 <code>Documents</code>文件夹。</li>
-<li>ls：用于列出当前目录中的文件和文件夹。例如，<code>ls -l </code>将以详细格式显示文件列表。</li>
-<li>mkdir：用于创建新的文件夹。例如，<code>mkdir myfolder</code>将创建一个名为<code>myfolder</code>的文件夹。</li>
-<li>rm：用于删除文件和文件夹。例如，<code>rm myfile</code>将删除名为<code>myfile</code>的文件。</li>
-<li>cp：用于复制文件和文件夹。例如，<code>cp myfile newfile</code>将复制<code>myfile</code>并将其命名为<code>newfile</code>。</li>
-<li>mv：用于移动文件和文件夹，或者重命名文件和文件夹。例如，<code>mv myfile newlocation</code>将<code>myfile</code>移动到<code>newlocation</code>。</li>
-<li>sudo：用于以管理员权限执行命令。例如，<code>sudo apt-get update</code>将更新软件包列表。</li>
-<li>grep：用于在文件中查找指定的文本模式。例如，<code>grep &quot;keyword&quot; myfile</code>将在<code>myfile</code>文件中查找包含”keyword”的行。</li>
-</ul>
-<ol start="3">
-<li>命令的参数和选项：许多命令都有不同的参数和选项，可以根据需求来使用。可以通过在终端中输入命令名后加上–help来查看命令的帮助文档，了解可用的参数和选项。</li>
-</ol>
-<h2 id="三、常见问题和解决方案"><a href="#三、常见问题和解决方案" class="headerlink" title="三、常见问题和解决方案"></a>三、常见问题和解决方案</h2><ol>
-<li><p>忘记了sudo密码该怎么办？<br>解决方案：如果忘记了sudo密码，可以通过重置root密码来解决。在启动时，进入“恢复模式”并选择<code>root shell</code>选项。然后使用命令<code>passwd &lt;username&gt;</code>来更改sudo用户的密码。</p>
-</li>
-<li><p>无法添加软件源，显示错误信息 怎么办？<br>解决方案：当添加软件源时，可能会遇到各种错误。首先，请确保输入的软件源地址正确。然后，检查网络连接是否正常。还可以在终端中运行命令<code>sudo apt update</code>来获取更详细的错误信息，并根据错误信息解决问题。</p>
-</li>
-<li><p>无法安装软件包，显示依赖项错误。<br>解决方案：当安装软件包时，可能会遇到依赖项错误。请检查错误消息中提到的依赖项，并尝试使用命令<code>sudo apt install &lt;dependency&gt;</code>来安装缺少的依赖项。如果问题仍然存在，可以尝试使用命令<code>sudo apt --fix-broken install</code>来修复依赖项问题。</p>
-</li>
-<li><p>问题：系统运行缓慢或出现错误。<br>解决方案：如果系统运行缓慢或出现错误，可能是由于系统资源不足或软件冲突引起的。可以尝试清理系统垃圾文件、关闭不必要的后台进程、升级硬件或重新安装操作系统来改善系统性能。</p>
-</li>
-<li><p>问题：无法删除用户，显示错误消息。<br>解决方案：当删除用户时，可能会遇到错误。请确保有足够的权限以及正确的用户名。还可以尝试在删除用户之前，先检查并解决该用户是否仍然拥有文件或进程。可以使用命令<code>sudo lsof -u &lt;username&gt;</code>来查找该用户的活动进程，并使用命令<code>kill &lt;PID&gt;</code>来终止进程。</p>
-</li>
-</ol>
-<p>摘自：<a href="https://blog.csdn.net/Long_xu/article/details/135039596">Ubuntu系统入门指南：基础操作和使用-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>一生一芯</category>
-      </categories>
-      <tags>
-        <tag>一生一芯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Boss直聘反爬解决办法</title>
-    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Boss直聘反爬解决办法"><a href="#Boss直聘反爬解决办法" class="headerlink" title="Boss直聘反爬解决办法"></a>Boss直聘反爬解决办法</h1><h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
-<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
-<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
-<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
-<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
-<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
-]]></content>
-      <categories>
-        <category>毕业设计</category>
-      </categories>
-      <tags>
-        <tag>毕业设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo 博客文章统计图</title>
     <url>/2025/01/19/Hexo%20%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E5%9B%BE/</url>
     <content><![CDATA[<h1 id="Hexo-博客文章统计图"><a href="#Hexo-博客文章统计图" class="headerlink" title="Hexo 博客文章统计图"></a>Hexo 博客文章统计图</h1><p>此文章参考<strong>Eurkon</strong>大神的文章<a href="https://blog.eurkon.com/post/1213ef82.html">Hexo 博客文章统计图</a>，教程基本没有改，完全搬过来，只需要修改个别时间</p>
@@ -138,6 +73,71 @@
       </tags>
   </entry>
   <entry>
+    <title>Boss直聘反爬解决办法</title>
+    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Boss直聘反爬解决办法"><a href="#Boss直聘反爬解决办法" class="headerlink" title="Boss直聘反爬解决办法"></a>Boss直聘反爬解决办法</h1><h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
+<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
+<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
+<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
+<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
+]]></content>
+      <categories>
+        <category>毕业设计</category>
+      </categories>
+      <tags>
+        <tag>毕业设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu系统基础操作和使用</title>
+    <url>/2025/01/15/Ubuntu%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="Ubuntu系统基础操作和使用"><a href="#Ubuntu系统基础操作和使用" class="headerlink" title="Ubuntu系统基础操作和使用"></a>Ubuntu系统基础操作和使用</h1><h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p><a href="https://so.csdn.net/so/search?q=Ubuntu%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">Ubuntu系统</a> 是一种基于Linux的 <a href="https://so.csdn.net/so/search?q=%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">开源操作系统</a>，它由南非的商业人士马克·舍特尔沃斯创立，其目标是提供一个易于使用、免费且开放的操作系统</p>
+<p>这里省略安装教程，采用版本为22.04。</p>
+<h2 id="二、Ubuntu系统的基础操作"><a href="#二、Ubuntu系统的基础操作" class="headerlink" title="二、Ubuntu系统的基础操作"></a>二、Ubuntu系统的基础操作</h2><h3 id="2-1-页面介绍"><a href="#2-1-页面介绍" class="headerlink" title="2.1 页面介绍"></a>2.1 页面介绍</h3><p>页面很清晰易懂，任务栏——位于屏幕顶部的横条通常包含了应用程序启动器、系统菜单、通知区域等；通知区域——通常位于任务栏右侧，包含了系统通知、网络连接、音量控制等快捷操作……这里不做过多介绍</p>
+<h3 id="2-2-应用安装和卸载"><a href="#2-2-应用安装和卸载" class="headerlink" title="2.2 应用安装和卸载"></a>2.2 应用安装和卸载</h3><p>在Ubuntu系统中可以通过软件中心或命令行来安装和卸载应用程序。</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250115185353308.png" alt="下载界面"></p>
+<h3 id="2-3-如何打开中终端"><a href="#2-3-如何打开中终端" class="headerlink" title="2.3 如何打开中终端"></a>2.3 如何打开中终端</h3><ol>
+<li>在Ubuntu系统中可以通过在应用程序菜单中搜索“终端”或使用快捷键<code>Ctrl+Alt+T</code>来打开终端。</li>
+<li>常用命令：</li>
+</ol>
+<ul>
+<li>cd：用于切换当前工作目录。例如，<code>cd Documents</code> 将当前目录更改为 <code>Documents</code>文件夹。</li>
+<li>ls：用于列出当前目录中的文件和文件夹。例如，<code>ls -l </code>将以详细格式显示文件列表。</li>
+<li>mkdir：用于创建新的文件夹。例如，<code>mkdir myfolder</code>将创建一个名为<code>myfolder</code>的文件夹。</li>
+<li>rm：用于删除文件和文件夹。例如，<code>rm myfile</code>将删除名为<code>myfile</code>的文件。</li>
+<li>cp：用于复制文件和文件夹。例如，<code>cp myfile newfile</code>将复制<code>myfile</code>并将其命名为<code>newfile</code>。</li>
+<li>mv：用于移动文件和文件夹，或者重命名文件和文件夹。例如，<code>mv myfile newlocation</code>将<code>myfile</code>移动到<code>newlocation</code>。</li>
+<li>sudo：用于以管理员权限执行命令。例如，<code>sudo apt-get update</code>将更新软件包列表。</li>
+<li>grep：用于在文件中查找指定的文本模式。例如，<code>grep &quot;keyword&quot; myfile</code>将在<code>myfile</code>文件中查找包含”keyword”的行。</li>
+</ul>
+<ol start="3">
+<li>命令的参数和选项：许多命令都有不同的参数和选项，可以根据需求来使用。可以通过在终端中输入命令名后加上–help来查看命令的帮助文档，了解可用的参数和选项。</li>
+</ol>
+<h2 id="三、常见问题和解决方案"><a href="#三、常见问题和解决方案" class="headerlink" title="三、常见问题和解决方案"></a>三、常见问题和解决方案</h2><ol>
+<li><p>忘记了sudo密码该怎么办？<br>解决方案：如果忘记了sudo密码，可以通过重置root密码来解决。在启动时，进入“恢复模式”并选择<code>root shell</code>选项。然后使用命令<code>passwd &lt;username&gt;</code>来更改sudo用户的密码。</p>
+</li>
+<li><p>无法添加软件源，显示错误信息 怎么办？<br>解决方案：当添加软件源时，可能会遇到各种错误。首先，请确保输入的软件源地址正确。然后，检查网络连接是否正常。还可以在终端中运行命令<code>sudo apt update</code>来获取更详细的错误信息，并根据错误信息解决问题。</p>
+</li>
+<li><p>无法安装软件包，显示依赖项错误。<br>解决方案：当安装软件包时，可能会遇到依赖项错误。请检查错误消息中提到的依赖项，并尝试使用命令<code>sudo apt install &lt;dependency&gt;</code>来安装缺少的依赖项。如果问题仍然存在，可以尝试使用命令<code>sudo apt --fix-broken install</code>来修复依赖项问题。</p>
+</li>
+<li><p>问题：系统运行缓慢或出现错误。<br>解决方案：如果系统运行缓慢或出现错误，可能是由于系统资源不足或软件冲突引起的。可以尝试清理系统垃圾文件、关闭不必要的后台进程、升级硬件或重新安装操作系统来改善系统性能。</p>
+</li>
+<li><p>问题：无法删除用户，显示错误消息。<br>解决方案：当删除用户时，可能会遇到错误。请确保有足够的权限以及正确的用户名。还可以尝试在删除用户之前，先检查并解决该用户是否仍然拥有文件或进程。可以使用命令<code>sudo lsof -u &lt;username&gt;</code>来查找该用户的活动进程，并使用命令<code>kill &lt;PID&gt;</code>来终止进程。</p>
+</li>
+</ol>
+<p>摘自：<a href="https://blog.csdn.net/Long_xu/article/details/135039596">Ubuntu系统入门指南：基础操作和使用-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>一生一芯</category>
+      </categories>
+      <tags>
+        <tag>一生一芯</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vim基本用法</title>
     <url>/2025/01/15/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<h1 id="vim基本用法"><a href="#vim基本用法" class="headerlink" title="vim基本用法"></a>vim基本用法</h1><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
@@ -196,22 +196,6 @@
       </categories>
       <tags>
         <tag>一生一芯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>枚举</title>
-    <url>/2025/01/13/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="计算机复试学习——枚举"><a href="#计算机复试学习——枚举" class="headerlink" title="计算机复试学习——枚举"></a>计算机复试学习——枚举</h1><h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
-<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
-        <tag>计算机机试</tag>
       </tags>
   </entry>
   <entry>
@@ -311,6 +295,22 @@
       </tags>
   </entry>
   <entry>
+    <title>枚举</title>
+    <url>/2025/01/13/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="计算机复试学习——枚举"><a href="#计算机复试学习——枚举" class="headerlink" title="计算机复试学习——枚举"></a>计算机复试学习——枚举</h1><h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
+<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+        <tag>计算机机试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文章统计</title>
     <url>/charts/index.html</url>
     <content><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
@@ -323,16 +323,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
-</div>
-
-
-<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#x32;&#48;&#54;&#48;&#54;&#51;&#x31;&#x34;&#53;&#64;&#x71;&#113;&#46;&#99;&#111;&#x6d;">&#51;&#x32;&#48;&#54;&#48;&#54;&#51;&#x31;&#x34;&#53;&#64;&#x71;&#113;&#46;&#99;&#111;&#x6d;</a></p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
-]]></content>
+    <title>电影</title>
+    <url>/movies/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>分类</title>
@@ -340,9 +333,16 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
-    <content><![CDATA[]]></content>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
+</div>
+
+
+<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#x33;&#49;&#52;&#x35;&#64;&#x71;&#113;&#46;&#99;&#x6f;&#109;">&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#x33;&#49;&#52;&#x35;&#64;&#x71;&#113;&#46;&#99;&#x6f;&#109;</a></p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
+]]></content>
   </entry>
   <entry>
     <title>友链</title>
@@ -350,8 +350,8 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>电影</title>
-    <url>/movies/index.html</url>
+    <title>音乐</title>
+    <url>/music/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
