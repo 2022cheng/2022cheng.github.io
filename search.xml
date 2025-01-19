@@ -195,17 +195,6 @@
     
     
     <entry>
-      <title>文章统计</title>
-      <link href="/charts/index.html"/>
-      <url>/charts/index.html</url>
-      
-        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2024-12" style="border-radius: 8px; height: 300px; padding: 8px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -217,22 +206,22 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>文章统计</title>
+      <link href="/charts/index.html"/>
+      <url>/charts/index.html</url>
       
-        <content type="html"><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p></div><h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p><h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#50;&#x30;&#x36;&#48;&#x36;&#51;&#x31;&#x34;&#x35;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;">&#x33;&#50;&#x30;&#x36;&#48;&#x36;&#51;&#x31;&#x34;&#x35;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;</a></p><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>]]></content>
+        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2024-12" style="border-radius: 8px; height: 300px; padding: 8px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p></div><h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p><h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#50;&#x30;&#54;&#48;&#54;&#51;&#x31;&#x34;&#x35;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;">&#51;&#50;&#x30;&#54;&#48;&#54;&#51;&#x31;&#x34;&#x35;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;</a></p><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>]]></content>
       
     </entry>
     
@@ -242,6 +231,17 @@
       <title>电影</title>
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -273,17 +273,6 @@
     
     <entry>
       <title></title>
-      <link href="/config/css/font.css"/>
-      <url>/config/css/font.css</url>
-      
-        <content type="html"><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */@font-face {    font-family: 'iconfont';  /* Project id 4808987 */    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');}.iconfont {    font-family: "iconfont" !important;    font-size: 16px; /* 字体大小自行修改 */    font-style: normal;    -webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}.icon-github:before {    content: "\ea0b";    color: red; /* 图标颜色需要自行修改 */}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/config/css/transpancy.css"/>
       <url>/config/css/transpancy.css</url>
       
@@ -299,6 +288,17 @@
       <url>/config/js/charts.js</url>
       
         <content type="html"><![CDATA[function switchPostChart () {    // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义    let color = document.documentElement.getAttribute('data-theme') === 'light' ? '#4C4948' : 'rgba(255,255,255,0.7)'    if (document.getElementById('posts-chart') && postsOption) {        try {            let postsOptionNew = postsOption            postsOptionNew.title.textStyle.color = color            postsOptionNew.xAxis.nameTextStyle.color = color            postsOptionNew.yAxis.nameTextStyle.color = color            postsOptionNew.xAxis.axisLabel.color = color            postsOptionNew.yAxis.axisLabel.color = color            postsOptionNew.xAxis.axisLine.lineStyle.color = color            postsOptionNew.yAxis.axisLine.lineStyle.color = color            postsOptionNew.series[0].markLine.data[0].label.color = color            postsChart.setOption(postsOptionNew)        } catch (error) {            console.log(error)        }    }    if (document.getElementById('tags-chart') && tagsOption) {        try {            let tagsOptionNew = tagsOption            tagsOptionNew.title.textStyle.color = color            tagsOptionNew.xAxis.nameTextStyle.color = color            tagsOptionNew.yAxis.nameTextStyle.color = color            tagsOptionNew.xAxis.axisLabel.color = color            tagsOptionNew.yAxis.axisLabel.color = color            tagsOptionNew.xAxis.axisLine.lineStyle.color = color            tagsOptionNew.yAxis.axisLine.lineStyle.color = color            tagsOptionNew.series[0].markLine.data[0].label.color = color            tagsChart.setOption(tagsOptionNew)        } catch (error) {            console.log(error)        }    }    if (document.getElementById('categories-chart') && categoriesOption) {        try {            let categoriesOptionNew = categoriesOption            categoriesOptionNew.title.textStyle.color = color            categoriesOptionNew.legend.textStyle.color = color            if (!categoryParentFlag) { categoriesOptionNew.series[0].label.color = color }            categoriesChart.setOption(categoriesOptionNew)        } catch (error) {            console.log(error)        }    }}document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/config/css/font.css"/>
+      <url>/config/css/font.css</url>
+      
+        <content type="html"><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */@font-face {    font-family: 'iconfont';  /* Project id 4808987 */    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');}.iconfont {    font-family: "iconfont" !important;    font-size: 16px; /* 字体大小自行修改 */    font-style: normal;    -webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}.icon-github:before {    content: "\ea0b";    color: red; /* 图标颜色需要自行修改 */}]]></content>
       
     </entry>
     
