@@ -47,86 +47,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Boss直聘反爬解决办法</title>
-    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Boss直聘反爬解决办法"><a href="#Boss直聘反爬解决办法" class="headerlink" title="Boss直聘反爬解决办法"></a>Boss直聘反爬解决办法</h1><h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
-<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
-<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
-<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
-<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
-<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
-]]></content>
-      <categories>
-        <category>毕业设计</category>
-      </categories>
-      <tags>
-        <tag>毕业设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vim基本用法</title>
-    <url>/2025/01/15/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="vim基本用法"><a href="#vim基本用法" class="headerlink" title="vim基本用法"></a>vim基本用法</h1><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
-<li>vim filename可直接新建文件，打开文件后默认进入命令模式。</li>
-<li>命令模式下可以移动光标或者进行删除、复制、粘贴。</li>
-<li>移动光标常用命令：<ul>
-<li>方向键或者h（左）、j（下）、k（上）、l（右）：光标移动一个字符。</li>
-<li>[Ctrl] + [f]：向下翻页。</li>
-<li>[Ctrl] + [b]：向上翻页。</li>
-<li>0 或 [Home]：光标移动到当前行最前面的字符。</li>
-<li>$ 或 [End]：光标移动到当前行最后面的字符。</li>
-<li>G:光标移动到文件最后一行。</li>
-<li>gg：光标移动到文件第一行。</li>
-</ul>
-</li>
-<li>删除、复制、粘贴常用命令：<ul>
-<li>x：向后删除一个字符。</li>
-<li>X：向前删除一个字符。</li>
-<li>dd：删除当前行。</li>
-<li>ndd：n为数字，删除包含当前行的n行。</li>
-<li>yy：复制当前行。</li>
-<li>nyy：n为数字，复制包含当前行的n行。</li>
-<li>p：粘贴到当前行的下一行。</li>
-<li>P：粘贴到当前行的上一行。</li>
-<li>u：撤销上一个动作。</li>
-<li>[Ctrl] + [r]：重做上一个动作。</li>
-</ul>
-</li>
-</ul>
-<h2 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h2><ul>
-<li>在命令模式下按i进入编辑模式。编辑模式下可以看到“– INSERT –”的提示。</li>
-<li>编辑完成后按esc键退出到命令模式中。</li>
-</ul>
-<h2 id="末行模式："><a href="#末行模式：" class="headerlink" title="末行模式："></a>末行模式：</h2><ul>
-<li>在命令模式下按:（英文冒号）进入末行模式。该模式下可以进行设置、保存、退出等操作。</li>
-<li>按esc键可以退出到命令模式中。</li>
-<li>末行模式下常用命令：<ul>
-<li>:w：保存文件。</li>
-<li>:q：不保存，退出vim。</li>
-<li>:wq：保存并退出vim。</li>
-<li>:q!：不保存，强制退出vim。</li>
-<li>:wq!：保存并强制退出vim。</li>
-<li>:set nu：显示行号。</li>
-<li>:set nonu：取消行号。</li>
-<li>:set ff&#x3D;unix：设置文件格式为unix格式。</li>
-</ul>
-</li>
-</ul>
-<p>参考此篇blog：</p>
-<blockquote>
-<p>作者：拉普拉斯妖kk<br>链接：<a href="https://juejin.cn/post/7015514944527400973">https://juejin.cn/post/7015514944527400973</a><br>来源：稀土掘金</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>一生一芯</category>
-      </categories>
-      <tags>
-        <tag>一生一芯</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo 博客文章统计图</title>
     <url>/2025/01/19/Hexo%20%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E5%9B%BE/</url>
     <content><![CDATA[<h1 id="Hexo-博客文章统计图"><a href="#Hexo-博客文章统计图" class="headerlink" title="Hexo 博客文章统计图"></a>Hexo 博客文章统计图</h1><p>此文章参考<strong>Eurkon</strong>大神的文章<a href="https://blog.eurkon.com/post/1213ef82.html">Hexo 博客文章统计图</a>，教程基本没有改，完全搬过来，只需要修改个别时间</p>
@@ -199,31 +119,22 @@
       </tags>
   </entry>
   <entry>
-    <title>枚举</title>
-    <url>/2025/01/13/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="计算机复试学习——枚举"><a href="#计算机复试学习——枚举" class="headerlink" title="计算机复试学习——枚举"></a>计算机复试学习——枚举</h1><h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
-<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
-
+    <title>Boss直聘反爬解决办法</title>
+    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Boss直聘反爬解决办法"><a href="#Boss直聘反爬解决办法" class="headerlink" title="Boss直聘反爬解决办法"></a>Boss直聘反爬解决办法</h1><h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
+<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
+<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
+<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
+<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
 ]]></content>
       <categories>
-        <category>考研</category>
+        <category>毕业设计</category>
       </categories>
       <tags>
-        <tag>考研</tag>
-        <tag>计算机机试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一篇博客</title>
-    <url>/2025/01/10/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
-    <content><![CDATA[<h1 id="这是第一篇blog"><a href="#这是第一篇blog" class="headerlink" title="这是第一篇blog"></a>这是第一篇blog</h1><p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
+        <tag>毕业设计</tag>
       </tags>
   </entry>
   <entry>
@@ -311,21 +222,93 @@
       </tags>
   </entry>
   <entry>
-    <title>友链</title>
-    <url>/link/index.html</url>
-    <content><![CDATA[]]></content>
+    <title>vim基本用法</title>
+    <url>/2025/01/15/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="vim基本用法"><a href="#vim基本用法" class="headerlink" title="vim基本用法"></a>vim基本用法</h1><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
+<li>vim filename可直接新建文件，打开文件后默认进入命令模式。</li>
+<li>命令模式下可以移动光标或者进行删除、复制、粘贴。</li>
+<li>移动光标常用命令：<ul>
+<li>方向键或者h（左）、j（下）、k（上）、l（右）：光标移动一个字符。</li>
+<li>[Ctrl] + [f]：向下翻页。</li>
+<li>[Ctrl] + [b]：向上翻页。</li>
+<li>0 或 [Home]：光标移动到当前行最前面的字符。</li>
+<li>$ 或 [End]：光标移动到当前行最后面的字符。</li>
+<li>G:光标移动到文件最后一行。</li>
+<li>gg：光标移动到文件第一行。</li>
+</ul>
+</li>
+<li>删除、复制、粘贴常用命令：<ul>
+<li>x：向后删除一个字符。</li>
+<li>X：向前删除一个字符。</li>
+<li>dd：删除当前行。</li>
+<li>ndd：n为数字，删除包含当前行的n行。</li>
+<li>yy：复制当前行。</li>
+<li>nyy：n为数字，复制包含当前行的n行。</li>
+<li>p：粘贴到当前行的下一行。</li>
+<li>P：粘贴到当前行的上一行。</li>
+<li>u：撤销上一个动作。</li>
+<li>[Ctrl] + [r]：重做上一个动作。</li>
+</ul>
+</li>
+</ul>
+<h2 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h2><ul>
+<li>在命令模式下按i进入编辑模式。编辑模式下可以看到“– INSERT –”的提示。</li>
+<li>编辑完成后按esc键退出到命令模式中。</li>
+</ul>
+<h2 id="末行模式："><a href="#末行模式：" class="headerlink" title="末行模式："></a>末行模式：</h2><ul>
+<li>在命令模式下按:（英文冒号）进入末行模式。该模式下可以进行设置、保存、退出等操作。</li>
+<li>按esc键可以退出到命令模式中。</li>
+<li>末行模式下常用命令：<ul>
+<li>:w：保存文件。</li>
+<li>:q：不保存，退出vim。</li>
+<li>:wq：保存并退出vim。</li>
+<li>:q!：不保存，强制退出vim。</li>
+<li>:wq!：保存并强制退出vim。</li>
+<li>:set nu：显示行号。</li>
+<li>:set nonu：取消行号。</li>
+<li>:set ff&#x3D;unix：设置文件格式为unix格式。</li>
+</ul>
+</li>
+</ul>
+<p>参考此篇blog：</p>
+<blockquote>
+<p>作者：拉普拉斯妖kk<br>链接：<a href="https://juejin.cn/post/7015514944527400973">https://juejin.cn/post/7015514944527400973</a><br>来源：稀土掘金</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>一生一芯</category>
+      </categories>
+      <tags>
+        <tag>一生一芯</tag>
+      </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
-</div>
+    <title>枚举</title>
+    <url>/2025/01/13/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="计算机复试学习——枚举"><a href="#计算机复试学习——枚举" class="headerlink" title="计算机复试学习——枚举"></a>计算机复试学习——枚举</h1><h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
+<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
 
-
-<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#x32;&#x30;&#54;&#x30;&#x36;&#x33;&#49;&#x34;&#x35;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#x33;&#x32;&#x30;&#54;&#x30;&#x36;&#x33;&#49;&#x34;&#x35;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a></p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
 ]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+        <tag>计算机机试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一篇博客</title>
+    <url>/2025/01/10/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
+    <content><![CDATA[<h1 id="这是第一篇blog"><a href="#这是第一篇blog" class="headerlink" title="这是第一篇blog"></a>这是第一篇blog</h1><p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
   </entry>
   <entry>
     <title>文章统计</title>
@@ -340,9 +323,16 @@
 ]]></content>
   </entry>
   <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
-    <content><![CDATA[]]></content>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
+</div>
+
+
+<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#50;&#48;&#54;&#48;&#54;&#51;&#x31;&#52;&#53;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;">&#x33;&#50;&#48;&#54;&#48;&#54;&#51;&#x31;&#52;&#53;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;</a></p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
+]]></content>
   </entry>
   <entry>
     <title>分类</title>
@@ -350,8 +340,23 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>友链</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>电影</title>
     <url>/movies/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>音乐</title>
+    <url>/music/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -395,11 +400,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/config/css/font.css</url>
     <content><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
@@ -422,38 +422,6 @@
     content: "\ea0b";
     color: red; /* 图标颜色需要自行修改 */
 }]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/css/transpancy.css</url>
-    <content><![CDATA[/* 文章页背景 */
-.layout_post>#post {
-    /* 以下代表透明度为0.7 可以自行修改*/
-    background: rgba(255, 255, 255, .7);
-}
-
-/* 所有页面背景 */
-#aside_content .card-widget,
-#recent-posts>.recent-post-item,
-.layout_page>div:first-child:not(.recent-posts),
-.layout_post>#page,
-.layout_post>#post,
-.read-mode .layout_post>#post {
-    /* 以下代表透明度为0.9 */
-    background: rgba(255, 255, 255, .8);
-}
-
-/*侧边卡片的透明度 */
-:root {
-    --card-bg: rgba(255, 255, 255, .8);
-}
-
-/* 页脚透明 */
-#footer {
-    /* 以下代表透明度为0.1*/
-    background: rgba(255, 255, 255, .1);
-}
-]]></content>
   </entry>
   <entry>
     <title></title>
@@ -506,6 +474,38 @@
     }
 }
 document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/css/transpancy.css</url>
+    <content><![CDATA[/* 文章页背景 */
+.layout_post>#post {
+    /* 以下代表透明度为0.7 可以自行修改*/
+    background: rgba(255, 255, 255, .7);
+}
+
+/* 所有页面背景 */
+#aside_content .card-widget,
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+    /* 以下代表透明度为0.9 */
+    background: rgba(255, 255, 255, .8);
+}
+
+/*侧边卡片的透明度 */
+:root {
+    --card-bg: rgba(255, 255, 255, .8);
+}
+
+/* 页脚透明 */
+#footer {
+    /* 以下代表透明度为0.1*/
+    background: rgba(255, 255, 255, .1);
+}
 ]]></content>
   </entry>
 </search>
