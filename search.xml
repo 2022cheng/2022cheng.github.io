@@ -47,25 +47,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Boss直聘反爬解决办法</title>
-    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
-<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
-<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
-<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
-<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
-<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
-]]></content>
-      <categories>
-        <category>毕业设计</category>
-      </categories>
-      <tags>
-        <tag>毕业设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo 博客文章统计图</title>
     <url>/2025/01/19/Hexo%20%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E5%9B%BE/</url>
     <content><![CDATA[<p>此文章参考<strong>Eurkon</strong>大神的文章<a href="https://blog.eurkon.com/post/1213ef82.html">Hexo 博客文章统计图</a>，教程基本没有改，完全搬过来，只需要修改个别时间</p>
@@ -135,6 +116,25 @@
       </categories>
       <tags>
         <tag>hexo魔改教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Boss直聘反爬解决办法</title>
+    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
+<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
+<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
+<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
+<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
+]]></content>
+      <categories>
+        <category>毕业设计</category>
+      </categories>
+      <tags>
+        <tag>毕业设计</tag>
       </tags>
   </entry>
   <entry>
@@ -210,6 +210,42 @@
       </tags>
   </entry>
   <entry>
+    <title>Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</title>
+    <url>/2025/01/20/git%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>使用git上传代码时，原本应该在几秒钟上传成功，但是却异常的慢，，这时突然出现一个错误弹窗（忘记截图了）：</p>
+<p>提示： “ssh:connect to host github.com port 22: Connection timed out”</p>
+<p>再多尝试几次，依然是这样。</p>
+<p>后来又尝试直接再文件夹里用git<a href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>提交：</p>
+<p>可惜结果依然是失败。。。</p>
+<p>又尝试重启电脑，结果毫无乱用。</p>
+<p>最后通过查阅各种资料，得知原因可能是由于电脑的防火墙或者其他网络原因导致<a href="https://so.csdn.net/so/search?q=ssh%E8%BF%9E%E6%8E%A5&spm=1001.2101.3001.7020">ssh连接</a>方式 端口22被封锁。</p>
+<hr>
+<h3 id="解决方法一："><a href="#解决方法一：" class="headerlink" title="解决方法一："></a>解决方法一：</h3><p><a href="https://blog.csdn.net/weixin_41287260/article/details/124368189">参考此篇文章</a></p>
+<h3 id="解决方法二："><a href="#解决方法二：" class="headerlink" title="解决方法二："></a>解决方法二：</h3><ol>
+<li>进入~&#x2F;.ssh下</li>
+<li>创建一个config文件</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br><span class="line"></span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line">User git</span><br><span class="line">Port 443</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+
+<p>4.保存退出</p>
+<p>5.检查是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>此时可以提交了</p>
+<h2 id="其他问题："><a href="#其他问题：" class="headerlink" title="其他问题："></a>其他问题：</h2><p>当我输入<code>hexo g</code>时，会出现如下错误：</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250120100746810.png" alt="image-20250120095943942"></p>
+<p> 从错误信息中可以看出，问题发生在 Hexo 处理 <code>_posts/git问题.md</code> 文件时，出现了 YAML 格式错误。主要错误是 <code>YAMLException: bad indentation of a mapping entry</code>，这表明该文件的 Front Matter（前置数据块）部分存在缩进或语法问题。此外，还有一个提示 <code>connect to host github.com port 22: Connection timed out</code>，这可能与网络连接有关，但不太可能直接导致 Hexo 生成失败。</p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>我此篇博客的<code>title</code>是<code>“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</code>注意到，其中是有<code>“”</code>的，这可能导致上传失败。将<code>title</code>改为<code>&quot;“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”&quot;</code>即可解决此问题，同时后面的那个<code>Connection timed out</code>错误也解决了<strong>（昨天晚上折腾了2小时去解决网络问题，没想到问题出在这里，还是以后要注意看报错呀！！！）</strong></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vim基本用法</title>
     <url>/2025/01/15/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
@@ -268,42 +304,6 @@
       </categories>
       <tags>
         <tag>一生一芯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</title>
-    <url>/2025/01/20/git%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>使用git上传代码时，原本应该在几秒钟上传成功，但是却异常的慢，，这时突然出现一个错误弹窗（忘记截图了）：</p>
-<p>提示： “ssh:connect to host github.com port 22: Connection timed out”</p>
-<p>再多尝试几次，依然是这样。</p>
-<p>后来又尝试直接再文件夹里用git<a href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>提交：</p>
-<p>可惜结果依然是失败。。。</p>
-<p>又尝试重启电脑，结果毫无乱用。</p>
-<p>最后通过查阅各种资料，得知原因可能是由于电脑的防火墙或者其他网络原因导致<a href="https://so.csdn.net/so/search?q=ssh%E8%BF%9E%E6%8E%A5&spm=1001.2101.3001.7020">ssh连接</a>方式 端口22被封锁。</p>
-<hr>
-<h3 id="解决方法一："><a href="#解决方法一：" class="headerlink" title="解决方法一："></a>解决方法一：</h3><p><a href="https://blog.csdn.net/weixin_41287260/article/details/124368189">参考此篇文章</a></p>
-<h3 id="解决方法二："><a href="#解决方法二：" class="headerlink" title="解决方法二："></a>解决方法二：</h3><ol>
-<li>进入~&#x2F;.ssh下</li>
-<li>创建一个config文件</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br><span class="line"></span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line">User git</span><br><span class="line">Port 443</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>4.保存退出</p>
-<p>5.检查是否成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>此时可以提交了</p>
-<h2 id="其他问题："><a href="#其他问题：" class="headerlink" title="其他问题："></a>其他问题：</h2><p>当我输入<code>hexo g</code>时，会出现如下错误：</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250120100746810.png" alt="image-20250120095943942"></p>
-<p> 从错误信息中可以看出，问题发生在 Hexo 处理 <code>_posts/git问题.md</code> 文件时，出现了 YAML 格式错误。主要错误是 <code>YAMLException: bad indentation of a mapping entry</code>，这表明该文件的 Front Matter（前置数据块）部分存在缩进或语法问题。此外，还有一个提示 <code>connect to host github.com port 22: Connection timed out</code>，这可能与网络连接有关，但不太可能直接导致 Hexo 生成失败。</p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>我此篇博客的<code>title</code>是<code>“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</code>注意到，其中是有<code>“”</code>的，这可能导致上传失败。将<code>title</code>改为<code>&quot;“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”&quot;</code>即可解决此问题，同时后面的那个<code>Connection timed out</code>错误也解决了<strong>（昨天晚上折腾了2小时去解决网络问题，没想到问题出在这里，还是以后要注意看报错呀！！！）</strong></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -419,38 +419,6 @@
       </tags>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>电影</title>
-    <url>/movies/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
-</div>
-
-
-<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#51;&#49;&#52;&#x35;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#51;&#49;&#52;&#x35;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a></p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>友链</title>
-    <url>/link/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>文章统计</title>
     <url>/charts/index.html</url>
     <content><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
@@ -463,9 +431,31 @@
 ]]></content>
   </entry>
   <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
+    <title>分类</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>电影</title>
+    <url>/movies/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>友链</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
+</div>
+
+
+<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#50;&#x30;&#54;&#x30;&#x36;&#51;&#x31;&#52;&#53;&#64;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x33;&#50;&#x30;&#54;&#x30;&#x36;&#51;&#x31;&#52;&#53;&#64;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
+]]></content>
   </entry>
   <entry>
     <title>我的一些碎碎念</title>
@@ -486,6 +476,16 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>音乐</title>
+    <url>/music/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
@@ -591,6 +591,38 @@
   </entry>
   <entry>
     <title></title>
+    <url>/config/css/transpancy.css</url>
+    <content><![CDATA[/* 文章页背景 */
+.layout_post>#post {
+    /* 以下代表透明度为0.7 可以自行修改*/
+    background: rgba(255, 255, 255, .7);
+}
+
+/* 所有页面背景 */
+#aside_content .card-widget,
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+    /* 以下代表透明度为0.9 */
+    background: rgba(255, 255, 255, .8);
+}
+
+/*侧边卡片的透明度 */
+:root {
+    --card-bg: rgba(255, 255, 255, .8);
+}
+
+/* 页脚透明 */
+#footer {
+    /* 以下代表透明度为0.1*/
+    background: rgba(255, 255, 255, .1);
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/config/css/custom.css</url>
     <content><![CDATA[/* 页脚与头图透明 */
 #footer {
@@ -628,38 +660,6 @@
     font-size:28px;
 }
 
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/css/transpancy.css</url>
-    <content><![CDATA[/* 文章页背景 */
-.layout_post>#post {
-    /* 以下代表透明度为0.7 可以自行修改*/
-    background: rgba(255, 255, 255, .7);
-}
-
-/* 所有页面背景 */
-#aside_content .card-widget,
-#recent-posts>.recent-post-item,
-.layout_page>div:first-child:not(.recent-posts),
-.layout_post>#page,
-.layout_post>#post,
-.read-mode .layout_post>#post {
-    /* 以下代表透明度为0.9 */
-    background: rgba(255, 255, 255, .8);
-}
-
-/*侧边卡片的透明度 */
-:root {
-    --card-bg: rgba(255, 255, 255, .8);
-}
-
-/* 页脚透明 */
-#footer {
-    /* 以下代表透明度为0.1*/
-    background: rgba(255, 255, 255, .1);
-}
 ]]></content>
   </entry>
   <entry>
