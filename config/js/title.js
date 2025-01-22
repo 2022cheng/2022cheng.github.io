@@ -1,4 +1,4 @@
-//动态标题
+//动态标题，恶搞标题
 var OriginTitile = document.title;
 var titleTime;
 document.addEventListener('visibilitychange', function () {
