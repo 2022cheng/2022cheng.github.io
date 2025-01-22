@@ -24,7 +24,7 @@
 
 /* 去除导航栏选项中底下的蓝条 */
 #nav *::after{
-    background-color: transparent!important;
+    background-color: transparent !important;
 }
 
 /* 导航栏菜单鼠标移入字体放大 */
@@ -33,5 +33,11 @@
 #nav #search-button:hover{
     font-size:28px;
 }
+
+
+
+
+
+
 
 

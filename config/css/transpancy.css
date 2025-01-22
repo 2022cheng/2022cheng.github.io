@@ -1,27 +1,45 @@
-/* 文章页背景 */
-.layout_post>#post {
-    /* 以下代表透明度为0.7 可以自行修改*/
-    background: rgba(255, 255, 255, .7);
+/* 文章页背景，仅适用于白天模式 */
+:root:not([data-theme="dark"]) .layout_post>#post {
+    /* 以下代表透明度为0.7 可以自行修改 */
+    background: rgba(255, 255, 255, 0.9);
 }
 
-/* 所有页面背景 */
-#aside_content .card-widget,
-#recent-posts>.recent-post-item,
-.layout_page>div:first-child:not(.recent-posts),
-.layout_post>#page,
-.layout_post>#post,
-.read-mode .layout_post>#post {
-    /* 以下代表透明度为0.9 */
-    background: rgba(255, 255, 255, .8);
+/* 所有页面背景，仅适用于白天模式 */
+:root:not([data-theme="dark"]) #aside_content .card-widget,
+:root:not([data-theme="dark"]) #recent-posts>.recent-post-item,
+:root:not([data-theme="dark"]) .layout_page>div:first-child:not(.recent-posts),
+:root:not([data-theme="dark"]) .layout_post>#page,
+:root:not([data-theme="dark"]) .layout_post>#post,
+:root:not([data-theme="dark"]) .read-mode .layout_post>#post {
+    /* 以下代表透明度为0.8 */
+    background: rgba(255, 255, 255, 0.9);
 }
 
-/*侧边卡片的透明度 */
-:root {
-    --card-bg: rgba(255, 255, 255, .8);
+/* 侧边卡片的透明度，仅适用于白天模式 */
+:root:not([data-theme="dark"]) {
+    --card-bg: rgba(255, 255, 255, 0.9);
 }
 
-/* 页脚透明 */
-#footer {
-    /* 以下代表透明度为0.1*/
-    background: rgba(255, 255, 255, .1);
+/* 页脚透明，仅适用于白天模式 */
+:root:not([data-theme="dark"]) #footer {
+    /* 以下代表透明度为0.1 */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 黑夜模式设置 */
+[data-theme="dark"] .layout_post>#post,
+[data-theme="dark"] #aside_content .card-widget,
+[data-theme="dark"] #recent-posts>.recent-post-item,
+[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),
+[data-theme="dark"] .layout_post>#page,
+[data-theme="dark"] .layout_post>#post,
+[data-theme="dark"] .read-mode .layout_post>#post,
+[data-theme="dark"] #footer {
+    /* 黑夜模式下的背景为纯黑（可根据需要调整） */
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* 黑夜模式侧边卡片 */
+[data-theme="dark"] {
+    --card-bg: rgba(0, 0, 0, 0.9);
 }
