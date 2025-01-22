@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Boss直聘反爬解决办法</title>
+    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
+<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
+<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
+<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
+<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
+]]></content>
+      <categories>
+        <category>毕业设计</category>
+      </categories>
+      <tags>
+        <tag>毕业设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu系统基础操作和使用</title>
+    <url>/2025/01/15/Ubuntu%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p><a href="https://so.csdn.net/so/search?q=Ubuntu%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">Ubuntu系统</a> 是一种基于Linux的 <a href="https://so.csdn.net/so/search?q=%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">开源操作系统</a>，它由南非的商业人士马克·舍特尔沃斯创立，其目标是提供一个易于使用、免费且开放的操作系统</p>
+<p>这里省略安装教程，采用版本为22.04。</p>
+<h2 id="二、Ubuntu系统的基础操作"><a href="#二、Ubuntu系统的基础操作" class="headerlink" title="二、Ubuntu系统的基础操作"></a>二、Ubuntu系统的基础操作</h2><h3 id="2-1-页面介绍"><a href="#2-1-页面介绍" class="headerlink" title="2.1 页面介绍"></a>2.1 页面介绍</h3><p>页面很清晰易懂，任务栏——位于屏幕顶部的横条通常包含了应用程序启动器、系统菜单、通知区域等；通知区域——通常位于任务栏右侧，包含了系统通知、网络连接、音量控制等快捷操作……这里不做过多介绍</p>
+<h3 id="2-2-应用安装和卸载"><a href="#2-2-应用安装和卸载" class="headerlink" title="2.2 应用安装和卸载"></a>2.2 应用安装和卸载</h3><p>在Ubuntu系统中可以通过软件中心或命令行来安装和卸载应用程序。</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250115185353308.png" alt="下载界面"></p>
+<h3 id="2-3-如何打开中终端"><a href="#2-3-如何打开中终端" class="headerlink" title="2.3 如何打开中终端"></a>2.3 如何打开中终端</h3><ol>
+<li>在Ubuntu系统中可以通过在应用程序菜单中搜索“终端”或使用快捷键<code>Ctrl+Alt+T</code>来打开终端。</li>
+<li>常用命令：</li>
+</ol>
+<ul>
+<li>cd：用于切换当前工作目录。例如，<code>cd Documents</code> 将当前目录更改为 <code>Documents</code>文件夹。</li>
+<li>ls：用于列出当前目录中的文件和文件夹。例如，<code>ls -l </code>将以详细格式显示文件列表。</li>
+<li>mkdir：用于创建新的文件夹。例如，<code>mkdir myfolder</code>将创建一个名为<code>myfolder</code>的文件夹。</li>
+<li>rm：用于删除文件和文件夹。例如，<code>rm myfile</code>将删除名为<code>myfile</code>的文件。</li>
+<li>cp：用于复制文件和文件夹。例如，<code>cp myfile newfile</code>将复制<code>myfile</code>并将其命名为<code>newfile</code>。</li>
+<li>mv：用于移动文件和文件夹，或者重命名文件和文件夹。例如，<code>mv myfile newlocation</code>将<code>myfile</code>移动到<code>newlocation</code>。</li>
+<li>sudo：用于以管理员权限执行命令。例如，<code>sudo apt-get update</code>将更新软件包列表。</li>
+<li>grep：用于在文件中查找指定的文本模式。例如，<code>grep &quot;keyword&quot; myfile</code>将在<code>myfile</code>文件中查找包含”keyword”的行。</li>
+</ul>
+<ol start="3">
+<li>命令的参数和选项：许多命令都有不同的参数和选项，可以根据需求来使用。可以通过在终端中输入命令名后加上–help来查看命令的帮助文档，了解可用的参数和选项。</li>
+</ol>
+<h2 id="三、常见问题和解决方案"><a href="#三、常见问题和解决方案" class="headerlink" title="三、常见问题和解决方案"></a>三、常见问题和解决方案</h2><ol>
+<li><p>忘记了sudo密码该怎么办？<br>解决方案：如果忘记了sudo密码，可以通过重置root密码来解决。在启动时，进入“恢复模式”并选择<code>root shell</code>选项。然后使用命令<code>passwd &lt;username&gt;</code>来更改sudo用户的密码。</p>
+</li>
+<li><p>无法添加软件源，显示错误信息 怎么办？<br>解决方案：当添加软件源时，可能会遇到各种错误。首先，请确保输入的软件源地址正确。然后，检查网络连接是否正常。还可以在终端中运行命令<code>sudo apt update</code>来获取更详细的错误信息，并根据错误信息解决问题。</p>
+</li>
+<li><p>无法安装软件包，显示依赖项错误。<br>解决方案：当安装软件包时，可能会遇到依赖项错误。请检查错误消息中提到的依赖项，并尝试使用命令<code>sudo apt install &lt;dependency&gt;</code>来安装缺少的依赖项。如果问题仍然存在，可以尝试使用命令<code>sudo apt --fix-broken install</code>来修复依赖项问题。</p>
+</li>
+<li><p>问题：系统运行缓慢或出现错误。<br>解决方案：如果系统运行缓慢或出现错误，可能是由于系统资源不足或软件冲突引起的。可以尝试清理系统垃圾文件、关闭不必要的后台进程、升级硬件或重新安装操作系统来改善系统性能。</p>
+</li>
+<li><p>问题：无法删除用户，显示错误消息。<br>解决方案：当删除用户时，可能会遇到错误。请确保有足够的权限以及正确的用户名。还可以尝试在删除用户之前，先检查并解决该用户是否仍然拥有文件或进程。可以使用命令<code>sudo lsof -u &lt;username&gt;</code>来查找该用户的活动进程，并使用命令<code>kill &lt;PID&gt;</code>来终止进程。</p>
+</li>
+</ol>
+<p>摘自：<a href="https://blog.csdn.net/Long_xu/article/details/135039596">Ubuntu系统入门指南：基础操作和使用-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>一生一芯</category>
+      </categories>
+      <tags>
+        <tag>一生一芯</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 博客文章统计图</title>
     <url>/2025/01/19/Hexo%20%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E5%9B%BE/</url>
     <content><![CDATA[<p>此文章参考<strong>Eurkon</strong>大神的文章<a href="https://blog.eurkon.com/post/1213ef82.html">Hexo 博客文章统计图</a>，教程基本没有改，完全搬过来，只需要修改个别时间</p>
@@ -66,201 +131,21 @@
 
 ]]></content>
       <categories>
-        <category>hexo魔改教程</category>
+        <category>butterfly魔改教程</category>
       </categories>
       <tags>
-        <tag>hexo魔改教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu系统基础操作和使用</title>
-    <url>/2025/01/15/Ubuntu%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p><a href="https://so.csdn.net/so/search?q=Ubuntu%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">Ubuntu系统</a> 是一种基于Linux的 <a href="https://so.csdn.net/so/search?q=%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">开源操作系统</a>，它由南非的商业人士马克·舍特尔沃斯创立，其目标是提供一个易于使用、免费且开放的操作系统</p>
-<p>这里省略安装教程，采用版本为22.04。</p>
-<h2 id="二、Ubuntu系统的基础操作"><a href="#二、Ubuntu系统的基础操作" class="headerlink" title="二、Ubuntu系统的基础操作"></a>二、Ubuntu系统的基础操作</h2><h3 id="2-1-页面介绍"><a href="#2-1-页面介绍" class="headerlink" title="2.1 页面介绍"></a>2.1 页面介绍</h3><p>页面很清晰易懂，任务栏——位于屏幕顶部的横条通常包含了应用程序启动器、系统菜单、通知区域等；通知区域——通常位于任务栏右侧，包含了系统通知、网络连接、音量控制等快捷操作……这里不做过多介绍</p>
-<h3 id="2-2-应用安装和卸载"><a href="#2-2-应用安装和卸载" class="headerlink" title="2.2 应用安装和卸载"></a>2.2 应用安装和卸载</h3><p>在Ubuntu系统中可以通过软件中心或命令行来安装和卸载应用程序。</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250115185353308.png" alt="下载界面"></p>
-<h3 id="2-3-如何打开中终端"><a href="#2-3-如何打开中终端" class="headerlink" title="2.3 如何打开中终端"></a>2.3 如何打开中终端</h3><ol>
-<li>在Ubuntu系统中可以通过在应用程序菜单中搜索“终端”或使用快捷键<code>Ctrl+Alt+T</code>来打开终端。</li>
-<li>常用命令：</li>
-</ol>
-<ul>
-<li>cd：用于切换当前工作目录。例如，<code>cd Documents</code> 将当前目录更改为 <code>Documents</code>文件夹。</li>
-<li>ls：用于列出当前目录中的文件和文件夹。例如，<code>ls -l </code>将以详细格式显示文件列表。</li>
-<li>mkdir：用于创建新的文件夹。例如，<code>mkdir myfolder</code>将创建一个名为<code>myfolder</code>的文件夹。</li>
-<li>rm：用于删除文件和文件夹。例如，<code>rm myfile</code>将删除名为<code>myfile</code>的文件。</li>
-<li>cp：用于复制文件和文件夹。例如，<code>cp myfile newfile</code>将复制<code>myfile</code>并将其命名为<code>newfile</code>。</li>
-<li>mv：用于移动文件和文件夹，或者重命名文件和文件夹。例如，<code>mv myfile newlocation</code>将<code>myfile</code>移动到<code>newlocation</code>。</li>
-<li>sudo：用于以管理员权限执行命令。例如，<code>sudo apt-get update</code>将更新软件包列表。</li>
-<li>grep：用于在文件中查找指定的文本模式。例如，<code>grep &quot;keyword&quot; myfile</code>将在<code>myfile</code>文件中查找包含”keyword”的行。</li>
-</ul>
-<ol start="3">
-<li>命令的参数和选项：许多命令都有不同的参数和选项，可以根据需求来使用。可以通过在终端中输入命令名后加上–help来查看命令的帮助文档，了解可用的参数和选项。</li>
-</ol>
-<h2 id="三、常见问题和解决方案"><a href="#三、常见问题和解决方案" class="headerlink" title="三、常见问题和解决方案"></a>三、常见问题和解决方案</h2><ol>
-<li><p>忘记了sudo密码该怎么办？<br>解决方案：如果忘记了sudo密码，可以通过重置root密码来解决。在启动时，进入“恢复模式”并选择<code>root shell</code>选项。然后使用命令<code>passwd &lt;username&gt;</code>来更改sudo用户的密码。</p>
-</li>
-<li><p>无法添加软件源，显示错误信息 怎么办？<br>解决方案：当添加软件源时，可能会遇到各种错误。首先，请确保输入的软件源地址正确。然后，检查网络连接是否正常。还可以在终端中运行命令<code>sudo apt update</code>来获取更详细的错误信息，并根据错误信息解决问题。</p>
-</li>
-<li><p>无法安装软件包，显示依赖项错误。<br>解决方案：当安装软件包时，可能会遇到依赖项错误。请检查错误消息中提到的依赖项，并尝试使用命令<code>sudo apt install &lt;dependency&gt;</code>来安装缺少的依赖项。如果问题仍然存在，可以尝试使用命令<code>sudo apt --fix-broken install</code>来修复依赖项问题。</p>
-</li>
-<li><p>问题：系统运行缓慢或出现错误。<br>解决方案：如果系统运行缓慢或出现错误，可能是由于系统资源不足或软件冲突引起的。可以尝试清理系统垃圾文件、关闭不必要的后台进程、升级硬件或重新安装操作系统来改善系统性能。</p>
-</li>
-<li><p>问题：无法删除用户，显示错误消息。<br>解决方案：当删除用户时，可能会遇到错误。请确保有足够的权限以及正确的用户名。还可以尝试在删除用户之前，先检查并解决该用户是否仍然拥有文件或进程。可以使用命令<code>sudo lsof -u &lt;username&gt;</code>来查找该用户的活动进程，并使用命令<code>kill &lt;PID&gt;</code>来终止进程。</p>
-</li>
-</ol>
-<p>摘自：<a href="https://blog.csdn.net/Long_xu/article/details/135039596">Ubuntu系统入门指南：基础操作和使用-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>一生一芯</category>
-      </categories>
-      <tags>
-        <tag>一生一芯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Boss直聘反爬解决办法</title>
-    <url>/2025/01/19/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
-<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
-<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
-<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
-<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
-<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
-]]></content>
-      <categories>
-        <category>毕业设计</category>
-      </categories>
-      <tags>
-        <tag>毕业设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</title>
-    <url>/2025/01/20/git%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>使用git上传代码时，原本应该在几秒钟上传成功，但是却异常的慢，，这时突然出现一个错误弹窗（忘记截图了）：</p>
-<p>提示： “ssh:connect to host github.com port 22: Connection timed out”</p>
-<p>再多尝试几次，依然是这样。</p>
-<p>后来又尝试直接再文件夹里用git<a href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>提交：</p>
-<p>可惜结果依然是失败。。。</p>
-<p>又尝试重启电脑，结果毫无乱用。</p>
-<p>最后通过查阅各种资料，得知原因可能是由于电脑的防火墙或者其他网络原因导致<a href="https://so.csdn.net/so/search?q=ssh%E8%BF%9E%E6%8E%A5&spm=1001.2101.3001.7020">ssh连接</a>方式 端口22被封锁。</p>
-<hr>
-<h3 id="解决方法一："><a href="#解决方法一：" class="headerlink" title="解决方法一："></a>解决方法一：</h3><p><a href="https://blog.csdn.net/weixin_41287260/article/details/124368189">参考此篇文章</a></p>
-<h3 id="解决方法二："><a href="#解决方法二：" class="headerlink" title="解决方法二："></a>解决方法二：</h3><ol>
-<li>进入~&#x2F;.ssh下</li>
-<li>创建一个config文件</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br><span class="line"></span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line">User git</span><br><span class="line">Port 443</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>4.保存退出</p>
-<p>5.检查是否成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>此时可以提交了</p>
-<h2 id="其他问题："><a href="#其他问题：" class="headerlink" title="其他问题："></a>其他问题：</h2><p>当我输入<code>hexo g</code>时，会出现如下错误：</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250120100746810.png" alt="image-20250120095943942"></p>
-<p> 从错误信息中可以看出，问题发生在 Hexo 处理 <code>_posts/git问题.md</code> 文件时，出现了 YAML 格式错误。主要错误是 <code>YAMLException: bad indentation of a mapping entry</code>，这表明该文件的 Front Matter（前置数据块）部分存在缩进或语法问题。此外，还有一个提示 <code>connect to host github.com port 22: Connection timed out</code>，这可能与网络连接有关，但不太可能直接导致 Hexo 生成失败。</p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>我此篇博客的<code>title</code>是<code>“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</code>注意到，其中是有<code>“”</code>的，这可能导致上传失败。将<code>title</code>改为<code>&quot;“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”&quot;</code>即可解决此问题，同时后面的那个<code>Connection timed out</code>错误也解决了<strong>（昨天晚上折腾了2小时去解决网络问题，没想到问题出在这里，还是以后要注意看报错呀！！！）</strong></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vim基本用法</title>
-    <url>/2025/01/15/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
-<li>vim filename可直接新建文件，打开文件后默认进入命令模式。</li>
-<li>命令模式下可以移动光标或者进行删除、复制、粘贴。</li>
-<li>移动光标常用命令：<ul>
-<li>方向键或者h（左）、j（下）、k（上）、l（右）：光标移动一个字符。</li>
-<li>[Ctrl] + [f]：向下翻页。</li>
-<li>[Ctrl] + [b]：向上翻页。</li>
-<li>0 或 [Home]：光标移动到当前行最前面的字符。</li>
-<li>$ 或 [End]：光标移动到当前行最后面的字符。</li>
-<li>G:光标移动到文件最后一行。</li>
-<li>gg：光标移动到文件第一行。</li>
-</ul>
-</li>
-<li>删除、复制、粘贴常用命令：<ul>
-<li>x：向后删除一个字符。</li>
-<li>X：向前删除一个字符。</li>
-<li>dd：删除当前行。</li>
-<li>ndd：n为数字，删除包含当前行的n行。</li>
-<li>yy：复制当前行。</li>
-<li>nyy：n为数字，复制包含当前行的n行。</li>
-<li>p：粘贴到当前行的下一行。</li>
-<li>P：粘贴到当前行的上一行。</li>
-<li>u：撤销上一个动作。</li>
-<li>[Ctrl] + [r]：重做上一个动作。</li>
-</ul>
-</li>
-</ul>
-<h2 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h2><ul>
-<li>在命令模式下按i进入编辑模式。编辑模式下可以看到“– INSERT –”的提示。</li>
-<li>编辑完成后按esc键退出到命令模式中。</li>
-</ul>
-<h2 id="末行模式："><a href="#末行模式：" class="headerlink" title="末行模式："></a>末行模式：</h2><ul>
-<li>在命令模式下按:（英文冒号）进入末行模式。该模式下可以进行设置、保存、退出等操作。</li>
-<li>按esc键可以退出到命令模式中。</li>
-<li>末行模式下常用命令：<ul>
-<li>:w：保存文件。</li>
-<li>:q：不保存，退出vim。</li>
-<li>:wq：保存并退出vim。</li>
-<li>:q!：不保存，强制退出vim。</li>
-<li>:wq!：保存并强制退出vim。</li>
-<li>:set nu：显示行号。</li>
-<li>:set nonu：取消行号。</li>
-<li>:set ff&#x3D;unix：设置文件格式为unix格式。</li>
-</ul>
-</li>
-</ul>
-<p>参考此篇blog：</p>
-<blockquote>
-<p>作者：拉普拉斯妖kk<br>链接：<a href="https://juejin.cn/post/7015514944527400973">https://juejin.cn/post/7015514944527400973</a><br>来源：稀土掘金</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>一生一芯</category>
-      </categories>
-      <tags>
-        <tag>一生一芯</tag>
+        <tag>hexo.butterfly魔改教程</tag>
       </tags>
   </entry>
   <entry>
     <title>butterfly魔改教程（一）</title>
     <url>/2025/01/20/butterfly%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p><strong>魔改有风险，魔改需谨慎，一定要备份呀！！！</strong></p>
-<div class="timeline green"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>查看网站更新日志</p>
-</div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-22-</p>
-</div></div><div class='timeline-item-content'><ol>
-<li>首页样式的修改</li>
-<li>butterfly魔改时间轴的插入</li>
-</ol>
-</div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-21</p>
-</div></div><div class='timeline-item-content'><ol>
-<li><p>外挂标签的引入（店长）</p>
-</li>
-<li><p>网站恶搞标题</p>
-</li>
-<li><p>gitalk评论系统</p>
-</li>
-</ol>
-</div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-20-</p>
-</div></div><div class='timeline-item-content'><ol>
-<li><p>文章标题居中显示</p>
-</li>
-<li><p>文章页波浪线（安知鱼）</p>
-</li>
-</ol>
-</div></div></div>
+<details class="folding-tag" purple><summary> 查看网站更新日志 </summary>
+              <div class='content'>
+              <div class="timeline  blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-22-</p></div></div><div class='timeline-item-content'><ol><li>首页样式的修改</li><li>butterfly魔改时间轴的插入（外挂标签的应用）</li><li>分栏<code>tab</code>，外挂标签的应用</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-21</p></div></div><div class='timeline-item-content'><ol><li><p>外挂标签的引入（店长）</p></li><li><p>网站恶搞标题</p></li><li><p>gitalk评论系统</p></li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-20-</p></div></div><div class='timeline-item-content'><ol><li><p>文章标题居中显示</p></li><li><p>文章页波浪线（安知鱼）</p></li></ol></div></div></div>
+              </div>
+            </details>
 
 <h2 id="说说页面的创建"><a href="#说说页面的创建" class="headerlink" title="说说页面的创建"></a>说说页面的创建</h2><details class="folding-tag" green><summary> 点击查看教程 </summary>
               <div class='content'>
@@ -300,38 +185,10 @@
 
 ]]></content>
       <categories>
-        <category>hexo魔改教程</category>
+        <category>butterfly魔改教程</category>
       </categories>
       <tags>
-        <tag>hexo魔改教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>枚举</title>
-    <url>/2025/01/13/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
-<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
-        <tag>计算机机试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一篇博客</title>
-    <url>/2025/01/10/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
-    <content><![CDATA[<p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
+        <tag>hexo.butterfly魔改教程</tag>
       </tags>
   </entry>
   <entry>
@@ -419,21 +276,182 @@
       </tags>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
+    <title>vim基本用法</title>
+    <url>/2025/01/15/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
+<li>vim filename可直接新建文件，打开文件后默认进入命令模式。</li>
+<li>命令模式下可以移动光标或者进行删除、复制、粘贴。</li>
+<li>移动光标常用命令：<ul>
+<li>方向键或者h（左）、j（下）、k（上）、l（右）：光标移动一个字符。</li>
+<li>[Ctrl] + [f]：向下翻页。</li>
+<li>[Ctrl] + [b]：向上翻页。</li>
+<li>0 或 [Home]：光标移动到当前行最前面的字符。</li>
+<li>$ 或 [End]：光标移动到当前行最后面的字符。</li>
+<li>G:光标移动到文件最后一行。</li>
+<li>gg：光标移动到文件第一行。</li>
+</ul>
+</li>
+<li>删除、复制、粘贴常用命令：<ul>
+<li>x：向后删除一个字符。</li>
+<li>X：向前删除一个字符。</li>
+<li>dd：删除当前行。</li>
+<li>ndd：n为数字，删除包含当前行的n行。</li>
+<li>yy：复制当前行。</li>
+<li>nyy：n为数字，复制包含当前行的n行。</li>
+<li>p：粘贴到当前行的下一行。</li>
+<li>P：粘贴到当前行的上一行。</li>
+<li>u：撤销上一个动作。</li>
+<li>[Ctrl] + [r]：重做上一个动作。</li>
+</ul>
+</li>
+</ul>
+<h2 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h2><ul>
+<li>在命令模式下按i进入编辑模式。编辑模式下可以看到“– INSERT –”的提示。</li>
+<li>编辑完成后按esc键退出到命令模式中。</li>
+</ul>
+<h2 id="末行模式："><a href="#末行模式：" class="headerlink" title="末行模式："></a>末行模式：</h2><ul>
+<li>在命令模式下按:（英文冒号）进入末行模式。该模式下可以进行设置、保存、退出等操作。</li>
+<li>按esc键可以退出到命令模式中。</li>
+<li>末行模式下常用命令：<ul>
+<li>:w：保存文件。</li>
+<li>:q：不保存，退出vim。</li>
+<li>:wq：保存并退出vim。</li>
+<li>:q!：不保存，强制退出vim。</li>
+<li>:wq!：保存并强制退出vim。</li>
+<li>:set nu：显示行号。</li>
+<li>:set nonu：取消行号。</li>
+<li>:set ff&#x3D;unix：设置文件格式为unix格式。</li>
+</ul>
+</li>
+</ul>
+<p>参考此篇blog：</p>
+<blockquote>
+<p>作者：拉普拉斯妖kk<br>链接：<a href="https://juejin.cn/post/7015514944527400973">https://juejin.cn/post/7015514944527400973</a><br>来源：稀土掘金</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>一生一芯</category>
+      </categories>
+      <tags>
+        <tag>一生一芯</tag>
+      </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
-</div>
+    <title>枚举</title>
+    <url>/2025/01/13/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
+<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
 
-
-<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#x32;&#48;&#x36;&#x30;&#54;&#x33;&#49;&#52;&#x35;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#109;">&#51;&#x32;&#48;&#x36;&#x30;&#54;&#x33;&#49;&#52;&#x35;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#109;</a></p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
 ]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+        <tag>计算机机试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一篇博客</title>
+    <url>/2025/01/10/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
+    <content><![CDATA[<p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>外挂标签相关用法</title>
+    <url>/2025/01/22/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE%E7%9B%B8%E5%85%B3%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="外挂标签-时间轴"><a href="#外挂标签-时间轴" class="headerlink" title="外挂标签-时间轴"></a>外挂标签-时间轴</h2><p>详细教程见：<a href="https://www.fomal.cc/posts/2013454d.html#2-10-%E9%93%BE%E6%8E%A5%E5%8D%A1%E7%89%87-link">Markdowwn语法与外挂标签写法汇总</a></p>
+<div class="tabs"><div class="nav-tabs"><button type="button" class="tab active">标签语法</button><button type="button" class="tab">配置参数</button><button type="button" class="tab">示例源码</button></div><div class="tab-contents"><div class="tab-item-content active"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% timeline 时间线标题（可选）[,color] %&#125;</span><br><span class="line">&lt;!-- timeline 时间节点（标题） --&gt;</span><br><span class="line">正文内容</span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line">&lt;!-- timeline 时间节点（标题） --&gt;</span><br><span class="line">正文内容</span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content"><ol>
+<li><code>title</code>:标题&#x2F;时间线</li>
+<li><code>color</code>:<code>timeline</code>颜色:default(留空) &#x2F; blue &#x2F; pink &#x2F; red &#x2F; purple &#x2F; orange &#x2F; green</li>
+</ol></div><div class="tab-item-content"><p>1.Demo 1 - 预设选择第一个【默认】</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% timeline 时间轴样式,blue %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- timeline 2020-07-24 [<span class="string">2.6.6 -&gt; 3.0</span>](<span class="link">https://github.com/volantis-x/hexo-theme-volantis/releases</span>) --&gt;</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 如果有 <span class="code">`hexo-lazyload-image`</span> 插件，需要删除并重新安装最新版本，设置 <span class="code">`lazyload.isSPA: true`</span>。</span><br><span class="line"><span class="bullet">2.</span> 2.x 版本的 css 和 js 不适用于 3.x 版本，如果使用了 <span class="code">`use_cdn: true`</span> 则需要删除。</span><br><span class="line"><span class="bullet">3.</span> 2.x 版本的 fancybox 标签在 3.x 版本中被重命名为 gallery 。</span><br><span class="line"><span class="bullet">4.</span> 2.x 版本的置顶 <span class="code">`top: true`</span> 改为了 <span class="code">`pin: true`</span>，并且同样适用于 <span class="code">`layout: page`</span> 的页面。</span><br><span class="line"><span class="bullet">5.</span> 如果使用了 <span class="code">`hexo-offline`</span> 插件，建议卸载，3.0 版本默认开启了 pjax 服务。</span><br><span class="line"></span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- timeline 2020-05-15 [<span class="string">2.6.3 -&gt; 2.6.6</span>](<span class="link">https://github.com/volantis-x/hexo-theme-volantis/releases/tag/2.6.6</span>) --&gt;</span><br><span class="line"></span><br><span class="line">不需要额外处理。</span><br><span class="line"></span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- timeline 2020-04-20 [<span class="string">2.6.2 -&gt; 2.6.3</span>](<span class="link">https://github.com/volantis-x/hexo-theme-volantis/releases/tag/2.6.3</span>) --&gt;</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 全局搜索 <span class="code">`seotitle`</span> 并替换为 <span class="code">`seo_title`</span>。</span><br><span class="line"><span class="bullet">2.</span> group 组件的索引规则有变，使用 group 组件的文章内，<span class="code">`group: group_name`</span> 对应的组件名必须是 <span class="code">`group_name`</span>。</span><br><span class="line"><span class="bullet">2.</span> group 组件的列表名优先显示文章的 <span class="code">`short_title`</span> 其次是 <span class="code">`title`</span>。</span><br><span class="line"></span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div>
+
+<h2 id="分栏-tab"><a href="#分栏-tab" class="headerlink" title="分栏 tab"></a>分栏 tab</h2><p>详细教程见：<a href="https://www.fomal.cc/posts/2013454d.html#2-10-%E9%93%BE%E6%8E%A5%E5%8D%A1%E7%89%87-link">Markdowwn语法与外挂标签写法汇总</a></p>
+<div class="tabs"><div class="nav-tabs"><button type="button" class="tab active">标签语法</button><button type="button" class="tab">配置参数</button><button type="button" class="tab">示例源码</button><button type="button" class="tab">渲染演示</button></div><div class="tab-contents"><div class="tab-item-content active"><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line">&lt;!-- tab [Tab caption] [@icon] --&gt;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content"><ol>
+<li>Unique name :<ul>
+<li>选项卡块标签的唯一名称，不带逗号。</li>
+<li>将在#id中用作每个标签及其索引号的前缀。</li>
+<li>如果名称中包含空格，则对于生成#id，所有空格将由破折号代替。</li>
+<li>仅当前帖子&#x2F;页面的URL必须是唯一的！</li>
+</ul>
+</li>
+<li>[index]:<ul>
+<li>活动选项卡的索引号。</li>
+<li>如果未指定，将选择第一个标签（1）。</li>
+<li>如果index为-1，则不会选择任何选项卡。</li>
+<li>可选参数。</li>
+</ul>
+</li>
+<li>[Tab caption]:<ul>
+<li>当前选项卡的标题。</li>
+<li>如果未指定标题，则带有制表符索引后缀的唯一名称将用作制表符的标题。</li>
+<li>如果未指定标题，但指定了图标，则标题将为空。</li>
+<li>可选参数。</li>
+</ul>
+</li>
+<li>[@icon]:<ul>
+<li>FontAwesome图标名称（全名，看起来像“ fas fa-font”）</li>
+<li>可以指定带空格或不带空格；</li>
+<li>例如’Tab caption @icon’ 和 ‘Tab caption@icon’.</li>
+<li>可选参数。</li>
+</ul>
+</li>
+</ol></div><div class="tab-item-content"><p>1.Demo 1 - 预设选择第一个【默认】</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test1 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content"><p>1.Demo 1 - 预设选择第一个【默认】</p>
+<div class="tabs"><div class="nav-tabs"><button type="button" class="tab active">test1 1</button><button type="button" class="tab">test1 2</button><button type="button" class="tab">test1 3</button></div><div class="tab-contents"><div class="tab-item-content active"><p><strong>This is Tab 1.</strong></p></div><div class="tab-item-content"><p><strong>This is Tab 2.</strong></p></div><div class="tab-item-content"><p><strong>This is Tab 3.</strong></p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div>
+
+]]></content>
+      <categories>
+        <category>butterfly魔改教程</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>butterfly魔改教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</title>
+    <url>/2025/01/20/git%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>使用git上传代码时，原本应该在几秒钟上传成功，但是却异常的慢，，这时突然出现一个错误弹窗（忘记截图了）：</p>
+<p>提示： “ssh:connect to host github.com port 22: Connection timed out”</p>
+<p>再多尝试几次，依然是这样。</p>
+<p>后来又尝试直接再文件夹里用git<a href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>提交：</p>
+<p>可惜结果依然是失败。。。</p>
+<p>又尝试重启电脑，结果毫无乱用。</p>
+<p>最后通过查阅各种资料，得知原因可能是由于电脑的防火墙或者其他网络原因导致<a href="https://so.csdn.net/so/search?q=ssh%E8%BF%9E%E6%8E%A5&spm=1001.2101.3001.7020">ssh连接</a>方式 端口22被封锁。</p>
+<hr>
+<h3 id="解决方法一："><a href="#解决方法一：" class="headerlink" title="解决方法一："></a>解决方法一：</h3><p><a href="https://blog.csdn.net/weixin_41287260/article/details/124368189">参考此篇文章</a></p>
+<h3 id="解决方法二："><a href="#解决方法二：" class="headerlink" title="解决方法二："></a>解决方法二：</h3><ol>
+<li>进入~&#x2F;.ssh下</li>
+<li>创建一个config文件</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br><span class="line"></span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line">User git</span><br><span class="line">Port 443</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+
+<p>4.保存退出</p>
+<p>5.检查是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>此时可以提交了</p>
+<h2 id="其他问题："><a href="#其他问题：" class="headerlink" title="其他问题："></a>其他问题：</h2><p>当我输入<code>hexo g</code>时，会出现如下错误：</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250120100746810.png" alt="image-20250120095943942"></p>
+<p> 从错误信息中可以看出，问题发生在 Hexo 处理 <code>_posts/git问题.md</code> 文件时，出现了 YAML 格式错误。主要错误是 <code>YAMLException: bad indentation of a mapping entry</code>，这表明该文件的 Front Matter（前置数据块）部分存在缩进或语法问题。此外，还有一个提示 <code>connect to host github.com port 22: Connection timed out</code>，这可能与网络连接有关，但不太可能直接导致 Hexo 生成失败。</p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>我此篇博客的<code>title</code>是<code>“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</code>注意到，其中是有<code>“”</code>的，这可能导致上传失败。将<code>title</code>改为<code>&quot;“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”&quot;</code>即可解决此问题，同时后面的那个<code>Connection timed out</code>错误也解决了<strong>（昨天晚上折腾了2小时去解决网络问题，没想到问题出在这里，还是以后要注意看报错呀！！！）</strong></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
     <title>文章统计</title>
@@ -453,8 +471,35 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
+</div>
+
+
+<h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#50;&#x30;&#54;&#x30;&#x36;&#x33;&#x31;&#52;&#x35;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">&#x33;&#50;&#x30;&#54;&#x30;&#x36;&#x33;&#x31;&#52;&#x35;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;</a></p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>电影</title>
     <url>/movies/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>音乐</title>
+    <url>/music/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -478,14 +523,46 @@
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
-    <content><![CDATA[]]></content>
+    <title></title>
+    <url>/config/css/custom.css</url>
+    <content><![CDATA[/* 页脚与头图透明 */
+#footer {
+    background: transparent !important;
+}
+#page-header {
+    background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+#page-header::before {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+    background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+    background: transparent !important;
+}
+
+/* 去除导航栏选项中底下的蓝条 */
+#nav *::after{
+    background-color: transparent!important;
+}
+
+/* 导航栏菜单鼠标移入字体放大 */
+#nav #site-name:hover,
+#nav .menus_item:hover,
+#nav #search-button:hover{
+    font-size:28px;
+}
+
+
+]]></content>
   </entry>
   <entry>
     <title></title>
@@ -567,48 +644,6 @@
   </entry>
   <entry>
     <title></title>
-    <url>/config/css/custom.css</url>
-    <content><![CDATA[/* 页脚与头图透明 */
-#footer {
-    background: transparent !important;
-}
-#page-header {
-    background: transparent !important;
-}
-
-/* 白天模式遮罩透明 */
-#footer::before {
-    background: rgba(0, 0, 0, 0.2) !important;
-}
-#page-header::before {
-    background: rgba(0, 0, 0, 0.2) !important;
-}
-
-/* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
-    background: transparent !important;
-}
-[data-theme="dark"] #page-header::before {
-    background: transparent !important;
-}
-
-/* 去除导航栏选项中底下的蓝条 */
-#nav *::after{
-    background-color: transparent!important;
-}
-
-/* 导航栏菜单鼠标移入字体放大 */
-#nav #site-name:hover,
-#nav .menus_item:hover,
-#nav #search-button:hover{
-    font-size:28px;
-}
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/config/css/font.css</url>
     <content><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
@@ -630,59 +665,6 @@
     content: "\ea0b";
     color: red; /* 图标颜色需要自行修改 */
 }]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/js/chart.js</url>
-    <content><![CDATA[function switchPostChart () {
-    // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义
-    let color = document.documentElement.getAttribute('data-theme') === 'light' ? '#4C4948' : 'rgba(255,255,255,0.7)'
-    if (document.getElementById('posts-chart') && postsOption) {
-        try {
-            let postsOptionNew = postsOption
-            postsOptionNew.title.textStyle.color = color
-            postsOptionNew.xAxis.nameTextStyle.color = color
-            postsOptionNew.yAxis.nameTextStyle.color = color
-            postsOptionNew.xAxis.axisLabel.color = color
-            postsOptionNew.yAxis.axisLabel.color = color
-            postsOptionNew.xAxis.axisLine.lineStyle.color = color
-            postsOptionNew.yAxis.axisLine.lineStyle.color = color
-            postsOptionNew.series[0].markLine.data[0].label.color = color
-            postsChart.setOption(postsOptionNew)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    if (document.getElementById('tags-chart') && tagsOption) {
-        try {
-            let tagsOptionNew = tagsOption
-            tagsOptionNew.title.textStyle.color = color
-            tagsOptionNew.xAxis.nameTextStyle.color = color
-            tagsOptionNew.yAxis.nameTextStyle.color = color
-            tagsOptionNew.xAxis.axisLabel.color = color
-            tagsOptionNew.yAxis.axisLabel.color = color
-            tagsOptionNew.xAxis.axisLine.lineStyle.color = color
-            tagsOptionNew.yAxis.axisLine.lineStyle.color = color
-            tagsOptionNew.series[0].markLine.data[0].label.color = color
-            tagsChart.setOption(tagsOptionNew)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    if (document.getElementById('categories-chart') && categoriesOption) {
-        try {
-            let categoriesOptionNew = categoriesOption
-            categoriesOptionNew.title.textStyle.color = color
-            categoriesOptionNew.legend.textStyle.color = color
-            if (!categoryParentFlag) { categoriesOptionNew.series[0].label.color = color }
-            categoriesChart.setOption(categoriesOptionNew)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-}
-document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })
-]]></content>
   </entry>
   <entry>
     <title></title>
@@ -736,5 +718,58 @@ document.addEventListener('visibilitychange', function () {
         }, 2000);
     }
 });]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/js/chart.js</url>
+    <content><![CDATA[function switchPostChart () {
+    // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义
+    let color = document.documentElement.getAttribute('data-theme') === 'light' ? '#4C4948' : 'rgba(255,255,255,0.7)'
+    if (document.getElementById('posts-chart') && postsOption) {
+        try {
+            let postsOptionNew = postsOption
+            postsOptionNew.title.textStyle.color = color
+            postsOptionNew.xAxis.nameTextStyle.color = color
+            postsOptionNew.yAxis.nameTextStyle.color = color
+            postsOptionNew.xAxis.axisLabel.color = color
+            postsOptionNew.yAxis.axisLabel.color = color
+            postsOptionNew.xAxis.axisLine.lineStyle.color = color
+            postsOptionNew.yAxis.axisLine.lineStyle.color = color
+            postsOptionNew.series[0].markLine.data[0].label.color = color
+            postsChart.setOption(postsOptionNew)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    if (document.getElementById('tags-chart') && tagsOption) {
+        try {
+            let tagsOptionNew = tagsOption
+            tagsOptionNew.title.textStyle.color = color
+            tagsOptionNew.xAxis.nameTextStyle.color = color
+            tagsOptionNew.yAxis.nameTextStyle.color = color
+            tagsOptionNew.xAxis.axisLabel.color = color
+            tagsOptionNew.yAxis.axisLabel.color = color
+            tagsOptionNew.xAxis.axisLine.lineStyle.color = color
+            tagsOptionNew.yAxis.axisLine.lineStyle.color = color
+            tagsOptionNew.series[0].markLine.data[0].label.color = color
+            tagsChart.setOption(tagsOptionNew)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    if (document.getElementById('categories-chart') && categoriesOption) {
+        try {
+            let categoriesOptionNew = categoriesOption
+            categoriesOptionNew.title.textStyle.color = color
+            categoriesOptionNew.legend.textStyle.color = color
+            if (!categoryParentFlag) { categoriesOptionNew.series[0].label.color = color }
+            categoriesChart.setOption(categoriesOptionNew)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })
+]]></content>
   </entry>
 </search>
