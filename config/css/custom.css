@@ -204,4 +204,9 @@ div#archive {
     display: none;
 }
 
+/*--------加载动画-------------*/
+/* 深色模式背景 */
+html[data-theme="dark"] .loading-bg {
+    background: rgba(0, 0, 0, 0.85) !important; /* 深色模式背景 */
+}
 
