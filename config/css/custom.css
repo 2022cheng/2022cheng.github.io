@@ -2,6 +2,7 @@
 #footer {
     background: transparent !important;
 }
+
 #page-header {
     background: transparent !important;
 }
@@ -10,6 +11,7 @@
 #footer::before {
     background: rgba(0, 0, 0, 0.2) !important;
 }
+
 #page-header::before {
     background: rgba(0, 0, 0, 0.2) !important;
 }
@@ -18,22 +20,24 @@
 [data-theme="dark"] #footer::before {
     background: transparent !important;
 }
+
 [data-theme="dark"] #page-header::before {
     background: transparent !important;
 }
 
 /* 去除导航栏选项中底下的蓝条 */
-#nav *::after{
+#nav *::after {
     background-color: transparent !important;
 }
 
 /* 导航栏菜单鼠标移入字体放大 */
 #nav #site-name:hover,
 #nav .menus_item:hover,
-#nav #search-button:hover{
-    font-size:28px;
+#nav #search-button:hover {
+    font-size: 28px;
 }
 
+/*----------*/
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
     background-image: url(https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250123182303360.webp);
@@ -41,6 +45,7 @@
     background-attachment: inherit;
     background-size: 100%;
 }
+
 [data-theme="dark"] #aside-content > .card-widget.card-info {
     background-image: url(https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250123182303360.webp);
     background-repeat: no-repeat;
@@ -48,6 +53,7 @@
     background-size: 100%;
 }
 
+/*----------*/
 /* 关于页面区块 */
 .about_page {
     background: #fafafa;
@@ -56,37 +62,86 @@
     margin: 5px;
     border: 2px solid #a0a0a0;
 }
+
 [data-theme="dark"] .about_page {
     background: #252525;
 }
 
+/*----------*/
 /* 小冰分类分类磁铁黑夜模式适配 */
 .magnet_item {
     margin-right: 5px !important;
 }
+
 #catalog_magnet {
     padding: 18px 18px 0 18px !important;
 }
+
 @media screen and (max-width: 600px) {
     .magnet_item {
         margin-right: 0px !important;
     }
 }
+
 [data-theme="dark"] .magnet_link_context {
     background: #1e1e1e;
     color: antiquewhite;
 }
+
 [data-theme="dark"] .magnet_link_context {
     border-radius: 6px;
 }
+
 [data-theme="dark"] .magnet_link_context:hover {
     background: var(--text-bg-hover) !important;
     color: #f2f2f2;
     border-radius: 6px;
 }
 
+/*----------*/
+/* 全局宽度 */
+.layout {
+    max-width: 1400px;
+}
+
+/* 侧边卡片栏宽度 */
+.aside-content {
+    max-width: 318px;
+    min-width: 300px;
+}
+
+/* 平板尺寸自适应(不启用侧边栏宽度限制) */
+@media screen and (max-width: 900px) {
+    .aside-content {
+        max-width: none !important;
+        padding: 0 5px 0 5px;
+    }
+}
+
+/* 除了首页以外其他页面隐藏卡片，并采用宽屏显示 */
+#archive,
+#page,
+#category,
+#tag {
+    width: 100%;
+}
+
+.page:not(.page.home) .aside-content {
+    display: none;
+}
+
+/*友链适配*/
+.flink-list-item {
+    width: calc(100% / 4 - 15px) !important;
+}
+
+@media screen and (max-width: 1250px) {
+    .flink-list-item {
+        width: calc(100% / 3 - 15px) !important;
+    }
+}
 
 
-
+/*----------*/
 
 
