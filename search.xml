@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>mysql知识点总结</title>
-      <link href="/2025/01/24/mysql/"/>
-      <url>/2025/01/24/mysql/</url>
-      
-        <content type="html"><![CDATA[<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><h2 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h2><p><strong>查询的语法结构：</strong></p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>   <span class="operator">&lt;</span>Column1, Column2，Column3.....<span class="operator">&gt;</span> </span><br><span class="line"><span class="keyword">FROM</span> <span class="operator">&lt;</span>table_name<span class="operator">&gt;</span> </span><br><span class="line">[<span class="keyword">WHERE</span> <span class="operator">&lt;</span>表达式<span class="operator">&gt;</span>] </span><br><span class="line">[<span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="operator">&lt;</span> Column1, Column2……<span class="operator">&gt;</span>[<span class="keyword">ASC</span>或<span class="keyword">DESC</span>]]</span><br></pre></td></tr></table></figure><p> 示例：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 语法</span></span><br><span class="line"><span class="keyword">SELECT</span>  姓名 , 年龄 , 工作地点  <span class="keyword">FROM</span>  studentInfo </span><br><span class="line"><span class="keyword">WHERE</span>  工作地点 <span class="operator">=</span> <span class="string">&#x27;上海&#x27;</span>;</span><br><span class="line"><span class="comment">-- 案例：</span></span><br><span class="line">USE SchoolDB; <span class="comment">-- 选择要使用的数据库</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> StudentInfo; <span class="comment">-- 查询表中全部数据</span></span><br></pre></td></tr></table></figure><p><strong>MySQL</strong>对大小写不敏感，包括关键字在内。</p><h3 id="1-1、Limit查询"><a href="#1-1、Limit查询" class="headerlink" title="1.1、Limit查询"></a>1.1、Limit查询</h3><p>使用LIMIT限定查询返回行： <strong>LIMIT</strong> 子句用于限制SELECT 语句返回指定的记录数。</p><p><strong>语法及案例：</strong></p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 语法  :  从a开始，查询b条</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> limit a,b</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> mysql </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-            <tag> 考研 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>butterfly魔改教程（二）</title>
       <link href="/2025/01/24/butterfly%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B2/"/>
       <url>/2025/01/24/butterfly%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B2/</url>
@@ -346,17 +319,6 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>文章统计</title>
       <link href="/charts/index.html"/>
       <url>/charts/index.html</url>
@@ -379,33 +341,11 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p></div><details class="folding-tag" purple><summary> 查看网站更新日志 </summary>              <div class='content'>              <div class="timeline  blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>魔改ing</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-24</p></div></div><div class='timeline-item-content'><ol><li>页面样式调节 -详见butterfly魔改教程（二）</li><li>博客宽屏适配（自用） -详见butterfly魔改教程（二）暂时使用</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-23</p></div></div><div class='timeline-item-content'><ol><li>增加了gitalk自动提交<code>issues</code>的配置，在<code>_config.butterfly.yml</code>中的<code>gitalk</code>配置项中加入 <code>createIssueManually: false</code></li><li>个人信息卡片背景图</li><li>增加了页脚Github徽标，没有采用时钟样式，配置在<code>_config.yml</code>文件中，采用插件<code>npm install hexo-butterfly-footer-beautify --save</code></li><li>在<code>custom.css</code>中添加了部分样式，对小冰分类分类磁铁黑夜模式适配代码调整</li><li>在<code>custom.css</code>中添加了部分样式，加入了<code>关于页面区块 </code>的样式</li><li>加入渐变色版权美化（店长+微调）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-22</p></div></div><div class='timeline-item-content'><ol><li>首页样式的修改</li><li>butterfly魔改时间轴的插入（外挂标签的应用）</li><li>分栏<code>tab</code>（外挂标签的应用）</li><li><code>hexo-magnet</code> 插件 的使用：<ul><li>自定义 tags 或 categories 的排列和展示</li><li>自定义 tags 或 categories 的展示图标，名称</li><li>自定义排列的行数，默认 2 行</li></ul></li><li>首页轮播图的插入</li><li>卡片透明度的的修改（暂时弃用）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-21</p></div></div><div class='timeline-item-content'><ol><li>外挂标签的引入（店长）</li><li>网站恶搞标题</li><li>gitalk评论系统</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-20</p></div></div><div class='timeline-item-content'><ol><li>文章标题居中显示</li><li>文章页波浪线（安知鱼）</li></ol></div></div></div>              </div>            </details><h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><div class="about_page"><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p></div><h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><div class="about_page"><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#50;&#x30;&#54;&#48;&#x36;&#x33;&#49;&#52;&#53;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#x33;&#50;&#x30;&#54;&#48;&#x36;&#x33;&#49;&#52;&#53;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a></p></div><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><div class="about_page"><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）<br><a href="https://www.yyyzyyyz.cn/about/">yyyz</a> （参考up将本站部署到阿里云服务器）</p></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p></div><details class="folding-tag" purple><summary> 查看网站更新日志 </summary>              <div class='content'>              <div class="timeline  blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>魔改ing</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-24</p></div></div><div class='timeline-item-content'><ol><li>页面样式调节 -详见butterfly魔改教程（二）</li><li>博客宽屏适配（自用） -详见butterfly魔改教程（二）暂时使用</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-23</p></div></div><div class='timeline-item-content'><ol><li>增加了gitalk自动提交<code>issues</code>的配置，在<code>_config.butterfly.yml</code>中的<code>gitalk</code>配置项中加入 <code>createIssueManually: false</code></li><li>个人信息卡片背景图</li><li>增加了页脚Github徽标，没有采用时钟样式，配置在<code>_config.yml</code>文件中，采用插件<code>npm install hexo-butterfly-footer-beautify --save</code></li><li>在<code>custom.css</code>中添加了部分样式，对小冰分类分类磁铁黑夜模式适配代码调整</li><li>在<code>custom.css</code>中添加了部分样式，加入了<code>关于页面区块 </code>的样式</li><li>加入渐变色版权美化（店长+微调）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-22</p></div></div><div class='timeline-item-content'><ol><li>首页样式的修改</li><li>butterfly魔改时间轴的插入（外挂标签的应用）</li><li>分栏<code>tab</code>（外挂标签的应用）</li><li><code>hexo-magnet</code> 插件 的使用：<ul><li>自定义 tags 或 categories 的排列和展示</li><li>自定义 tags 或 categories 的展示图标，名称</li><li>自定义排列的行数，默认 2 行</li></ul></li><li>首页轮播图的插入</li><li>卡片透明度的的修改（暂时弃用）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-21</p></div></div><div class='timeline-item-content'><ol><li>外挂标签的引入（店长）</li><li>网站恶搞标题</li><li>gitalk评论系统</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-20</p></div></div><div class='timeline-item-content'><ol><li>文章标题居中显示</li><li>文章页波浪线（安知鱼）</li></ol></div></div></div>              </div>            </details><h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><div class="about_page"><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p></div><h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><div class="about_page"><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#x33;&#x32;&#x30;&#54;&#x30;&#54;&#x33;&#x31;&#52;&#x35;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;">&#x33;&#x32;&#x30;&#54;&#x30;&#54;&#x33;&#x31;&#52;&#x35;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;</a></p></div><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><div class="about_page"><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）<br><a href="https://www.yyyzyyyz.cn/about/">yyyz</a> （参考up将本站部署到阿里云服务器）</p></div>]]></content>
       
     </entry>
     
@@ -423,9 +363,42 @@
     
     
     <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -439,17 +412,6 @@
       <url>/config/css/bolang.css</url>
       
         <content type="html"><![CDATA[/* 波浪css */.main-hero-waves-area {    width: 100%;    position: absolute;    left: 0;    bottom: -11px;    z-index: 5;}.waves-area .waves-svg {    width: 100%;    height: 5rem;}/* Animation */.parallax > use {    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;}.parallax > use:nth-child(1) {    animation-delay: -2s;    animation-duration: 7s;    fill: #f7f9febd;}.parallax > use:nth-child(2) {    animation-delay: -3s;    animation-duration: 10s;    fill: #f7f9fe82;}.parallax > use:nth-child(3) {    animation-delay: -4s;    animation-duration: 13s;    fill: #f7f9fe36;}.parallax > use:nth-child(4) {    animation-delay: -5s;    animation-duration: 20s;    fill: #f7f9fe;}/* 黑色模式背景 */[data-theme="dark"] .parallax > use:nth-child(1) {    animation-delay: -2s;    animation-duration: 7s;    fill: #18171dc8;}[data-theme="dark"] .parallax > use:nth-child(2) {    animation-delay: -3s;    animation-duration: 10s;    fill: #18171d80;}[data-theme="dark"] .parallax > use:nth-child(3) {    animation-delay: -4s;    animation-duration: 13s;    fill: #18171d3e;}[data-theme="dark"] .parallax > use:nth-child(4) {    animation-delay: -5s;    animation-duration: 20s;    fill: #18171d;}@keyframes move-forever {    0% {        transform: translate3d(-90px, 0, 0);    }    100% {        transform: translate3d(85px, 0, 0);    }}/*Shrinking for mobile*/@media (max-width: 768px) {    .waves-area .waves-svg {        height: 40px;        min-height: 40px;    }}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/config/css/font.css"/>
-      <url>/config/css/font.css</url>
-      
-        <content type="html"><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */@font-face {    font-family: 'iconfont';  /* Project id 4808987 */    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');}.iconfont {    font-family: "iconfont" !important;    font-size: 16px; /* 字体大小自行修改 */    font-style: normal;    -webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}.icon-github:before {    content: "\ea0b";    color: red; /* 图标颜色需要自行修改 */}]]></content>
       
     </entry>
     
@@ -472,6 +434,28 @@
       <url>/config/css/transpancy.css</url>
       
         <content type="html"><![CDATA[/* 文章页背景，仅适用于白天模式 */:root:not([data-theme="dark"]) .layout_post>#post {    /* 以下代表透明度为0.7 可以自行修改 */    background: rgba(255, 255, 255, 0.9);}/* 所有页面背景，仅适用于白天模式 */:root:not([data-theme="dark"]) #aside_content .card-widget,:root:not([data-theme="dark"]) #recent-posts>.recent-post-item,:root:not([data-theme="dark"]) .layout_page>div:first-child:not(.recent-posts),:root:not([data-theme="dark"]) .layout_post>#page,:root:not([data-theme="dark"]) .layout_post>#post,:root:not([data-theme="dark"]) .read-mode .layout_post>#post {    /* 以下代表透明度为0.8 */    background: rgba(255, 255, 255, 0.9);}/* 侧边卡片的透明度，仅适用于白天模式 */:root:not([data-theme="dark"]) {    --card-bg: rgba(255, 255, 255, 0.9);}/* 页脚透明，仅适用于白天模式 */:root:not([data-theme="dark"]) #footer {    /* 以下代表透明度为0.1 */    background: rgba(255, 255, 255, 0.2);}/* 黑夜模式设置 */[data-theme="dark"] .layout_post>#post,[data-theme="dark"] #aside_content .card-widget,[data-theme="dark"] #recent-posts>.recent-post-item,[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),[data-theme="dark"] .layout_post>#page,[data-theme="dark"] .layout_post>#post,[data-theme="dark"] .read-mode .layout_post>#post,[data-theme="dark"] #footer {    /* 黑夜模式下的背景为纯黑（可根据需要调整） */    background: rgba(0, 0, 0, 0.9);}/* 黑夜模式侧边卡片 */[data-theme="dark"] {    --card-bg: rgba(0, 0, 0, 0.9);}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/config/css/progress_bar.css"/>
+      <url>/config/css/progress_bar.css</url>
+      
+        <content type="html"><![CDATA[.pace {    -webkit-pointer-events: none;    pointer-events: none;    -webkit-user-select: none;    -moz-user-select: none;    user-select: none;    z-index: 2000;    position: fixed;    margin: auto;    top: 10px;    left: 0;    right: 0;    height: 8px;    border-radius: 8px;    width: 4rem;    background: #eaecf2;    border: 1px #e3e8f7;    overflow: hidden;}.pace-inactive .pace-progress {    opacity: 0;    transition: 0.3s ease-in;}.pace .pace-progress {    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;    -ms-box-sizing: border-box;    -o-box-sizing: border-box;    box-sizing: border-box;    -webkit-transform: translate3d(0, 0, 0);    -moz-transform: translate3d(0, 0, 0);    -ms-transform: translate3d(0, 0, 0);    -o-transform: translate3d(0, 0, 0);    transform: translate3d(0, 0, 0);    max-width: 200px;    position: absolute;    z-index: 2000;    display: block;    top: 0;    right: 100%;    height: 100%;    width: 100%;    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);    animation: gradient 1.5s ease infinite;    background-size: 200%;}.pace.pace-inactive {    opacity: 0;    transition: 0.3s;    top: -8px;}@keyframes gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}.loading-img {    background: url(https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250123182424614.webp) no-repeat center center;    background-size: cover;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/config/css/font.css"/>
+      <url>/config/css/font.css</url>
+      
+        <content type="html"><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */@font-face {    font-family: 'iconfont';  /* Project id 4808987 */    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');}.iconfont {    font-family: "iconfont" !important;    font-size: 16px; /* 字体大小自行修改 */    font-style: normal;    -webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}.icon-github:before {    content: "\ea0b";    color: red; /* 图标颜色需要自行修改 */}]]></content>
       
     </entry>
     
