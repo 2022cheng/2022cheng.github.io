@@ -344,22 +344,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p></div><details class="folding-tag" purple><summary> 查看网站更新日志 </summary>              <div class='content'>              <div class="timeline  blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>魔改ing</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-23</p></div></div><div class='timeline-item-content'><ol><li>增加了gitalk自动提交<code>issues</code>的配置，在<code>_config.butterfly.yml</code>中的<code>gitalk</code>配置项中加入 <code>createIssueManually: false</code></li><li>个人信息卡片背景图</li><li>增加了页脚Github徽标，没有采用时钟样式，配置在<code>_config.yml</code>文件中，采用插件<code>npm install hexo-butterfly-footer-beautify --save</code></li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-22</p></div></div><div class='timeline-item-content'><ol><li>首页样式的修改</li><li>butterfly魔改时间轴的插入（外挂标签的应用）</li><li>分栏<code>tab</code>（外挂标签的应用）</li><li><code>hexo-magnet</code> 插件 的使用：<ul><li>自定义 tags 或 categories 的排列和展示</li><li>自定义 tags 或 categories 的展示图标，名称</li><li>自定义排列的行数，默认 2 行</li></ul></li><li>首页轮播图的插入</li><li>卡片透明度的的修改（暂时弃用）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-21</p></div></div><div class='timeline-item-content'><ol><li><p>外挂标签的引入（店长）</p></li><li><p>网站恶搞标题</p></li><li><p>gitalk评论系统</p></li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-20</p></div></div><div class='timeline-item-content'><ol><li><p>文章标题居中显示</p></li><li><p>文章页波浪线（安知鱼）</p></li></ol></div></div></div>              </div>            </details><h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p><h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#x32;&#48;&#x36;&#x30;&#54;&#x33;&#49;&#x34;&#x35;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#51;&#x32;&#48;&#x36;&#x30;&#54;&#x33;&#49;&#x34;&#x35;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a></p><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>文章统计</title>
-      <link href="/charts/index.html"/>
-      <url>/charts/index.html</url>
-      
-        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2024-12" style="border-radius: 8px; height: 300px; padding: 8px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -377,11 +366,22 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>文章统计</title>
+      <link href="/charts/index.html"/>
+      <url>/charts/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2024-12" style="border-radius: 8px; height: 300px; padding: 8px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="note warning modern"><p><b>非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p></div><details class="folding-tag" purple><summary> 查看网站更新日志 </summary>              <div class='content'>              <div class="timeline  blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>魔改ing</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-23</p></div></div><div class='timeline-item-content'><ol><li>增加了gitalk自动提交<code>issues</code>的配置，在<code>_config.butterfly.yml</code>中的<code>gitalk</code>配置项中加入 <code>createIssueManually: false</code></li><li>个人信息卡片背景图</li><li>增加了页脚Github徽标，没有采用时钟样式，配置在<code>_config.yml</code>文件中，采用插件<code>npm install hexo-butterfly-footer-beautify --save</code></li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-22</p></div></div><div class='timeline-item-content'><ol><li>首页样式的修改</li><li>butterfly魔改时间轴的插入（外挂标签的应用）</li><li>分栏<code>tab</code>（外挂标签的应用）</li><li><code>hexo-magnet</code> 插件 的使用：<ul><li>自定义 tags 或 categories 的排列和展示</li><li>自定义 tags 或 categories 的展示图标，名称</li><li>自定义排列的行数，默认 2 行</li></ul></li><li>首页轮播图的插入</li><li>卡片透明度的的修改（暂时弃用）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-21</p></div></div><div class='timeline-item-content'><ol><li><p>外挂标签的引入（店长）</p></li><li><p>网站恶搞标题</p></li><li><p>gitalk评论系统</p></li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-20</p></div></div><div class='timeline-item-content'><ol><li><p>文章标题居中显示</p></li><li><p>文章页波浪线（安知鱼）</p></li></ol></div></div></div>              </div>            </details><h2 id="技术栈-框架"><a href="#技术栈-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><p>博客框架：Hexo  7.3.0<br>主题：Butterfly<br>源码仓库：<a href="https://github.com/2022cheng/2022cheng.github.io">Github</a><br>图床：阿里云oss存储平台</p><h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><p>昵称：未闻花名<br>性别：♂<br>生日：200X.04.24<br>身份：某正在奋力考研的大四学生<br>地点：暂时北方某地<br>邮箱：<a href="mailto:&#51;&#50;&#48;&#54;&#48;&#54;&#51;&#49;&#52;&#x35;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#51;&#50;&#48;&#54;&#48;&#54;&#51;&#49;&#52;&#x35;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></p><h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</p>]]></content>
       
     </entry>
     
@@ -399,22 +399,22 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>我的一些碎碎念</title>
+      <link href="/shuoshuo/index.html"/>
+      <url>/shuoshuo/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="1d4832cd1f51b0d6e6e977104b6749454d1ea7974cff0d2308d30327243bc3a0">9d4fe9047ed7fb9f3dc40dc89cc0e0da86f11b64d8364f8a60cf426b5e026d5290b9581438e62fb10d6284d1296408f08adce9b0b680cfea60f65a3b223267fcaa4ba459fa17bc9b99877f0afbc0a1bb7c46b314c386c3a3bbd7cec42328bb39306e78205150790ee6049b74cb001e1e5271e7e5f83eb5249232f30630815553e0b062bd09eaf65dde3c3b3a5777e20170db1537ff863daa8efcf00f84e74935f6830e7bdea1be279a616f5ece6ea13f83fb46cd01730c0506c39803af5a037a</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-xray">      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">这里需要密码才可查看哦</span>      </label>      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>      </svg>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>我的一些碎碎念</title>
-      <link href="/shuoshuo/index.html"/>
-      <url>/shuoshuo/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="1d4832cd1f51b0d6e6e977104b6749454d1ea7974cff0d2308d30327243bc3a0">9d4fe9047ed7fb9f3dc40dc89cc0e0da86f11b64d8364f8a60cf426b5e026d5290b9581438e62fb10d6284d1296408f08adce9b0b680cfea60f65a3b223267fcaa4ba459fa17bc9b99877f0afbc0a1bb7c46b314c386c3a3bbd7cec42328bb39306e78205150790ee6049b74cb001e1e5271e7e5f83eb5249232f30630815553e0b062bd09eaf65dde3c3b3a5777e20170db1537ff863daa8efcf00f84e74935f6830e7bdea1be279a616f5ece6ea13f83fb46cd01730c0506c39803af5a037a</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-xray">      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">这里需要密码才可查看哦</span>      </label>      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>      </svg>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -455,10 +455,10 @@
     
     <entry>
       <title></title>
-      <link href="/config/css/transpancy.css"/>
-      <url>/config/css/transpancy.css</url>
+      <link href="/config/css/font.css"/>
+      <url>/config/css/font.css</url>
       
-        <content type="html"><![CDATA[/* 文章页背景，仅适用于白天模式 */:root:not([data-theme="dark"]) .layout_post>#post {    /* 以下代表透明度为0.7 可以自行修改 */    background: rgba(255, 255, 255, 0.9);}/* 所有页面背景，仅适用于白天模式 */:root:not([data-theme="dark"]) #aside_content .card-widget,:root:not([data-theme="dark"]) #recent-posts>.recent-post-item,:root:not([data-theme="dark"]) .layout_page>div:first-child:not(.recent-posts),:root:not([data-theme="dark"]) .layout_post>#page,:root:not([data-theme="dark"]) .layout_post>#post,:root:not([data-theme="dark"]) .read-mode .layout_post>#post {    /* 以下代表透明度为0.8 */    background: rgba(255, 255, 255, 0.9);}/* 侧边卡片的透明度，仅适用于白天模式 */:root:not([data-theme="dark"]) {    --card-bg: rgba(255, 255, 255, 0.9);}/* 页脚透明，仅适用于白天模式 */:root:not([data-theme="dark"]) #footer {    /* 以下代表透明度为0.1 */    background: rgba(255, 255, 255, 0.2);}/* 黑夜模式设置 */[data-theme="dark"] .layout_post>#post,[data-theme="dark"] #aside_content .card-widget,[data-theme="dark"] #recent-posts>.recent-post-item,[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),[data-theme="dark"] .layout_post>#page,[data-theme="dark"] .layout_post>#post,[data-theme="dark"] .read-mode .layout_post>#post,[data-theme="dark"] #footer {    /* 黑夜模式下的背景为纯黑（可根据需要调整） */    background: rgba(0, 0, 0, 0.9);}/* 黑夜模式侧边卡片 */[data-theme="dark"] {    --card-bg: rgba(0, 0, 0, 0.9);}]]></content>
+        <content type="html"><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */@font-face {    font-family: 'iconfont';  /* Project id 4808987 */    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');}.iconfont {    font-family: "iconfont" !important;    font-size: 16px; /* 字体大小自行修改 */    font-style: normal;    -webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}.icon-github:before {    content: "\ea0b";    color: red; /* 图标颜色需要自行修改 */}]]></content>
       
     </entry>
     
@@ -466,10 +466,10 @@
     
     <entry>
       <title></title>
-      <link href="/config/css/font.css"/>
-      <url>/config/css/font.css</url>
+      <link href="/config/css/transpancy.css"/>
+      <url>/config/css/transpancy.css</url>
       
-        <content type="html"><![CDATA[/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */@font-face {    font-family: 'iconfont';  /* Project id 4808987 */    src: url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff2?t=1736597902055') format('woff2'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.woff?t=1736597902055') format('woff'),    url('//at.alicdn.com/t/c/font_4808987_ey59jk1xjwf.ttf?t=1736597902055') format('truetype');}.iconfont {    font-family: "iconfont" !important;    font-size: 16px; /* 字体大小自行修改 */    font-style: normal;    -webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}.icon-github:before {    content: "\ea0b";    color: red; /* 图标颜色需要自行修改 */}]]></content>
+        <content type="html"><![CDATA[/* 文章页背景，仅适用于白天模式 */:root:not([data-theme="dark"]) .layout_post>#post {    /* 以下代表透明度为0.7 可以自行修改 */    background: rgba(255, 255, 255, 0.9);}/* 所有页面背景，仅适用于白天模式 */:root:not([data-theme="dark"]) #aside_content .card-widget,:root:not([data-theme="dark"]) #recent-posts>.recent-post-item,:root:not([data-theme="dark"]) .layout_page>div:first-child:not(.recent-posts),:root:not([data-theme="dark"]) .layout_post>#page,:root:not([data-theme="dark"]) .layout_post>#post,:root:not([data-theme="dark"]) .read-mode .layout_post>#post {    /* 以下代表透明度为0.8 */    background: rgba(255, 255, 255, 0.9);}/* 侧边卡片的透明度，仅适用于白天模式 */:root:not([data-theme="dark"]) {    --card-bg: rgba(255, 255, 255, 0.9);}/* 页脚透明，仅适用于白天模式 */:root:not([data-theme="dark"]) #footer {    /* 以下代表透明度为0.1 */    background: rgba(255, 255, 255, 0.2);}/* 黑夜模式设置 */[data-theme="dark"] .layout_post>#post,[data-theme="dark"] #aside_content .card-widget,[data-theme="dark"] #recent-posts>.recent-post-item,[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),[data-theme="dark"] .layout_post>#page,[data-theme="dark"] .layout_post>#post,[data-theme="dark"] .read-mode .layout_post>#post,[data-theme="dark"] #footer {    /* 黑夜模式下的背景为纯黑（可根据需要调整） */    background: rgba(0, 0, 0, 0.9);}/* 黑夜模式侧边卡片 */[data-theme="dark"] {    --card-bg: rgba(0, 0, 0, 0.9);}]]></content>
       
     </entry>
     
