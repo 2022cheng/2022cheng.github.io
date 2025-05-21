@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Ubuntu系统基础操作和使用</title>
+    <url>/2025/01/15/2025_1/Ubuntu%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p><a href="https://so.csdn.net/so/search?q=Ubuntu%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">Ubuntu系统</a> 是一种基于Linux的 <a href="https://so.csdn.net/so/search?q=%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">开源操作系统</a>，它由南非的商业人士马克·舍特尔沃斯创立，其目标是提供一个易于使用、免费且开放的操作系统</p>
+<p>这里省略安装教程，采用版本为22.04。</p>
+<h2 id="二、Ubuntu系统的基础操作"><a href="#二、Ubuntu系统的基础操作" class="headerlink" title="二、Ubuntu系统的基础操作"></a>二、Ubuntu系统的基础操作</h2><h3 id="2-1-页面介绍"><a href="#2-1-页面介绍" class="headerlink" title="2.1 页面介绍"></a>2.1 页面介绍</h3><p>页面很清晰易懂，任务栏——位于屏幕顶部的横条通常包含了应用程序启动器、系统菜单、通知区域等；通知区域——通常位于任务栏右侧，包含了系统通知、网络连接、音量控制等快捷操作……这里不做过多介绍</p>
+<h3 id="2-2-应用安装和卸载"><a href="#2-2-应用安装和卸载" class="headerlink" title="2.2 应用安装和卸载"></a>2.2 应用安装和卸载</h3><p>在Ubuntu系统中可以通过软件中心或命令行来安装和卸载应用程序。</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250115185353308.png" alt="下载界面"></p>
+<h3 id="2-3-如何打开中终端"><a href="#2-3-如何打开中终端" class="headerlink" title="2.3 如何打开中终端"></a>2.3 如何打开中终端</h3><ol>
+<li>在Ubuntu系统中可以通过在应用程序菜单中搜索“终端”或使用快捷键<code>Ctrl+Alt+T</code>来打开终端。</li>
+<li>常用命令：</li>
+</ol>
+<ul>
+<li>cd：用于切换当前工作目录。例如，<code>cd Documents</code> 将当前目录更改为 <code>Documents</code>文件夹。</li>
+<li>ls：用于列出当前目录中的文件和文件夹。例如，<code>ls -l </code>将以详细格式显示文件列表。</li>
+<li>mkdir：用于创建新的文件夹。例如，<code>mkdir myfolder</code>将创建一个名为<code>myfolder</code>的文件夹。</li>
+<li>rm：用于删除文件和文件夹。例如，<code>rm myfile</code>将删除名为<code>myfile</code>的文件。</li>
+<li>cp：用于复制文件和文件夹。例如，<code>cp myfile newfile</code>将复制<code>myfile</code>并将其命名为<code>newfile</code>。</li>
+<li>mv：用于移动文件和文件夹，或者重命名文件和文件夹。例如，<code>mv myfile newlocation</code>将<code>myfile</code>移动到<code>newlocation</code>。</li>
+<li>sudo：用于以管理员权限执行命令。例如，<code>sudo apt-get update</code>将更新软件包列表。</li>
+<li>grep：用于在文件中查找指定的文本模式。例如，<code>grep &quot;keyword&quot; myfile</code>将在<code>myfile</code>文件中查找包含”keyword”的行。</li>
+</ul>
+<ol start="3">
+<li>命令的参数和选项：许多命令都有不同的参数和选项，可以根据需求来使用。可以通过在终端中输入命令名后加上–help来查看命令的帮助文档，了解可用的参数和选项。</li>
+</ol>
+<h2 id="三、常见问题和解决方案"><a href="#三、常见问题和解决方案" class="headerlink" title="三、常见问题和解决方案"></a>三、常见问题和解决方案</h2><ol>
+<li><p>忘记了sudo密码该怎么办？<br>解决方案：如果忘记了sudo密码，可以通过重置root密码来解决。在启动时，进入“恢复模式”并选择<code>root shell</code>选项。然后使用命令<code>passwd &lt;username&gt;</code>来更改sudo用户的密码。</p>
+</li>
+<li><p>无法添加软件源，显示错误信息 怎么办？<br>解决方案：当添加软件源时，可能会遇到各种错误。首先，请确保输入的软件源地址正确。然后，检查网络连接是否正常。还可以在终端中运行命令<code>sudo apt update</code>来获取更详细的错误信息，并根据错误信息解决问题。</p>
+</li>
+<li><p>无法安装软件包，显示依赖项错误。<br>解决方案：当安装软件包时，可能会遇到依赖项错误。请检查错误消息中提到的依赖项，并尝试使用命令<code>sudo apt install &lt;dependency&gt;</code>来安装缺少的依赖项。如果问题仍然存在，可以尝试使用命令<code>sudo apt --fix-broken install</code>来修复依赖项问题。</p>
+</li>
+<li><p>问题：系统运行缓慢或出现错误。<br>解决方案：如果系统运行缓慢或出现错误，可能是由于系统资源不足或软件冲突引起的。可以尝试清理系统垃圾文件、关闭不必要的后台进程、升级硬件或重新安装操作系统来改善系统性能。</p>
+</li>
+<li><p>问题：无法删除用户，显示错误消息。<br>解决方案：当删除用户时，可能会遇到错误。请确保有足够的权限以及正确的用户名。还可以尝试在删除用户之前，先检查并解决该用户是否仍然拥有文件或进程。可以使用命令<code>sudo lsof -u &lt;username&gt;</code>来查找该用户的活动进程，并使用命令<code>kill &lt;PID&gt;</code>来终止进程。</p>
+</li>
+</ol>
+<p>摘自：<a href="https://blog.csdn.net/Long_xu/article/details/135039596">Ubuntu系统入门指南：基础操作和使用-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>一生一芯</category>
+      </categories>
+      <tags>
+        <tag>一生一芯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Boss直聘反爬解决办法</title>
+    <url>/2025/01/19/2025_1/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
+<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
+<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
+<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
+<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
+]]></content>
+      <categories>
+        <category>毕业设计</category>
+      </categories>
+      <tags>
+        <tag>毕业设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>毕业设计01_爬虫完结（爬取boss直聘数据）</title>
+    <url>/2025/02/07/2025_2/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E7%88%AC%E8%99%AB%E5%AE%8C%E7%BB%93/</url>
+    <content><![CDATA[<p>爬虫部分没有记录笔记，爬虫中遇见的反爬中的问题见博客中的《Boss直聘反爬解决方法》</p>
+<h2 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h2><p>本项目采用<code>Django</code>框架，先创建一个新应用</p>
+<p>输入<code>python manage.py startapp myApp</code>，创建一个新的 Django 应用（App）</p>
+<p>生成的目录结构通常如下：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">myApp/</span><br><span class="line">    __init__.py <span class="comment"># 这是一个空文件，用于告诉 Python 这个目录是一个 Python 包。</span></span><br><span class="line">    admin.py <span class="comment"># 用于注册模型到 Django 的管理后台。</span></span><br><span class="line">    apps.py <span class="comment"># 包含应用的配置信息。</span></span><br><span class="line">    migrations/ <span class="comment"># 用于存放数据库迁移文件。</span></span><br><span class="line">        __init__.py</span><br><span class="line">    models.py <span class="comment"># 用于定义数据库模型。</span></span><br><span class="line">    tests.py <span class="comment"># 用于编写应用的测试用例。</span></span><br><span class="line">    views.py <span class="comment"># 用于编写视图函数或类。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="定义数据库模型"><a href="#定义数据库模型" class="headerlink" title="定义数据库模型"></a>定义数据库模型</h2><ol>
+<li>在 <code>models.py</code> 文件中，定义了三个 <code>Django</code> 模型：<code>JobInfo</code>、<code>User</code> 和 <code>History</code>。这些模型对应于数据库中的表，每个模型的字段对应于表中的列。通过定义模型，实际上是在定义数据库中的表结构 Django 会根据这些模型自动生成相应的数据库表。</li>
+</ol>
+<p><strong>有以下好处：</strong></p>
+<ul>
+<li><strong>数据持久化</strong>：这些模型将用于在数据库中存储和管理数据。例如，可以通过 <code>JobInfo</code> 模型来存储和查询岗位信息，通过 <code>User</code> 模型来管理用户信息。</li>
+<li><strong>数据关系</strong>：通过外键（如 <code>History</code> 模型中的 <code>job</code> 和 <code>user</code>），可以在不同的模型之间建立关系，从而实现复杂的数据查询和操作。</li>
+<li><strong>数据库迁移</strong>：在定义好模型后，可以使用 Django 的迁移工具（<code>python manage.py makemigrations</code> 和 <code>python manage.py migrate</code>）来创建或更新数据库表结构。</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your models here.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JobInfo</span>(models.Model):</span><br><span class="line">    <span class="built_in">id</span> = models.AutoField(<span class="string">&#x27;id&#x27;</span>, primary_key=<span class="literal">True</span>)</span><br><span class="line">    title = models.CharField(<span class="string">&quot;岗位名字&quot;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    address = models.CharField(<span class="string">&#x27;省会&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="built_in">type</span> = models.CharField(<span class="string">&#x27;职业&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    educational = models.CharField(<span class="string">&#x27;学历&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    workExperience = models.CharField(<span class="string">&#x27;工作经验&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    workTag = models.CharField(<span class="string">&#x27;工作标签&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    salary = models.CharField(<span class="string">&#x27;薪资&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    salaryMonth = models.CharField(<span class="string">&#x27;年终奖&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyTags = models.CharField(<span class="string">&#x27;公司福利&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    hrWork = models.CharField(<span class="string">&#x27;人事职位&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    hrName = models.CharField(<span class="string">&#x27;人事名字&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    pratice = models.BooleanField(<span class="string">&#x27;是否为实习单位&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyTitle = models.CharField(<span class="string">&#x27;公司名称&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyAvatar = models.CharField(<span class="string">&#x27;公司头像&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyNature = models.CharField(<span class="string">&#x27;公司性质&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyStatus = models.CharField(<span class="string">&#x27;公司状态&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyPeople = models.CharField(<span class="string">&#x27;公司人数&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    detailUrl = models.CharField(<span class="string">&#x27;详情地址&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyUrl = models.CharField(<span class="string">&#x27;公司详情地址 &#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyUrl = models.CharField(<span class="string">&#x27;公司详情地址&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    createTime = models.DateTimeField(<span class="string">&#x27;创建时间&#x27;</span>, auto_now_add=<span class="literal">True</span>)</span><br><span class="line">    dist = models.CharField(<span class="string">&#x27;行政区&#x27;</span>, max_length=<span class="number">25</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        db_table = <span class="string">&quot;jobInfo&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>(models.Model):</span><br><span class="line">    <span class="built_in">id</span> = models.AutoField(<span class="string">&#x27;id&#x27;</span>, primary_key=<span class="literal">True</span>)</span><br><span class="line">    username = models.CharField(<span class="string">&#x27;用户名&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    password = models.CharField(<span class="string">&#x27;密码&#x27;</span>, max_length=<span class="number">25</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    educational = models.CharField(<span class="string">&#x27;学历&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    workExpirence = models.CharField(<span class="string">&#x27;工作经验&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    address = models.CharField(<span class="string">&#x27;意向城市&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    work = models.CharField(<span class="string">&#x27;意向岗位&#x27;</span>, max_length=<span class="number">25</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    avatar = models.FileField(<span class="string">&#x27;用户头像&#x27;</span>, upload_to=<span class="string">&quot;avatar&quot;</span>, default=<span class="string">&quot;avatar/default.png&quot;</span>)</span><br><span class="line">    createTime = models.DateTimeField(<span class="string">&#x27;创建时间&#x27;</span>, auto_now_add=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        db_table = <span class="string">&quot;user&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">History</span>(models.Model):</span><br><span class="line">    <span class="built_in">id</span> = models.AutoField(<span class="string">&#x27;id&#x27;</span>, primary_key=<span class="literal">True</span>)</span><br><span class="line">    job = models.ForeignKey(JobInfo, on_delete=models.CASCADE)</span><br><span class="line">    user = models.ForeignKey(User, on_delete=models.CASCADE)</span><br><span class="line">    count = models.IntegerField(<span class="string">&quot;点击次数&quot;</span>, default=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        db_table = <span class="string">&quot;histroy&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在<code>graduationdesign</code>中的<code>settings.py</code>的<code>INSTALLED_APPS </code>中添加应用——<code>myApp</code>，然后进行数据库的迁移，在 mysql 数据库中生成相关的表</li>
+</ol>
+<p>用以下指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>修改爬虫代码，添加保存数据库中的功能，然后向数据库中存入数据</li>
+</ol>
+<h2 id="爬boss直聘原码（附带存入数据库）"><a href="#爬boss直聘原码（附带存入数据库）" class="headerlink" title="爬boss直聘原码（附带存入数据库）"></a>爬boss直聘原码（附带存入数据库）</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.service <span class="keyword">import</span> Service</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> django</span><br><span class="line"></span><br><span class="line">os.environ.setdefault(<span class="string">&#x27;DJANGO_SETTINGS_MODULE&#x27;</span>, <span class="string">&#x27;graduationdesign.settings&#x27;</span>)</span><br><span class="line">django.setup()</span><br><span class="line"><span class="keyword">from</span> myApp.models <span class="keyword">import</span> JobInfo</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">spider</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, <span class="built_in">type</span>, page</span>):</span><br><span class="line">        <span class="variable language_">self</span>.<span class="built_in">type</span> = <span class="built_in">type</span>  <span class="comment"># 岗位关键字</span></span><br><span class="line">        <span class="variable language_">self</span>.page = <span class="built_in">int</span>(page)  <span class="comment"># 页码数（当前页码数）</span></span><br><span class="line">        <span class="variable language_">self</span>.spiderUrl = <span class="string">&quot;https://www.zhipin.com/web/geek/job?query=%s&amp;city=100010000&amp;page=%s&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.brower = <span class="variable language_">self</span>.startBrower()  <span class="comment"># 只初始化一次浏览器实例</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">startBrower</span>(<span class="params">self</span>):</span><br><span class="line">        service = Service(<span class="string">&quot;./chromedriver.exe&quot;</span>)</span><br><span class="line">        options = webdriver.ChromeOptions()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 浏览器的复用（防止反爬）</span></span><br><span class="line">        <span class="comment"># 打开cmd 输入   chrome.exe -remote-debugging-port=9222</span></span><br><span class="line">        options.add_experimental_option(<span class="string">&#x27;debuggerAddress&#x27;</span>, <span class="string">&#x27;localhost:9222&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 方法二：使用过手机热点，每次重新打开手机热点，IP地址也不一样</span></span><br><span class="line">        <span class="comment"># options.add_experimental_option(&quot;excludeSwitches&quot;, [&#x27;enable-automation&#x27;])</span></span><br><span class="line">        brower = webdriver.Chrome(service=service, options=options)</span><br><span class="line">        <span class="keyword">return</span> brower</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">self, page</span>):  <span class="comment"># page为总共要爬取的page总数</span></span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.page &gt; page: <span class="keyword">return</span></span><br><span class="line">        <span class="comment"># brower = self.startBrower()</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;正在爬取的页面路径：&quot;</span> + <span class="variable language_">self</span>.spiderUrl % (<span class="variable language_">self</span>.<span class="built_in">type</span>, <span class="variable language_">self</span>.page))</span><br><span class="line">        <span class="variable language_">self</span>.brower.get(<span class="variable language_">self</span>.spiderUrl % (<span class="variable language_">self</span>.<span class="built_in">type</span>, <span class="variable language_">self</span>.page))</span><br><span class="line">        time.sleep(<span class="number">15</span>)</span><br><span class="line">        job_list = <span class="variable language_">self</span>.brower.find_elements(by=By.XPATH, value=<span class="string">&#x27;//ul[@class=&quot;job-list-box&quot;]/li&#x27;</span>)  <span class="comment"># value参数使用XPATH语法</span></span><br><span class="line">        <span class="keyword">for</span> index, job <span class="keyword">in</span> <span class="built_in">enumerate</span>(job_list):</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                jobData = []</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;正在爬取第%d个数据&quot;</span> % (index + <span class="number">1</span>))</span><br><span class="line">                <span class="comment"># title</span></span><br><span class="line">                title = job.find_element(by=By.XPATH,</span><br><span class="line">                                         value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-title&#x27;)]&quot;</span></span><br><span class="line">                                               <span class="string">&quot;/span[@class=&#x27;job-name&#x27;]&quot;</span>).text</span><br><span class="line">                <span class="comment"># address</span></span><br><span class="line">                addresses = job.find_element(by=By.XPATH,</span><br><span class="line">                                             value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-title&#x27;)]&quot;</span></span><br><span class="line">                                                   <span class="string">&quot;/span[@class=&#x27;job-area-wrapper&#x27;]/span&quot;</span>).text.split(<span class="string">&#x27;·&#x27;</span>)</span><br><span class="line">                address = addresses[<span class="number">0</span>]</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(addresses) != <span class="number">1</span>:</span><br><span class="line">                    dist = addresses[<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dist = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># type</span></span><br><span class="line">                <span class="built_in">type</span> = <span class="variable language_">self</span>.<span class="built_in">type</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># educational, workExperience</span></span><br><span class="line">                tag_list = job.find_elements(by=By.XPATH,</span><br><span class="line">                                             value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                   <span class="string">&quot;/ul[@class=&#x27;tag-list&#x27;]/li&quot;</span>)</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(tag_list) == <span class="number">2</span>:</span><br><span class="line">                    educational = tag_list[<span class="number">1</span>].text</span><br><span class="line">                    workExperience = tag_list[<span class="number">0</span>].text</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    educational = tag_list[<span class="number">2</span>].text</span><br><span class="line">                    workExperience = tag_list[<span class="number">1</span>].text</span><br><span class="line"></span><br><span class="line">                <span class="comment"># hrName</span></span><br><span class="line">                hrName = job.find_element(by=By.XPATH,</span><br><span class="line">                                          value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                <span class="string">&quot;/div[@class=&#x27;info-public&#x27;]&quot;</span>).text</span><br><span class="line">                <span class="comment"># hrWork</span></span><br><span class="line">                hrWork = job.find_element(by=By.XPATH,</span><br><span class="line">                                          value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                <span class="string">&quot;/div[@class=&#x27;info-public&#x27;]/em&quot;</span>).text</span><br><span class="line">                <span class="comment"># workTag</span></span><br><span class="line">                workTag = job.find_elements(by=By.XPATH,</span><br><span class="line">                                            value=<span class="string">&quot;./div[contains(@class,&#x27;job-card-footer&#x27;)]/ul[@class=&#x27;tag-list&#x27;]/li&quot;</span>)</span><br><span class="line">                workTag = json.dumps(<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.text, workTag)))</span><br><span class="line"></span><br><span class="line">                <span class="comment"># pratice</span></span><br><span class="line">                pratice = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">                salaries = job.find_element(by=By.XPATH,</span><br><span class="line">                                            value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                  <span class="string">&quot;/span[@class=&#x27;salary&#x27;]&quot;</span>).text</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> salaries.find(<span class="string">&#x27;K&#x27;</span>) != -<span class="number">1</span>:</span><br><span class="line">                    salaries = salaries.split(<span class="string">&#x27;·&#x27;</span>)</span><br><span class="line">                    <span class="keyword">if</span> <span class="built_in">len</span>(salaries) == <span class="number">1</span>:</span><br><span class="line">                        <span class="comment"># salary</span></span><br><span class="line">                        salary = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: <span class="built_in">int</span>(x) * <span class="number">1000</span>, salaries[<span class="number">0</span>].replace(<span class="string">&#x27;K&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                        <span class="comment"># salaryMonth</span></span><br><span class="line">                        salaryMonth = <span class="string">&#x27;0薪&#x27;</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="comment"># salary</span></span><br><span class="line">                        salary = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: <span class="built_in">int</span>(x) * <span class="number">1000</span>, salaries[<span class="number">0</span>].replace(<span class="string">&#x27;K&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                        <span class="comment"># salaryMonth</span></span><br><span class="line">                        salaryMonth = salaries[<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># salary</span></span><br><span class="line">                    salary = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: <span class="built_in">int</span>(x), salaries.replace(<span class="string">&#x27;元/天&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                    <span class="comment"># salaryMonth</span></span><br><span class="line">                    salaryMonth = <span class="string">&#x27;0薪&#x27;</span></span><br><span class="line">                    pratice = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># companyTitle</span></span><br><span class="line">                companyTitle = job.find_element(by=By.XPATH,</span><br><span class="line">                                                value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-info&#x27;]/h3/a&quot;</span>).text</span><br><span class="line">                <span class="comment"># companyAvatar</span></span><br><span class="line">                companyAvatar = job.find_element(by=By.XPATH,</span><br><span class="line">                                                 value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-logo&#x27;]/a/img&quot;</span>).get_attribute(</span><br><span class="line">                    <span class="string">&quot;src&quot;</span>)</span><br><span class="line">                companyInfos = job.find_elements(by=By.XPATH,</span><br><span class="line">                                                 value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-info&#x27;]/ul[@class=&#x27;company-tag-list&#x27;]/li&quot;</span>)</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(companyInfos) == <span class="number">3</span>:</span><br><span class="line">                    <span class="comment"># companyNature</span></span><br><span class="line">                    companyNature = companyInfos[<span class="number">0</span>].text</span><br><span class="line">                    <span class="comment"># companyStatus</span></span><br><span class="line">                    companyStatus = companyInfos[<span class="number">1</span>].text</span><br><span class="line">                    <span class="comment"># companyPeople</span></span><br><span class="line">                    companyPeoples = companyInfos[<span class="number">2</span>].text</span><br><span class="line">                    <span class="keyword">if</span> companyPeoples != <span class="string">&quot;10000人以上&quot;</span>:</span><br><span class="line">                        companyPeople = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x, companyInfos[<span class="number">2</span>].text.replace(<span class="string">&#x27;人&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        companyPeople = [<span class="number">0</span>, <span class="number">10000</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># companyNature</span></span><br><span class="line">                    companyNature = companyInfos[<span class="number">0</span>].text</span><br><span class="line">                    <span class="comment"># companyStatus</span></span><br><span class="line">                    companyStatus = <span class="string">&#x27;未融资&#x27;</span></span><br><span class="line">                    <span class="comment"># companyPeople</span></span><br><span class="line">                    companyPeoples = companyInfos[<span class="number">1</span>].text</span><br><span class="line">                    <span class="keyword">if</span> companyPeoples != <span class="string">&quot;10000人以上&quot;</span>:</span><br><span class="line">                        companyPeople = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x, companyInfos[<span class="number">1</span>].text.replace(<span class="string">&#x27;人&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        companyPeople = [<span class="number">0</span>, <span class="number">10000</span>]</span><br><span class="line"></span><br><span class="line">                <span class="comment"># companyTags</span></span><br><span class="line">                companyTags = job.find_element(by=By.XPATH,</span><br><span class="line">                                               value=<span class="string">&quot;./div[contains(@class,&#x27;job-card-footer&#x27;)]/div[@class=&#x27;info-desc&#x27;]&quot;</span>).text</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> companyTags:</span><br><span class="line">                    companyTags = <span class="string">&#x27;无&#x27;</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    companyTags = json.dumps(companyTags.split(<span class="string">&#x27;，&#x27;</span>))</span><br><span class="line"></span><br><span class="line">                <span class="comment"># detailUr</span></span><br><span class="line">                detailUrl = job.find_element(by=By.XPATH,</span><br><span class="line">                                             value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]&quot;</span>).get_attribute(<span class="string">&#x27;href&#x27;</span>)</span><br><span class="line">                <span class="comment"># companyUr</span></span><br><span class="line">                companyUrl = job.find_element(by=By.XPATH,</span><br><span class="line">                                              value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-info&#x27;]/h3/a&quot;</span>).get_attribute(</span><br><span class="line">                    <span class="string">&#x27;href&#x27;</span>)</span><br><span class="line"></span><br><span class="line">                jobData.append(title)</span><br><span class="line">                jobData.append(address)</span><br><span class="line">                jobData.append(<span class="built_in">type</span>)</span><br><span class="line">                jobData.append(educational)</span><br><span class="line">                jobData.append(workExperience)</span><br><span class="line">                jobData.append(workTag)</span><br><span class="line">                jobData.append(salary)</span><br><span class="line">                jobData.append(salaryMonth)</span><br><span class="line">                jobData.append(companyTags)</span><br><span class="line">                jobData.append(hrWork)</span><br><span class="line">                jobData.append(hrName)</span><br><span class="line">                jobData.append(pratice)</span><br><span class="line">                jobData.append(companyTitle)</span><br><span class="line">                jobData.append(companyAvatar)</span><br><span class="line">                jobData.append(companyNature)</span><br><span class="line">                jobData.append(companyStatus)</span><br><span class="line">                jobData.append(companyPeople)</span><br><span class="line">                jobData.append(detailUrl)</span><br><span class="line">                jobData.append(companyUrl)</span><br><span class="line">                jobData.append(dist)</span><br><span class="line"></span><br><span class="line">                <span class="variable language_">self</span>.save_to_csv(jobData)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">        <span class="variable language_">self</span>.page += <span class="number">1</span>;</span><br><span class="line">        <span class="variable language_">self</span>.main(page)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save_to_csv</span>(<span class="params">self, rowData</span>):</span><br><span class="line">        <span class="comment"># with open(&#x27;./temp1.csv&#x27;, &#x27;a&#x27;, newline=&#x27;&#x27;, encoding=&#x27;utf8&#x27;) as wf:</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./temp2.csv&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, newline=<span class="string">&#x27;&#x27;</span>, encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>) <span class="keyword">as</span> wf:</span><br><span class="line">            writer = csv.writer(wf)</span><br><span class="line">            writer.writerow(rowData)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">clear_csv</span>(<span class="params">self</span>):</span><br><span class="line">        df = pd.read_csv(<span class="string">&#x27;./temp2.csv&#x27;</span>)</span><br><span class="line">        df.dropna(inplace=<span class="literal">True</span>)</span><br><span class="line">        df.drop_duplicates(inplace=<span class="literal">True</span>)</span><br><span class="line">        df[<span class="string">&#x27;salaryMonth&#x27;</span>] = df[<span class="string">&#x27;salaryMonth&#x27;</span>].<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.replace(<span class="string">&#x27;薪&#x27;</span>, <span class="string">&#x27;&#x27;</span>))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;总数为%d&quot;</span> % df.shape[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">return</span> df.values</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save_to_sql</span>(<span class="params">self</span>):</span><br><span class="line">        data = <span class="variable language_">self</span>.clear_csv()</span><br><span class="line">        <span class="keyword">for</span> job <span class="keyword">in</span> data:</span><br><span class="line">            JobInfo.objects.create(</span><br><span class="line">                title=job[<span class="number">0</span>],</span><br><span class="line">                address=job[<span class="number">1</span>],</span><br><span class="line">                <span class="built_in">type</span>=job[<span class="number">2</span>],</span><br><span class="line">                educational=job[<span class="number">3</span>],</span><br><span class="line">                workExperience=job[<span class="number">4</span>],</span><br><span class="line">                workTag=job[<span class="number">5</span>],</span><br><span class="line">                salary=job[<span class="number">6</span>],</span><br><span class="line">                salaryMonth=job[<span class="number">7</span>],</span><br><span class="line">                companyTags=job[<span class="number">8</span>],</span><br><span class="line">                hrWork=job[<span class="number">9</span>],</span><br><span class="line">                hrName=job[<span class="number">10</span>],</span><br><span class="line">                pratice=job[<span class="number">11</span>],</span><br><span class="line">                companyTitle=job[<span class="number">12</span>],</span><br><span class="line">                companyAvatar=job[<span class="number">13</span>],</span><br><span class="line">                companyNature=job[<span class="number">14</span>],</span><br><span class="line">                companyStatus=job[<span class="number">15</span>],</span><br><span class="line">                companyPeople=job[<span class="number">16</span>],</span><br><span class="line">                detailUrl=job[<span class="number">17</span>],</span><br><span class="line">                companyUrl=job[<span class="number">18</span>],</span><br><span class="line">                dist=job[<span class="number">19</span>]</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">init</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&quot;./temp2.csv&quot;</span>):</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./temp2.csv&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, newline=<span class="string">&#x27;&#x27;</span>, encoding=<span class="string">&quot;utf8&quot;</span>) <span class="keyword">as</span> wf:</span><br><span class="line">                writer = csv.writer(wf)</span><br><span class="line">                writer.writerow(</span><br><span class="line">                    [<span class="string">&quot;title&quot;</span>, <span class="string">&quot;address&quot;</span>, <span class="string">&quot;type&quot;</span>, <span class="string">&quot;educational&quot;</span>, <span class="string">&quot;workExperience&quot;</span>, <span class="string">&quot;workTag&quot;</span>, <span class="string">&quot;salary&quot;</span>, <span class="string">&quot;salaryMonth&quot;</span></span><br><span class="line">                        , <span class="string">&quot;companyTags&quot;</span>, <span class="string">&quot;hrWork&quot;</span>, <span class="string">&quot;hrName&quot;</span>, <span class="string">&quot;pratice&quot;</span>, <span class="string">&quot;companyTitle&quot;</span>, <span class="string">&quot;companyAvatar&quot;</span>,</span><br><span class="line">                     <span class="string">&quot;companyNature&quot;</span>, <span class="string">&quot;companyStatus&quot;</span>, <span class="string">&quot;companyPeople&quot;</span>, <span class="string">&quot;detailUrl&quot;</span>, <span class="string">&quot;companyUrl&quot;</span>, <span class="string">&quot;dist&quot;</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># JobInfo.objects.all()</span></span><br><span class="line">    <span class="comment"># keywords = [&quot;python爬虫&quot;, &quot;python后端&quot;, &quot;python大数据&quot;, &quot;python数据分析&quot;,&quot;AI&quot;,&quot;python&quot;]</span></span><br><span class="line">    <span class="comment"># keywords = [&quot;运维&quot;, &quot;测试&quot;,&quot;机器学习&quot;,&quot;算法工程师&quot;]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># spiderObj = spider(&quot;机器学习&quot;,&quot;1&quot;)</span></span><br><span class="line">    spiderObj = spider(<span class="string">&quot;算法工程师&quot;</span>,<span class="string">&quot;1&quot;</span>)</span><br><span class="line">    <span class="comment"># spiderObj.init()</span></span><br><span class="line">    <span class="comment"># spiderObj.main(10)</span></span><br><span class="line">    spiderObj.save_to_sql()</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>毕业设计</category>
+      </categories>
+      <tags>
+        <tag>毕业设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 博客文章统计图</title>
     <url>/2025/01/19/2025_1/Hexo%20%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E5%9B%BE/</url>
     <content><![CDATA[<p>此文章参考<strong>Eurkon</strong>大神的文章<a href="https://blog.eurkon.com/post/1213ef82.html">Hexo 博客文章统计图</a>，教程基本没有改，完全搬过来，只需要修改个别时间</p>
@@ -74,43 +176,58 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu系统基础操作和使用</title>
-    <url>/2025/01/15/2025_1/Ubuntu%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p><a href="https://so.csdn.net/so/search?q=Ubuntu%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">Ubuntu系统</a> 是一种基于Linux的 <a href="https://so.csdn.net/so/search?q=%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1001.2101.3001.7020">开源操作系统</a>，它由南非的商业人士马克·舍特尔沃斯创立，其目标是提供一个易于使用、免费且开放的操作系统</p>
-<p>这里省略安装教程，采用版本为22.04。</p>
-<h2 id="二、Ubuntu系统的基础操作"><a href="#二、Ubuntu系统的基础操作" class="headerlink" title="二、Ubuntu系统的基础操作"></a>二、Ubuntu系统的基础操作</h2><h3 id="2-1-页面介绍"><a href="#2-1-页面介绍" class="headerlink" title="2.1 页面介绍"></a>2.1 页面介绍</h3><p>页面很清晰易懂，任务栏——位于屏幕顶部的横条通常包含了应用程序启动器、系统菜单、通知区域等；通知区域——通常位于任务栏右侧，包含了系统通知、网络连接、音量控制等快捷操作……这里不做过多介绍</p>
-<h3 id="2-2-应用安装和卸载"><a href="#2-2-应用安装和卸载" class="headerlink" title="2.2 应用安装和卸载"></a>2.2 应用安装和卸载</h3><p>在Ubuntu系统中可以通过软件中心或命令行来安装和卸载应用程序。</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250115185353308.png" alt="下载界面"></p>
-<h3 id="2-3-如何打开中终端"><a href="#2-3-如何打开中终端" class="headerlink" title="2.3 如何打开中终端"></a>2.3 如何打开中终端</h3><ol>
-<li>在Ubuntu系统中可以通过在应用程序菜单中搜索“终端”或使用快捷键<code>Ctrl+Alt+T</code>来打开终端。</li>
-<li>常用命令：</li>
-</ol>
-<ul>
-<li>cd：用于切换当前工作目录。例如，<code>cd Documents</code> 将当前目录更改为 <code>Documents</code>文件夹。</li>
-<li>ls：用于列出当前目录中的文件和文件夹。例如，<code>ls -l </code>将以详细格式显示文件列表。</li>
-<li>mkdir：用于创建新的文件夹。例如，<code>mkdir myfolder</code>将创建一个名为<code>myfolder</code>的文件夹。</li>
-<li>rm：用于删除文件和文件夹。例如，<code>rm myfile</code>将删除名为<code>myfile</code>的文件。</li>
-<li>cp：用于复制文件和文件夹。例如，<code>cp myfile newfile</code>将复制<code>myfile</code>并将其命名为<code>newfile</code>。</li>
-<li>mv：用于移动文件和文件夹，或者重命名文件和文件夹。例如，<code>mv myfile newlocation</code>将<code>myfile</code>移动到<code>newlocation</code>。</li>
-<li>sudo：用于以管理员权限执行命令。例如，<code>sudo apt-get update</code>将更新软件包列表。</li>
-<li>grep：用于在文件中查找指定的文本模式。例如，<code>grep &quot;keyword&quot; myfile</code>将在<code>myfile</code>文件中查找包含”keyword”的行。</li>
+    <title>vim基本用法</title>
+    <url>/2025/01/15/2025_1/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
+<li>vim filename可直接新建文件，打开文件后默认进入命令模式。</li>
+<li>命令模式下可以移动光标或者进行删除、复制、粘贴。</li>
+<li>移动光标常用命令：<ul>
+<li>方向键或者h（左）、j（下）、k（上）、l（右）：光标移动一个字符。</li>
+<li>[Ctrl] + [f]：向下翻页。</li>
+<li>[Ctrl] + [b]：向上翻页。</li>
+<li>0 或 [Home]：光标移动到当前行最前面的字符。</li>
+<li>$ 或 [End]：光标移动到当前行最后面的字符。</li>
+<li>G:光标移动到文件最后一行。</li>
+<li>gg：光标移动到文件第一行。</li>
 </ul>
-<ol start="3">
-<li>命令的参数和选项：许多命令都有不同的参数和选项，可以根据需求来使用。可以通过在终端中输入命令名后加上–help来查看命令的帮助文档，了解可用的参数和选项。</li>
-</ol>
-<h2 id="三、常见问题和解决方案"><a href="#三、常见问题和解决方案" class="headerlink" title="三、常见问题和解决方案"></a>三、常见问题和解决方案</h2><ol>
-<li><p>忘记了sudo密码该怎么办？<br>解决方案：如果忘记了sudo密码，可以通过重置root密码来解决。在启动时，进入“恢复模式”并选择<code>root shell</code>选项。然后使用命令<code>passwd &lt;username&gt;</code>来更改sudo用户的密码。</p>
 </li>
-<li><p>无法添加软件源，显示错误信息 怎么办？<br>解决方案：当添加软件源时，可能会遇到各种错误。首先，请确保输入的软件源地址正确。然后，检查网络连接是否正常。还可以在终端中运行命令<code>sudo apt update</code>来获取更详细的错误信息，并根据错误信息解决问题。</p>
+<li>删除、复制、粘贴常用命令：<ul>
+<li>x：向后删除一个字符。</li>
+<li>X：向前删除一个字符。</li>
+<li>dd：删除当前行。</li>
+<li>ndd：n为数字，删除包含当前行的n行。</li>
+<li>yy：复制当前行。</li>
+<li>nyy：n为数字，复制包含当前行的n行。</li>
+<li>p：粘贴到当前行的下一行。</li>
+<li>P：粘贴到当前行的上一行。</li>
+<li>u：撤销上一个动作。</li>
+<li>[Ctrl] + [r]：重做上一个动作。</li>
+</ul>
 </li>
-<li><p>无法安装软件包，显示依赖项错误。<br>解决方案：当安装软件包时，可能会遇到依赖项错误。请检查错误消息中提到的依赖项，并尝试使用命令<code>sudo apt install &lt;dependency&gt;</code>来安装缺少的依赖项。如果问题仍然存在，可以尝试使用命令<code>sudo apt --fix-broken install</code>来修复依赖项问题。</p>
+</ul>
+<h2 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h2><ul>
+<li>在命令模式下按i进入编辑模式。编辑模式下可以看到“– INSERT –”的提示。</li>
+<li>编辑完成后按esc键退出到命令模式中。</li>
+</ul>
+<h2 id="末行模式："><a href="#末行模式：" class="headerlink" title="末行模式："></a>末行模式：</h2><ul>
+<li>在命令模式下按:（英文冒号）进入末行模式。该模式下可以进行设置、保存、退出等操作。</li>
+<li>按esc键可以退出到命令模式中。</li>
+<li>末行模式下常用命令：<ul>
+<li>:w：保存文件。</li>
+<li>:q：不保存，退出vim。</li>
+<li>:wq：保存并退出vim。</li>
+<li>:q!：不保存，强制退出vim。</li>
+<li>:wq!：保存并强制退出vim。</li>
+<li>:set nu：显示行号。</li>
+<li>:set nonu：取消行号。</li>
+<li>:set ff&#x3D;unix：设置文件格式为unix格式。</li>
+</ul>
 </li>
-<li><p>问题：系统运行缓慢或出现错误。<br>解决方案：如果系统运行缓慢或出现错误，可能是由于系统资源不足或软件冲突引起的。可以尝试清理系统垃圾文件、关闭不必要的后台进程、升级硬件或重新安装操作系统来改善系统性能。</p>
-</li>
-<li><p>问题：无法删除用户，显示错误消息。<br>解决方案：当删除用户时，可能会遇到错误。请确保有足够的权限以及正确的用户名。还可以尝试在删除用户之前，先检查并解决该用户是否仍然拥有文件或进程。可以使用命令<code>sudo lsof -u &lt;username&gt;</code>来查找该用户的活动进程，并使用命令<code>kill &lt;PID&gt;</code>来终止进程。</p>
-</li>
-</ol>
-<p>摘自：<a href="https://blog.csdn.net/Long_xu/article/details/135039596">Ubuntu系统入门指南：基础操作和使用-CSDN博客</a></p>
+</ul>
+<p>参考此篇blog：</p>
+<blockquote>
+<p>作者：拉普拉斯妖kk<br>链接：<a href="https://juejin.cn/post/7015514944527400973">https://juejin.cn/post/7015514944527400973</a><br>来源：稀土掘金</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>一生一芯</category>
@@ -120,22 +237,39 @@
       </tags>
   </entry>
   <entry>
-    <title>Boss直聘反爬解决办法</title>
-    <url>/2025/01/19/2025_1/boss%E7%9B%B4%E8%81%98%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="方法一：更换网络"><a href="#方法一：更换网络" class="headerlink" title="方法一：更换网络"></a>方法一：更换网络</h3><p>例如使用家里面<code>wifi</code>被网站进行了反爬的限制，此时只需要更换手机的热点，重新爬取即可，若是手机的<code>wifi</code>也被限制，则打开手机的飞行模式，再重启热点，此时就可以修改手机<code>wifi</code>的网络<code>IP</code>地址，接着进行爬取</p>
-<h3 id="方法二：浏览器复用"><a href="#方法二：浏览器复用" class="headerlink" title="方法二：浏览器复用"></a>方法二：浏览器复用</h3><h4 id="浏览器复用是什么？"><a href="#浏览器复用是什么？" class="headerlink" title="浏览器复用是什么？"></a>浏览器复用是什么？</h4><p>在Web自动化测试中，通常要求在成功扫码登陆后才能执行后续操作。这里boss直聘的反爬操作中，会经过人工输入验证码，然后才能接着进行爬虫操作，但是每次爬取一个字段的时候，就会新打开一个浏览器，导致登录状态取消。采用浏览器复用，可以帮助我们保持一个浏览器的开启，不会在运行过程中，新打开一个浏览器。</p>
-<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>① 首先打开<code>cmd</code>，输入<code>netstat -ano | findstr &quot;9222&quot;</code>查看<code>9222</code>端口是否被占用</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050444.png" alt="image-20250119185029052"></p>
-<p>如果运行结果如上，则说明<code>9222</code>端口没有被占用</p>
-<p>② 修改chrome浏览器设置，按照下图将<code>关闭 Google Chrome 后继续运行后台应用</code>按钮关闭</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250119191050445.png" alt="image-20250119185219755"></p>
-<p>③ 在<code>cmd</code>中输入<code>chrome.exe -remote-debugging-port=9222</code>会弹出一个浏览器页面，此时我们登录我们的boss账号进行爬取操作即可</p>
+    <title>Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</title>
+    <url>/2025/01/20/2025_1/git%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>使用git上传代码时，原本应该在几秒钟上传成功，但是却异常的慢，，这时突然出现一个错误弹窗（忘记截图了）：</p>
+<p>提示： “ssh:connect to host github.com port 22: Connection timed out”</p>
+<p>再多尝试几次，依然是这样。</p>
+<p>后来又尝试直接再文件夹里用git<a href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>提交：</p>
+<p>可惜结果依然是失败。。。</p>
+<p>又尝试重启电脑，结果毫无乱用。</p>
+<p>最后通过查阅各种资料，得知原因可能是由于电脑的防火墙或者其他网络原因导致<a href="https://so.csdn.net/so/search?q=ssh%E8%BF%9E%E6%8E%A5&spm=1001.2101.3001.7020">ssh连接</a>方式 端口22被封锁。</p>
+<hr>
+<h3 id="解决方法一："><a href="#解决方法一：" class="headerlink" title="解决方法一："></a>解决方法一：</h3><p><a href="https://blog.csdn.net/weixin_41287260/article/details/124368189">参考此篇文章</a></p>
+<h3 id="解决方法二："><a href="#解决方法二：" class="headerlink" title="解决方法二："></a>解决方法二：</h3><ol>
+<li>进入~&#x2F;.ssh下</li>
+<li>创建一个config文件</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br><span class="line"></span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line">User git</span><br><span class="line">Port 443</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+
+<p>4.保存退出</p>
+<p>5.检查是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>此时可以提交了</p>
+<h2 id="其他问题："><a href="#其他问题：" class="headerlink" title="其他问题："></a>其他问题：</h2><p>当我输入<code>hexo g</code>时，会出现如下错误：</p>
+<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250120100746810.png" alt="image-20250120095943942"></p>
+<p> 从错误信息中可以看出，问题发生在 Hexo 处理 <code>_posts/git问题.md</code> 文件时，出现了 YAML 格式错误。主要错误是 <code>YAMLException: bad indentation of a mapping entry</code>，这表明该文件的 Front Matter（前置数据块）部分存在缩进或语法问题。此外，还有一个提示 <code>connect to host github.com port 22: Connection timed out</code>，这可能与网络连接有关，但不太可能直接导致 Hexo 生成失败。</p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>我此篇博客的<code>title</code>是<code>“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</code>注意到，其中是有<code>“”</code>的，这可能导致上传失败。将<code>title</code>改为<code>&quot;“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”&quot;</code>即可解决此问题，同时后面的那个<code>Connection timed out</code>错误也解决了<strong>（昨天晚上折腾了2小时去解决网络问题，没想到问题出在这里，还是以后要注意看报错呀！！！）</strong></p>
 ]]></content>
       <categories>
-        <category>毕业设计</category>
+        <category>git</category>
       </categories>
       <tags>
-        <tag>毕业设计</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -272,64 +406,19 @@
       </tags>
   </entry>
   <entry>
-    <title>vim基本用法</title>
-    <url>/2025/01/15/2025_1/vim%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><ul>
-<li>vim filename可直接新建文件，打开文件后默认进入命令模式。</li>
-<li>命令模式下可以移动光标或者进行删除、复制、粘贴。</li>
-<li>移动光标常用命令：<ul>
-<li>方向键或者h（左）、j（下）、k（上）、l（右）：光标移动一个字符。</li>
-<li>[Ctrl] + [f]：向下翻页。</li>
-<li>[Ctrl] + [b]：向上翻页。</li>
-<li>0 或 [Home]：光标移动到当前行最前面的字符。</li>
-<li>$ 或 [End]：光标移动到当前行最后面的字符。</li>
-<li>G:光标移动到文件最后一行。</li>
-<li>gg：光标移动到文件第一行。</li>
-</ul>
-</li>
-<li>删除、复制、粘贴常用命令：<ul>
-<li>x：向后删除一个字符。</li>
-<li>X：向前删除一个字符。</li>
-<li>dd：删除当前行。</li>
-<li>ndd：n为数字，删除包含当前行的n行。</li>
-<li>yy：复制当前行。</li>
-<li>nyy：n为数字，复制包含当前行的n行。</li>
-<li>p：粘贴到当前行的下一行。</li>
-<li>P：粘贴到当前行的上一行。</li>
-<li>u：撤销上一个动作。</li>
-<li>[Ctrl] + [r]：重做上一个动作。</li>
-</ul>
-</li>
-</ul>
-<h2 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h2><ul>
-<li>在命令模式下按i进入编辑模式。编辑模式下可以看到“– INSERT –”的提示。</li>
-<li>编辑完成后按esc键退出到命令模式中。</li>
-</ul>
-<h2 id="末行模式："><a href="#末行模式：" class="headerlink" title="末行模式："></a>末行模式：</h2><ul>
-<li>在命令模式下按:（英文冒号）进入末行模式。该模式下可以进行设置、保存、退出等操作。</li>
-<li>按esc键可以退出到命令模式中。</li>
-<li>末行模式下常用命令：<ul>
-<li>:w：保存文件。</li>
-<li>:q：不保存，退出vim。</li>
-<li>:wq：保存并退出vim。</li>
-<li>:q!：不保存，强制退出vim。</li>
-<li>:wq!：保存并强制退出vim。</li>
-<li>:set nu：显示行号。</li>
-<li>:set nonu：取消行号。</li>
-<li>:set ff&#x3D;unix：设置文件格式为unix格式。</li>
-</ul>
-</li>
-</ul>
-<p>参考此篇blog：</p>
-<blockquote>
-<p>作者：拉普拉斯妖kk<br>链接：<a href="https://juejin.cn/post/7015514944527400973">https://juejin.cn/post/7015514944527400973</a><br>来源：稀土掘金</p>
-</blockquote>
+    <title>枚举</title>
+    <url>/2025/01/13/2025_1/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
+<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>一生一芯</category>
+        <category>考研</category>
       </categories>
       <tags>
-        <tag>一生一芯</tag>
+        <tag>考研</tag>
+        <tag>计算机机试</tag>
       </tags>
   </entry>
   <entry>
@@ -417,55 +506,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</title>
-    <url>/2025/01/20/2025_1/git%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>使用git上传代码时，原本应该在几秒钟上传成功，但是却异常的慢，，这时突然出现一个错误弹窗（忘记截图了）：</p>
-<p>提示： “ssh:connect to host github.com port 22: Connection timed out”</p>
-<p>再多尝试几次，依然是这样。</p>
-<p>后来又尝试直接再文件夹里用git<a href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>提交：</p>
-<p>可惜结果依然是失败。。。</p>
-<p>又尝试重启电脑，结果毫无乱用。</p>
-<p>最后通过查阅各种资料，得知原因可能是由于电脑的防火墙或者其他网络原因导致<a href="https://so.csdn.net/so/search?q=ssh%E8%BF%9E%E6%8E%A5&spm=1001.2101.3001.7020">ssh连接</a>方式 端口22被封锁。</p>
-<hr>
-<h3 id="解决方法一："><a href="#解决方法一：" class="headerlink" title="解决方法一："></a>解决方法一：</h3><p><a href="https://blog.csdn.net/weixin_41287260/article/details/124368189">参考此篇文章</a></p>
-<h3 id="解决方法二："><a href="#解决方法二：" class="headerlink" title="解决方法二："></a>解决方法二：</h3><ol>
-<li>进入~&#x2F;.ssh下</li>
-<li>创建一个config文件</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br><span class="line"></span><br><span class="line">Host gitlab.com</span><br><span class="line">Hostname altssh.gitlab.com</span><br><span class="line">User git</span><br><span class="line">Port 443</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>4.保存退出</p>
-<p>5.检查是否成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>此时可以提交了</p>
-<h2 id="其他问题："><a href="#其他问题：" class="headerlink" title="其他问题："></a>其他问题：</h2><p>当我输入<code>hexo g</code>时，会出现如下错误：</p>
-<p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250120100746810.png" alt="image-20250120095943942"></p>
-<p> 从错误信息中可以看出，问题发生在 Hexo 处理 <code>_posts/git问题.md</code> 文件时，出现了 YAML 格式错误。主要错误是 <code>YAMLException: bad indentation of a mapping entry</code>，这表明该文件的 Front Matter（前置数据块）部分存在缩进或语法问题。此外，还有一个提示 <code>connect to host github.com port 22: Connection timed out</code>，这可能与网络连接有关，但不太可能直接导致 Hexo 生成失败。</p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>我此篇博客的<code>title</code>是<code>“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”</code>注意到，其中是有<code>“”</code>的，这可能导致上传失败。将<code>title</code>改为<code>&quot;“Git问题：解决“ssh:connect to host github.com port 22: Connection timed out”&quot;</code>即可解决此问题，同时后面的那个<code>Connection timed out</code>错误也解决了<strong>（昨天晚上折腾了2小时去解决网络问题，没想到问题出在这里，还是以后要注意看报错呀！！！）</strong></p>
+    <title>第一篇博客</title>
+    <url>/2025/01/10/2025_1/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
+    <content><![CDATA[<p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
 ]]></content>
       <categories>
-        <category>git</category>
+        <category>生活</category>
       </categories>
       <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>枚举</title>
-    <url>/2025/01/13/2025_1/%E5%A4%8D%E8%AF%95%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h4 id="题目链接："><a href="#题目链接：" class="headerlink" title="题目链接："></a><strong>题目链接：</strong></h4><p><a href="https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&envId=enumeration">https://leetcode.cn/problems/count-good-triplets/description/?envType=problem-list-v2&amp;envId=enumeration</a></p>
-<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p><img src="https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250113233233070.png" alt="题目描述"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countGoodTriplets</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>() - <span class="number">2</span>; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>; ++j)&#123;</span><br><span class="line">                 <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; arr.<span class="built_in">size</span>(); ++k) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">abs</span>(arr[i] - arr[j]) &lt;= a &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[j] - arr[k]) &lt;= b &amp;&amp; </span><br><span class="line">                        <span class="built_in">abs</span>(arr[i] - arr[k]) &lt;= c) ++res;</span><br><span class="line">                 &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//int abs(int x)求绝对值，如果 x 是正数，则返回 x，如果 x 是负数，则返回它的相反数，即 -x。如果 x 是 0，则返回 0。</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
-        <tag>计算机机试</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -568,18 +617,6 @@
       </tags>
   </entry>
   <entry>
-    <title>第一篇博客</title>
-    <url>/2025/01/10/2025_1/%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
-    <content><![CDATA[<p>距离考研结束已经20天了，三天后回家，就应该准备复试内容，接着学操作系统和英语了</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>“hexo博客生成博文出现‘out of memory’的问题”</title>
     <url>/2025/01/31/2025_1/%E8%AE%B0%E5%BD%95%E6%96%87%E7%AB%A0%E8%BF%87%E5%A4%9A%E6%8F%90%E4%BA%A4%E5%A4%B1%E8%B4%A5/</url>
     <content><![CDATA[<p><strong>目前还没有遇见此问题，不知道此方法是否可行，目前我试了一下这个命令，不能运行，之后再试吧，偶然看到，记录一下此方法</strong></p>
@@ -609,35 +646,128 @@
       </tags>
   </entry>
   <entry>
-    <title>毕业设计01_爬虫完结（爬取boss直聘数据）</title>
-    <url>/2025/02/07/2025_2/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E7%88%AC%E8%99%AB%E5%AE%8C%E7%BB%93/</url>
-    <content><![CDATA[<p>爬虫部分没有记录笔记，爬虫中遇见的反爬中的问题见博客中的《Boss直聘反爬解决方法》</p>
-<h2 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h2><p>本项目采用<code>Django</code>框架，先创建一个新应用</p>
-<p>输入<code>python manage.py startapp myApp</code>，创建一个新的 Django 应用（App）</p>
-<p>生成的目录结构通常如下：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">myApp/</span><br><span class="line">    __init__.py <span class="comment"># 这是一个空文件，用于告诉 Python 这个目录是一个 Python 包。</span></span><br><span class="line">    admin.py <span class="comment"># 用于注册模型到 Django 的管理后台。</span></span><br><span class="line">    apps.py <span class="comment"># 包含应用的配置信息。</span></span><br><span class="line">    migrations/ <span class="comment"># 用于存放数据库迁移文件。</span></span><br><span class="line">        __init__.py</span><br><span class="line">    models.py <span class="comment"># 用于定义数据库模型。</span></span><br><span class="line">    tests.py <span class="comment"># 用于编写应用的测试用例。</span></span><br><span class="line">    views.py <span class="comment"># 用于编写视图函数或类。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="定义数据库模型"><a href="#定义数据库模型" class="headerlink" title="定义数据库模型"></a>定义数据库模型</h2><ol>
-<li>在 <code>models.py</code> 文件中，定义了三个 <code>Django</code> 模型：<code>JobInfo</code>、<code>User</code> 和 <code>History</code>。这些模型对应于数据库中的表，每个模型的字段对应于表中的列。通过定义模型，实际上是在定义数据库中的表结构 Django 会根据这些模型自动生成相应的数据库表。</li>
+    <title>spring面试题</title>
+    <url>/2025/04/11/2025_4/01%20spring/</url>
+    <content><![CDATA[<h1 id="牛客论坛01-Spring常见面试题"><a href="#牛客论坛01-Spring常见面试题" class="headerlink" title="牛客论坛01-Spring常见面试题"></a>牛客论坛01-Spring常见面试题</h1><h2 id="Spring中的IoC和AOP是什么？它们的作用是什么？"><a href="#Spring中的IoC和AOP是什么？它们的作用是什么？" class="headerlink" title="Spring中的IoC和AOP是什么？它们的作用是什么？"></a>Spring中的IoC和AOP是什么？它们的作用是什么？</h2><blockquote>
+<p><strong>IoC（Inversion of Control:控制反转）</strong> 是一种设计思想，而不是一个具体的技术实现。IoC 的思想就是将原本在程序中手动创建对象的控制权，交由 Spring 框架来管理。不过， IoC 并非 Spring 特有，在其他语言中也有应用。所以说，控制反转是一种思想，目的是为了<strong>降低了代码耦合度，提升了系统的灵活性和可维护性</strong>。</p>
+<p>在<strong>没有IoC容器</strong>的情况下，比如类A通过<code>new</code>关键字直接实例化类B，对象创建和依赖关系由开发者手动控制，代码耦合度高，难以维护和扩展。而在<strong>有IoC容器</strong>的情况下，IoC容器负责实例化类A和类B，并管理它们的依赖关系，主函数只需从容器中获取所需对象，无需手动创建。</p>
+<p>所谓控制，就是指的是对象的创建（实例化，管理什么的），反转指的是将控制权交给外部框架（spring框架，IoC容器）。IoC 容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件&#x2F;注解即可，完全不用考虑对象是如何被创建出来的。在实际项目中一个 Service 类可能依赖了很多其他的类，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把人逼疯。如果利用 IoC 的话，你只需要配置好，然后在需要的地方引用就行了，这大大增加了项目的可维护性且降低了开发难度。</p>
+<p>其实在spring中IoC就是一个实现IoC的载体，是一个Map，其中存放着各种对象，早期是通过XML来配置的Bean，后面SpringBoot注解配置更好，只需加上 <code>@Autowired</code> 或 <code>@Resource</code>，Spring 就会自动注入依赖对象慢慢流行起来。</p>
+<hr>
+<p>AOP是面向切面编程，能够将那些与业务无关，却为业务模块所共同调用的逻辑或责任（例如事务处理、日志管理、权限控制等）封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性。Spring AOP 就是基于动态代理的，如果要代理的对象，实现了某个接口，那么 Spring AOP 会使用 JDK 动态代理，去创建代理对象，而对于没有实现接口的对象，就无法进行代理了，这时候 Spring AOP 会使用 <strong>Cglib</strong> 生成一个被代理对象的子类来作为代理。</p>
+</blockquote>
+<h2 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h2><p>其流程大概是以下几个步骤：</p>
+<p><img src="https://oss.javaguide.cn/github/javaguide/system-design/framework/spring/de6d2b213f112297298f3e223bf08f28.png" alt="img"></p>
+<p><strong>流程说明（重要）：</strong></p>
+<ol>
+<li>客户端（浏览器）发送请求， <code>DispatcherServlet</code>拦截请求。（dis po cher servlet）</li>
+<li><code>DispatcherServlet</code> 根据请求信息调用 <code>HandlerMapping</code> 。<code>HandlerMapping</code> 根据 URL 去匹配查找能处理的 <code>Handler</code>（也就是我们平常说的 <code>Controller</code> 控制器） ，并会将请求涉及到的拦截器和 <code>Handler</code> 一起封装。</li>
+<li><code>DispatcherServlet</code> 调用 <code>HandlerAdapter</code>适配器执行 <code>Handler</code> 。</li>
+<li><code>Handler</code> 完成对用户请求的处理后，会返回一个 <code>ModelAndView</code> 对象给<code>DispatcherServlet</code>，<code>ModelAndView</code> 顾名思义，包含了数据模型以及相应的视图的信息。<code>Model</code> 是返回的数据对象，<code>View</code> 是个逻辑上的 <code>View</code>。</li>
+<li><code>ViewResolver</code> 会根据逻辑 <code>View</code> 查找实际的 <code>View</code>。</li>
+<li><code>DispaterServlet</code> 把返回的 <code>Model</code> 传给 <code>View</code>（视图渲染）。</li>
+<li>把 <code>View</code> 返回给请求者（浏览器）</li>
 </ol>
-<p><strong>有以下好处：</strong></p>
+<p>上述流程是传统开发模式（JSP，Thymeleaf 【time leaf】等）的工作原理。然而现在主流的开发方式是前后端分离，这种情况下 Spring MVC 的 <code>View</code> 概念发生了一些变化。由于 <code>View</code> 通常由前端框架（Vue, React 等）来处理，后端不再负责渲染页面，而是只负责提供数据，因此：</p>
 <ul>
-<li><strong>数据持久化</strong>：这些模型将用于在数据库中存储和管理数据。例如，可以通过 <code>JobInfo</code> 模型来存储和查询岗位信息，通过 <code>User</code> 模型来管理用户信息。</li>
-<li><strong>数据关系</strong>：通过外键（如 <code>History</code> 模型中的 <code>job</code> 和 <code>user</code>），可以在不同的模型之间建立关系，从而实现复杂的数据查询和操作。</li>
-<li><strong>数据库迁移</strong>：在定义好模型后，可以使用 Django 的迁移工具（<code>python manage.py makemigrations</code> 和 <code>python manage.py migrate</code>）来创建或更新数据库表结构。</li>
+<li>前后端分离时，后端通常不再返回具体的视图，而是返回<strong>纯数据</strong>（通常是 JSON 格式），由前端负责渲染和展示。</li>
+<li><code>View</code> 的部分在前后端分离的场景下往往不需要设置，Spring MVC 的控制器方法只需要返回数据，不再返回 <code>ModelAndView</code>，而是直接返回数据，Spring 会自动将其转换为 JSON 格式。相应的，<code>ViewResolver</code> 也将不再被使用。</li>
 </ul>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your models here.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JobInfo</span>(models.Model):</span><br><span class="line">    <span class="built_in">id</span> = models.AutoField(<span class="string">&#x27;id&#x27;</span>, primary_key=<span class="literal">True</span>)</span><br><span class="line">    title = models.CharField(<span class="string">&quot;岗位名字&quot;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    address = models.CharField(<span class="string">&#x27;省会&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="built_in">type</span> = models.CharField(<span class="string">&#x27;职业&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    educational = models.CharField(<span class="string">&#x27;学历&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    workExperience = models.CharField(<span class="string">&#x27;工作经验&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    workTag = models.CharField(<span class="string">&#x27;工作标签&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    salary = models.CharField(<span class="string">&#x27;薪资&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    salaryMonth = models.CharField(<span class="string">&#x27;年终奖&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyTags = models.CharField(<span class="string">&#x27;公司福利&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    hrWork = models.CharField(<span class="string">&#x27;人事职位&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    hrName = models.CharField(<span class="string">&#x27;人事名字&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    pratice = models.BooleanField(<span class="string">&#x27;是否为实习单位&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyTitle = models.CharField(<span class="string">&#x27;公司名称&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyAvatar = models.CharField(<span class="string">&#x27;公司头像&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyNature = models.CharField(<span class="string">&#x27;公司性质&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyStatus = models.CharField(<span class="string">&#x27;公司状态&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyPeople = models.CharField(<span class="string">&#x27;公司人数&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    detailUrl = models.CharField(<span class="string">&#x27;详情地址&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyUrl = models.CharField(<span class="string">&#x27;公司详情地址 &#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    companyUrl = models.CharField(<span class="string">&#x27;公司详情地址&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    createTime = models.DateTimeField(<span class="string">&#x27;创建时间&#x27;</span>, auto_now_add=<span class="literal">True</span>)</span><br><span class="line">    dist = models.CharField(<span class="string">&#x27;行政区&#x27;</span>, max_length=<span class="number">25</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        db_table = <span class="string">&quot;jobInfo&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>(models.Model):</span><br><span class="line">    <span class="built_in">id</span> = models.AutoField(<span class="string">&#x27;id&#x27;</span>, primary_key=<span class="literal">True</span>)</span><br><span class="line">    username = models.CharField(<span class="string">&#x27;用户名&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    password = models.CharField(<span class="string">&#x27;密码&#x27;</span>, max_length=<span class="number">25</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    educational = models.CharField(<span class="string">&#x27;学历&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    workExpirence = models.CharField(<span class="string">&#x27;工作经验&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    address = models.CharField(<span class="string">&#x27;意向城市&#x27;</span>, max_length=<span class="number">255</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    work = models.CharField(<span class="string">&#x27;意向岗位&#x27;</span>, max_length=<span class="number">25</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    avatar = models.FileField(<span class="string">&#x27;用户头像&#x27;</span>, upload_to=<span class="string">&quot;avatar&quot;</span>, default=<span class="string">&quot;avatar/default.png&quot;</span>)</span><br><span class="line">    createTime = models.DateTimeField(<span class="string">&#x27;创建时间&#x27;</span>, auto_now_add=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        db_table = <span class="string">&quot;user&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">History</span>(models.Model):</span><br><span class="line">    <span class="built_in">id</span> = models.AutoField(<span class="string">&#x27;id&#x27;</span>, primary_key=<span class="literal">True</span>)</span><br><span class="line">    job = models.ForeignKey(JobInfo, on_delete=models.CASCADE)</span><br><span class="line">    user = models.ForeignKey(User, on_delete=models.CASCADE)</span><br><span class="line">    count = models.IntegerField(<span class="string">&quot;点击次数&quot;</span>, default=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        db_table = <span class="string">&quot;histroy&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>在<code>graduationdesign</code>中的<code>settings.py</code>的<code>INSTALLED_APPS </code>中添加应用——<code>myApp</code>，然后进行数据库的迁移，在 mysql 数据库中生成相关的表</li>
+<p>怎么做到呢？</p>
+<ul>
+<li>使用 <code>@RestController</code> 注解代替传统的 <code>@Controller</code> 注解，这样所有方法默认会返回 JSON 格式的数据，而不是试图解析视图。</li>
+<li>如果你使用的是 <code>@Controller</code>，可以结合 <code>@ResponseBody</code> 注解来返回 JSON。</li>
+</ul>
+<blockquote>
+<p>“在传统 Spring MVC 中，<code>DispatcherServlet</code> 拦截请求后，通过 <code>HandlerMapping</code> 查找 <code>Controller</code>，执行处理并返回 <code>ModelAndView</code>，最后由 <code>ViewResolver</code> 解析视图并渲染返回。而在前后端分离模式下，后端通过 <code>@RestController</code> 或 <code>@ResponseBody</code> 直接返回 JSON 数据，由前端负责渲染，<code>ViewResolver</code> 和视图渲染流程不再需要。这种模式更符合现代开发需求，提升了开发效率和系统灵活性。”</p>
+</blockquote>
+<h2 id="Spring-Spring-MVC-SpringBoot直接有什么关系？"><a href="#Spring-Spring-MVC-SpringBoot直接有什么关系？" class="headerlink" title="Spring, Spring MVC, SpringBoot直接有什么关系？"></a>Spring, Spring MVC, SpringBoot直接有什么关系？</h2><blockquote>
+<p>Spring 是一个开源的 Java 企业级开发框架，主要提供 IoC（控制反转）和 AOP（面向切面编程）功能，简化 Java 开发。Spring MVC 是 Spring 框架中的一个子模块，专门用于构建 Web 应用，它基于 MVC（Model-View-Controller）设计模式，提供了强大的请求处理、数据绑定、视图解析等功能，适用于开发传统的 Java Web 应用。而 Spring Boot 是在 Spring 基础上发展而来的，它简化了 Spring 的配置，提供了一套开箱即用的默认配置，并且内置了 Tomcat 等 Web 服务器，让开发者可以快速构建独立运行的 Spring 应用，而无需手动配置 XML 或复杂的 Bean 管理。简单来说，Spring 是一个大框架，Spring MVC 负责 Web 层，而 Spring Boot 进一步简化了 Spring 的使用，提升了开发效率。</p>
+</blockquote>
+<h2 id="Spring框架中用了哪些设计模式？"><a href="#Spring框架中用了哪些设计模式？" class="headerlink" title="Spring框架中用了哪些设计模式？"></a>Spring框架中用了哪些设计模式？</h2><p><strong>工厂设计模式</strong> : Spring 使用工厂模式通过 <code>BeanFactory</code>、<code>ApplicationContext</code> 创建 bean 对象。</p>
+<p><strong>代理设计模式</strong> : Spring AOP 功能的实现。</p>
+<p><strong>单例设计模式</strong> : Spring 中的 Bean 默认都是单例的。</p>
+<p><strong>模板方法模式</strong> : Spring 中 <code>jdbcTemplate</code>、<code>hibernateTemplate</code> 等以 Template 结尾的对数据库操作的类，它们就使用到了模板模式。</p>
+<p><strong>包装器设计模式</strong> : 我们的项目需要连接多个数据库，而且不同的客户在每次访问中根据需要会去访问不同的数据库。这种模式让我们可以根据客户的需求能够动态切换不同的数据源。</p>
+<p><strong>观察者模式:</strong> Spring 事件驱动模型就是观察者模式很经典的一个应用。</p>
+<p><strong>适配器模式</strong> : Spring AOP 的增强或通知(Advice)使用到了适配器模式、spring MVC 中也是用到了适配器模式适配<code>Controller</code>。</p>
+<h2 id="什么是spring的bean？"><a href="#什么是spring的bean？" class="headerlink" title="什么是spring的bean？"></a>什么是spring的bean？</h2><blockquote>
+<p>Bean 代指的就是那些被 IoC 容器所管理的对象。</p>
+<p>我们需要告诉 IoC 容器帮助我们管理哪些对象，这个是通过配置元数据来定义的。配置元数据可以是 XML 文件、注解或者 Java 配置类。</p>
+</blockquote>
+<h2 id="Bean的注解有哪些？"><a href="#Bean的注解有哪些？" class="headerlink" title="Bean的注解有哪些？"></a>Bean的注解有哪些？</h2><blockquote>
+<p><code>@Component</code>：通用的注解，可标注任意类为 <code>Spring</code> 组件。如果一个 Bean 不知道属于哪个层，可以使用<code>@Component</code> 注解标注。</p>
+<p><code>@Repository</code> : 对应持久层即 Dao 层，主要用于数据库相关操作。</p>
+<p><code>@Service</code> : 对应服务层，主要涉及一些复杂的逻辑，需要用到 Dao 层。</p>
+<p><code>@Controller</code> : 对应 Spring MVC 控制层，主要用于接受用户请求并调用 <code>Service</code> 层返回数据给前端页面。</p>
+</blockquote>
+<h2 id="spring的事务"><a href="#spring的事务" class="headerlink" title="spring的事务"></a>spring的事务</h2><p><strong>事务是逻辑上的一组操作，要么都执行，要么都不执行。</strong></p>
+<h3 id="Spring-事务传播机制有哪些"><a href="#Spring-事务传播机制有哪些" class="headerlink" title="Spring 事务传播机制有哪些"></a>Spring 事务传播机制有哪些</h3><p>propagation 代表事务的传播行为，默认值为 <code>Propagation.REQUIRED</code>，其他的属性信息如下</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e12eec102bf605fe084a3eb2aa0a8855.png" alt="image.png"></p>
+<h3 id="Transactional的其他属性有哪些？"><a href="#Transactional的其他属性有哪些？" class="headerlink" title="@Transactional的其他属性有哪些？"></a>@Transactional的其他属性有哪些？</h3><p><strong>timeout 属性</strong></p>
+<p>timeout ：事务的超时时间，默认值为 -1。如果超过该时间限制但事务还没有完成，则自动回滚事务。</p>
+<p><strong>readOnly 属性</strong></p>
+<p>readOnly ：指定事务是否为只读事务，默认值为 false；为了忽略那些不需要事务的方法，比如读取数据，可以设置 read-only 为 true。<br><strong>isolation 属性</strong></p>
+<p>isolation ：事务的隔离级别，默认值为Isolation.DEFAULT</p>
+<p>Isolation.DEFAULT：使用底层数据库默认的隔离级别。<br>Isolation.READ_UNCOMMITTED：读未提交<br>Isolation.READ_COMMITTED：读已提交<br>Isolation.REPEATABLE_READ：可重复读<br>Isolation.SERIALIZABLE：串行化<strong>rollbackFor 属性</strong></p>
+<p>rollbackFor ：用于指定能够触发事务回滚的异常类型，可以指定多个异常类型。</p>
+<p><strong>noRollbackFor属性</strong></p>
+<p>noRollbackFor：抛出指定的异常类型，不回滚事务，也可以指定多个异常类型。</p>
+<h2 id="MyBatis中的-和-的区别是什么？如何防止SQL注入？"><a href="#MyBatis中的-和-的区别是什么？如何防止SQL注入？" class="headerlink" title="MyBatis中的#{}和${}的区别是什么？如何防止SQL注入？"></a>MyBatis中的#{}和${}的区别是什么？如何防止SQL注入？</h2><blockquote>
+<p>在 MyBatis 中，<code>#&#123;&#125;</code> 和 <code>$&#123;&#125;</code> 是两种不同的参数占位符，它们的主要区别在于处理方式和安全性。<code>#&#123;&#125;</code> 是预编译占位符，MyBatis 会将其替换为 <code>?</code>，并通过 <code>PreparedStatement</code> 设置参数值，这种方式会对参数值进行转义，从而有效防止 SQL 注入，适合用于传递参数值，例如 <code>WHERE id = #&#123;id&#125;</code>。而 <code>$&#123;&#125;</code> 是字符串替换，MyBatis 会直接将值拼接到 SQL 语句中，这种方式不会对参数值进行转义，因此存在 SQL 注入风险，通常用于动态拼接表名、列名等场景，例如 <code>ORDER BY $&#123;columnName&#125;</code>。</p>
+<p>为了防止 SQL 注入，推荐优先使用 <code>#&#123;&#125;</code>，因为它能够自动处理参数值的转义，确保安全性。如果必须使用 <code>$&#123;&#125;</code>，应确保拼接的值是可信的，例如动态表名或列名，而不是用户输入的直接拼接。此外，还可以通过以下方式进一步增强安全性：严格校验用户输入，确保其符合预期格式；使用 MyBatis 的动态 SQL 标签（如 <code>&lt;if&gt;</code>、<code>&lt;choose&gt;</code>）生成安全的 SQL 语句，避免手动拼接 SQL；遵循最小权限原则，限制数据库用户的权限，避免使用高权限账号执行 SQL 操作。通过这些方法，可以有效防止 SQL 注入，确保应用的安全性。</p>
+</blockquote>
+<h2 id="Transactional失效场景与解决办法"><a href="#Transactional失效场景与解决办法" class="headerlink" title="@Transactional失效场景与解决办法"></a>@Transactional失效场景与解决办法</h2><p><strong><a href="https://blog.csdn.net/qq_57581439/article/details/132086303?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522f2084811286d77b37215da15ae86a796%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=f2084811286d77b37215da15ae86a796&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-132086303-null-null.142%5Ev102%5Epc_search_result_base4&utm_term=@Transactional&spm=1018.2226.3001.4187">链接</a></strong></p>
+<p>1、@Transactional 应用在非 public <strong>修饰的方法上</strong></p>
+<p>2、@Transactional 注解属性 propagation 设置错误</p>
+<p>3、@Transactional 注解属性 rollbackFor 设置错误</p>
+<p>4、同一个类中方法调用，导致@Transactional失效</p>
+<p>6、数据库引擎不支持事务</p>
+<h2 id="同一Service内方法A（无-Transactional）调用方法B（有-Transactional）是否生效？"><a href="#同一Service内方法A（无-Transactional）调用方法B（有-Transactional）是否生效？" class="headerlink" title="同一Service内方法A（无@Transactional）调用方法B（有@Transactional）是否生效？"></a>同一Service内方法A（无@Transactional）调用方法B（有@Transactional）是否生效？</h2><p>好的，面试官！我来具体回答这个问题。</p>
+<p>在同一 Service 内，如果方法 A（没有 <code>@Transactional</code>）调用方法 B（有 <code>@Transactional</code>），那么方法 B 的事务<strong>不会生效</strong>。原因是 Spring 的事务管理是基于代理机制实现的，当方法 A 直接调用方法 B 时，实际上是目标对象内部的方法调用，而不是通过代理对象调用，因此事务拦截器不会起作用。</p>
+<h3 id="为什么不会生效？"><a href="#为什么不会生效？" class="headerlink" title="为什么不会生效？"></a>为什么不会生效？</h3><p>• Spring 的事务是通过 AOP 动态代理实现的，代理对象会在方法调用前后添加事务管理的逻辑。<br>• 当方法 A 调用方法 B 时，是直接调用目标对象的方法，而不是通过代理对象调用，所以事务拦截器不会生效。</p>
+<h3 id="如何解决？"><a href="#如何解决？" class="headerlink" title="如何解决？"></a>如何解决？</h3><ol>
+<li><strong>将方法 A 和方法 B 拆分到不同的类中</strong>：通过代理对象调用方法 B，确保事务生效。</li>
+<li><strong>使用 <code>AopContext.currentProxy()</code> 获取当前代理对象</strong>：在方法 A 中通过代理对象调用方法 B。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">((YourService) AopContext.currentProxy()).methodB();</span><br></pre></td></tr></table></figure></li>
+<li><strong>在方法 A 上添加 <code>@Transactional</code> 注解</strong>：让整个调用链处于事务管理之下。</li>
 </ol>
-<p>用以下指令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>修改爬虫代码，添加保存数据库中的功能，然后向数据库中存入数据</li>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>同一 Service 内方法 A 调用方法 B 时，方法 B 的事务不会生效，因为直接调用绕过了代理机制。需要通过拆分类、使用代理对象或在方法 A 上加事务注解来解决。</p>
+<p>以上就是我的回答，谢谢！</p>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>超文本传输协议，用于传输HTML等内容的应用层协议，规定了浏览器和服务器之间如何通信的，以及通信时的数据格式。</p>
+<p>好的，面试官！我来回答这个问题。</p>
+<hr>
+<h3 id="1-HTTP-报文结构及内容类型标识？"><a href="#1-HTTP-报文结构及内容类型标识？" class="headerlink" title="1. HTTP 报文结构及内容类型标识？"></a><strong>1. HTTP 报文结构及内容类型标识？</strong></h3><p>HTTP 报文分为<strong>请求报文</strong>和<strong>响应报文</strong>，结构如下：</p>
+<h4 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a><strong>请求报文</strong></h4><ol>
+<li><strong>请求行</strong>：包含请求方法（如 <code>GET</code>、<code>POST</code>）、请求 URL 和 HTTP 版本。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GET /index.html HTTP/1.1</span><br></pre></td></tr></table></figure></li>
+<li><strong>请求头</strong>：包含客户端信息、请求内容类型等。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host: www.example.com</span><br><span class="line">Content-Type: application/json</span><br></pre></td></tr></table></figure></li>
+<li><strong>请求体</strong>：可选，用于传递数据（如 <code>POST</code> 请求中的表单或 JSON 数据）。</li>
 </ol>
-<h2 id="爬boss直聘原码（附带存入数据库）"><a href="#爬boss直聘原码（附带存入数据库）" class="headerlink" title="爬boss直聘原码（附带存入数据库）"></a>爬boss直聘原码（附带存入数据库）</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.service <span class="keyword">import</span> Service</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> django</span><br><span class="line"></span><br><span class="line">os.environ.setdefault(<span class="string">&#x27;DJANGO_SETTINGS_MODULE&#x27;</span>, <span class="string">&#x27;graduationdesign.settings&#x27;</span>)</span><br><span class="line">django.setup()</span><br><span class="line"><span class="keyword">from</span> myApp.models <span class="keyword">import</span> JobInfo</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">spider</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, <span class="built_in">type</span>, page</span>):</span><br><span class="line">        <span class="variable language_">self</span>.<span class="built_in">type</span> = <span class="built_in">type</span>  <span class="comment"># 岗位关键字</span></span><br><span class="line">        <span class="variable language_">self</span>.page = <span class="built_in">int</span>(page)  <span class="comment"># 页码数（当前页码数）</span></span><br><span class="line">        <span class="variable language_">self</span>.spiderUrl = <span class="string">&quot;https://www.zhipin.com/web/geek/job?query=%s&amp;city=100010000&amp;page=%s&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.brower = <span class="variable language_">self</span>.startBrower()  <span class="comment"># 只初始化一次浏览器实例</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">startBrower</span>(<span class="params">self</span>):</span><br><span class="line">        service = Service(<span class="string">&quot;./chromedriver.exe&quot;</span>)</span><br><span class="line">        options = webdriver.ChromeOptions()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 浏览器的复用（防止反爬）</span></span><br><span class="line">        <span class="comment"># 打开cmd 输入   chrome.exe -remote-debugging-port=9222</span></span><br><span class="line">        options.add_experimental_option(<span class="string">&#x27;debuggerAddress&#x27;</span>, <span class="string">&#x27;localhost:9222&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 方法二：使用过手机热点，每次重新打开手机热点，IP地址也不一样</span></span><br><span class="line">        <span class="comment"># options.add_experimental_option(&quot;excludeSwitches&quot;, [&#x27;enable-automation&#x27;])</span></span><br><span class="line">        brower = webdriver.Chrome(service=service, options=options)</span><br><span class="line">        <span class="keyword">return</span> brower</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">main</span>(<span class="params">self, page</span>):  <span class="comment"># page为总共要爬取的page总数</span></span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.page &gt; page: <span class="keyword">return</span></span><br><span class="line">        <span class="comment"># brower = self.startBrower()</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;正在爬取的页面路径：&quot;</span> + <span class="variable language_">self</span>.spiderUrl % (<span class="variable language_">self</span>.<span class="built_in">type</span>, <span class="variable language_">self</span>.page))</span><br><span class="line">        <span class="variable language_">self</span>.brower.get(<span class="variable language_">self</span>.spiderUrl % (<span class="variable language_">self</span>.<span class="built_in">type</span>, <span class="variable language_">self</span>.page))</span><br><span class="line">        time.sleep(<span class="number">15</span>)</span><br><span class="line">        job_list = <span class="variable language_">self</span>.brower.find_elements(by=By.XPATH, value=<span class="string">&#x27;//ul[@class=&quot;job-list-box&quot;]/li&#x27;</span>)  <span class="comment"># value参数使用XPATH语法</span></span><br><span class="line">        <span class="keyword">for</span> index, job <span class="keyword">in</span> <span class="built_in">enumerate</span>(job_list):</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                jobData = []</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;正在爬取第%d个数据&quot;</span> % (index + <span class="number">1</span>))</span><br><span class="line">                <span class="comment"># title</span></span><br><span class="line">                title = job.find_element(by=By.XPATH,</span><br><span class="line">                                         value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-title&#x27;)]&quot;</span></span><br><span class="line">                                               <span class="string">&quot;/span[@class=&#x27;job-name&#x27;]&quot;</span>).text</span><br><span class="line">                <span class="comment"># address</span></span><br><span class="line">                addresses = job.find_element(by=By.XPATH,</span><br><span class="line">                                             value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-title&#x27;)]&quot;</span></span><br><span class="line">                                                   <span class="string">&quot;/span[@class=&#x27;job-area-wrapper&#x27;]/span&quot;</span>).text.split(<span class="string">&#x27;·&#x27;</span>)</span><br><span class="line">                address = addresses[<span class="number">0</span>]</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(addresses) != <span class="number">1</span>:</span><br><span class="line">                    dist = addresses[<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dist = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># type</span></span><br><span class="line">                <span class="built_in">type</span> = <span class="variable language_">self</span>.<span class="built_in">type</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># educational, workExperience</span></span><br><span class="line">                tag_list = job.find_elements(by=By.XPATH,</span><br><span class="line">                                             value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                   <span class="string">&quot;/ul[@class=&#x27;tag-list&#x27;]/li&quot;</span>)</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(tag_list) == <span class="number">2</span>:</span><br><span class="line">                    educational = tag_list[<span class="number">1</span>].text</span><br><span class="line">                    workExperience = tag_list[<span class="number">0</span>].text</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    educational = tag_list[<span class="number">2</span>].text</span><br><span class="line">                    workExperience = tag_list[<span class="number">1</span>].text</span><br><span class="line"></span><br><span class="line">                <span class="comment"># hrName</span></span><br><span class="line">                hrName = job.find_element(by=By.XPATH,</span><br><span class="line">                                          value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                <span class="string">&quot;/div[@class=&#x27;info-public&#x27;]&quot;</span>).text</span><br><span class="line">                <span class="comment"># hrWork</span></span><br><span class="line">                hrWork = job.find_element(by=By.XPATH,</span><br><span class="line">                                          value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                <span class="string">&quot;/div[@class=&#x27;info-public&#x27;]/em&quot;</span>).text</span><br><span class="line">                <span class="comment"># workTag</span></span><br><span class="line">                workTag = job.find_elements(by=By.XPATH,</span><br><span class="line">                                            value=<span class="string">&quot;./div[contains(@class,&#x27;job-card-footer&#x27;)]/ul[@class=&#x27;tag-list&#x27;]/li&quot;</span>)</span><br><span class="line">                workTag = json.dumps(<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.text, workTag)))</span><br><span class="line"></span><br><span class="line">                <span class="comment"># pratice</span></span><br><span class="line">                pratice = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">                salaries = job.find_element(by=By.XPATH,</span><br><span class="line">                                            value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]/div[contains(@class,&#x27;job-info&#x27;)]&quot;</span></span><br><span class="line">                                                  <span class="string">&quot;/span[@class=&#x27;salary&#x27;]&quot;</span>).text</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> salaries.find(<span class="string">&#x27;K&#x27;</span>) != -<span class="number">1</span>:</span><br><span class="line">                    salaries = salaries.split(<span class="string">&#x27;·&#x27;</span>)</span><br><span class="line">                    <span class="keyword">if</span> <span class="built_in">len</span>(salaries) == <span class="number">1</span>:</span><br><span class="line">                        <span class="comment"># salary</span></span><br><span class="line">                        salary = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: <span class="built_in">int</span>(x) * <span class="number">1000</span>, salaries[<span class="number">0</span>].replace(<span class="string">&#x27;K&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                        <span class="comment"># salaryMonth</span></span><br><span class="line">                        salaryMonth = <span class="string">&#x27;0薪&#x27;</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="comment"># salary</span></span><br><span class="line">                        salary = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: <span class="built_in">int</span>(x) * <span class="number">1000</span>, salaries[<span class="number">0</span>].replace(<span class="string">&#x27;K&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                        <span class="comment"># salaryMonth</span></span><br><span class="line">                        salaryMonth = salaries[<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># salary</span></span><br><span class="line">                    salary = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: <span class="built_in">int</span>(x), salaries.replace(<span class="string">&#x27;元/天&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                    <span class="comment"># salaryMonth</span></span><br><span class="line">                    salaryMonth = <span class="string">&#x27;0薪&#x27;</span></span><br><span class="line">                    pratice = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># companyTitle</span></span><br><span class="line">                companyTitle = job.find_element(by=By.XPATH,</span><br><span class="line">                                                value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-info&#x27;]/h3/a&quot;</span>).text</span><br><span class="line">                <span class="comment"># companyAvatar</span></span><br><span class="line">                companyAvatar = job.find_element(by=By.XPATH,</span><br><span class="line">                                                 value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-logo&#x27;]/a/img&quot;</span>).get_attribute(</span><br><span class="line">                    <span class="string">&quot;src&quot;</span>)</span><br><span class="line">                companyInfos = job.find_elements(by=By.XPATH,</span><br><span class="line">                                                 value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-info&#x27;]/ul[@class=&#x27;company-tag-list&#x27;]/li&quot;</span>)</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(companyInfos) == <span class="number">3</span>:</span><br><span class="line">                    <span class="comment"># companyNature</span></span><br><span class="line">                    companyNature = companyInfos[<span class="number">0</span>].text</span><br><span class="line">                    <span class="comment"># companyStatus</span></span><br><span class="line">                    companyStatus = companyInfos[<span class="number">1</span>].text</span><br><span class="line">                    <span class="comment"># companyPeople</span></span><br><span class="line">                    companyPeoples = companyInfos[<span class="number">2</span>].text</span><br><span class="line">                    <span class="keyword">if</span> companyPeoples != <span class="string">&quot;10000人以上&quot;</span>:</span><br><span class="line">                        companyPeople = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x, companyInfos[<span class="number">2</span>].text.replace(<span class="string">&#x27;人&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        companyPeople = [<span class="number">0</span>, <span class="number">10000</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># companyNature</span></span><br><span class="line">                    companyNature = companyInfos[<span class="number">0</span>].text</span><br><span class="line">                    <span class="comment"># companyStatus</span></span><br><span class="line">                    companyStatus = <span class="string">&#x27;未融资&#x27;</span></span><br><span class="line">                    <span class="comment"># companyPeople</span></span><br><span class="line">                    companyPeoples = companyInfos[<span class="number">1</span>].text</span><br><span class="line">                    <span class="keyword">if</span> companyPeoples != <span class="string">&quot;10000人以上&quot;</span>:</span><br><span class="line">                        companyPeople = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x, companyInfos[<span class="number">1</span>].text.replace(<span class="string">&#x27;人&#x27;</span>, <span class="string">&#x27;&#x27;</span>).split(<span class="string">&#x27;-&#x27;</span>)))</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        companyPeople = [<span class="number">0</span>, <span class="number">10000</span>]</span><br><span class="line"></span><br><span class="line">                <span class="comment"># companyTags</span></span><br><span class="line">                companyTags = job.find_element(by=By.XPATH,</span><br><span class="line">                                               value=<span class="string">&quot;./div[contains(@class,&#x27;job-card-footer&#x27;)]/div[@class=&#x27;info-desc&#x27;]&quot;</span>).text</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> companyTags:</span><br><span class="line">                    companyTags = <span class="string">&#x27;无&#x27;</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    companyTags = json.dumps(companyTags.split(<span class="string">&#x27;，&#x27;</span>))</span><br><span class="line"></span><br><span class="line">                <span class="comment"># detailUr</span></span><br><span class="line">                detailUrl = job.find_element(by=By.XPATH,</span><br><span class="line">                                             value=<span class="string">&quot;.//a[@class=&#x27;job-card-left&#x27;]&quot;</span>).get_attribute(<span class="string">&#x27;href&#x27;</span>)</span><br><span class="line">                <span class="comment"># companyUr</span></span><br><span class="line">                companyUrl = job.find_element(by=By.XPATH,</span><br><span class="line">                                              value=<span class="string">&quot;.//div[@class=&#x27;job-card-right&#x27;]/div[@class=&#x27;company-info&#x27;]/h3/a&quot;</span>).get_attribute(</span><br><span class="line">                    <span class="string">&#x27;href&#x27;</span>)</span><br><span class="line"></span><br><span class="line">                jobData.append(title)</span><br><span class="line">                jobData.append(address)</span><br><span class="line">                jobData.append(<span class="built_in">type</span>)</span><br><span class="line">                jobData.append(educational)</span><br><span class="line">                jobData.append(workExperience)</span><br><span class="line">                jobData.append(workTag)</span><br><span class="line">                jobData.append(salary)</span><br><span class="line">                jobData.append(salaryMonth)</span><br><span class="line">                jobData.append(companyTags)</span><br><span class="line">                jobData.append(hrWork)</span><br><span class="line">                jobData.append(hrName)</span><br><span class="line">                jobData.append(pratice)</span><br><span class="line">                jobData.append(companyTitle)</span><br><span class="line">                jobData.append(companyAvatar)</span><br><span class="line">                jobData.append(companyNature)</span><br><span class="line">                jobData.append(companyStatus)</span><br><span class="line">                jobData.append(companyPeople)</span><br><span class="line">                jobData.append(detailUrl)</span><br><span class="line">                jobData.append(companyUrl)</span><br><span class="line">                jobData.append(dist)</span><br><span class="line"></span><br><span class="line">                <span class="variable language_">self</span>.save_to_csv(jobData)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">        <span class="variable language_">self</span>.page += <span class="number">1</span>;</span><br><span class="line">        <span class="variable language_">self</span>.main(page)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save_to_csv</span>(<span class="params">self, rowData</span>):</span><br><span class="line">        <span class="comment"># with open(&#x27;./temp1.csv&#x27;, &#x27;a&#x27;, newline=&#x27;&#x27;, encoding=&#x27;utf8&#x27;) as wf:</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./temp2.csv&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, newline=<span class="string">&#x27;&#x27;</span>, encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>) <span class="keyword">as</span> wf:</span><br><span class="line">            writer = csv.writer(wf)</span><br><span class="line">            writer.writerow(rowData)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">clear_csv</span>(<span class="params">self</span>):</span><br><span class="line">        df = pd.read_csv(<span class="string">&#x27;./temp2.csv&#x27;</span>)</span><br><span class="line">        df.dropna(inplace=<span class="literal">True</span>)</span><br><span class="line">        df.drop_duplicates(inplace=<span class="literal">True</span>)</span><br><span class="line">        df[<span class="string">&#x27;salaryMonth&#x27;</span>] = df[<span class="string">&#x27;salaryMonth&#x27;</span>].<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.replace(<span class="string">&#x27;薪&#x27;</span>, <span class="string">&#x27;&#x27;</span>))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;总数为%d&quot;</span> % df.shape[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">return</span> df.values</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save_to_sql</span>(<span class="params">self</span>):</span><br><span class="line">        data = <span class="variable language_">self</span>.clear_csv()</span><br><span class="line">        <span class="keyword">for</span> job <span class="keyword">in</span> data:</span><br><span class="line">            JobInfo.objects.create(</span><br><span class="line">                title=job[<span class="number">0</span>],</span><br><span class="line">                address=job[<span class="number">1</span>],</span><br><span class="line">                <span class="built_in">type</span>=job[<span class="number">2</span>],</span><br><span class="line">                educational=job[<span class="number">3</span>],</span><br><span class="line">                workExperience=job[<span class="number">4</span>],</span><br><span class="line">                workTag=job[<span class="number">5</span>],</span><br><span class="line">                salary=job[<span class="number">6</span>],</span><br><span class="line">                salaryMonth=job[<span class="number">7</span>],</span><br><span class="line">                companyTags=job[<span class="number">8</span>],</span><br><span class="line">                hrWork=job[<span class="number">9</span>],</span><br><span class="line">                hrName=job[<span class="number">10</span>],</span><br><span class="line">                pratice=job[<span class="number">11</span>],</span><br><span class="line">                companyTitle=job[<span class="number">12</span>],</span><br><span class="line">                companyAvatar=job[<span class="number">13</span>],</span><br><span class="line">                companyNature=job[<span class="number">14</span>],</span><br><span class="line">                companyStatus=job[<span class="number">15</span>],</span><br><span class="line">                companyPeople=job[<span class="number">16</span>],</span><br><span class="line">                detailUrl=job[<span class="number">17</span>],</span><br><span class="line">                companyUrl=job[<span class="number">18</span>],</span><br><span class="line">                dist=job[<span class="number">19</span>]</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">init</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&quot;./temp2.csv&quot;</span>):</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./temp2.csv&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, newline=<span class="string">&#x27;&#x27;</span>, encoding=<span class="string">&quot;utf8&quot;</span>) <span class="keyword">as</span> wf:</span><br><span class="line">                writer = csv.writer(wf)</span><br><span class="line">                writer.writerow(</span><br><span class="line">                    [<span class="string">&quot;title&quot;</span>, <span class="string">&quot;address&quot;</span>, <span class="string">&quot;type&quot;</span>, <span class="string">&quot;educational&quot;</span>, <span class="string">&quot;workExperience&quot;</span>, <span class="string">&quot;workTag&quot;</span>, <span class="string">&quot;salary&quot;</span>, <span class="string">&quot;salaryMonth&quot;</span></span><br><span class="line">                        , <span class="string">&quot;companyTags&quot;</span>, <span class="string">&quot;hrWork&quot;</span>, <span class="string">&quot;hrName&quot;</span>, <span class="string">&quot;pratice&quot;</span>, <span class="string">&quot;companyTitle&quot;</span>, <span class="string">&quot;companyAvatar&quot;</span>,</span><br><span class="line">                     <span class="string">&quot;companyNature&quot;</span>, <span class="string">&quot;companyStatus&quot;</span>, <span class="string">&quot;companyPeople&quot;</span>, <span class="string">&quot;detailUrl&quot;</span>, <span class="string">&quot;companyUrl&quot;</span>, <span class="string">&quot;dist&quot;</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># JobInfo.objects.all()</span></span><br><span class="line">    <span class="comment"># keywords = [&quot;python爬虫&quot;, &quot;python后端&quot;, &quot;python大数据&quot;, &quot;python数据分析&quot;,&quot;AI&quot;,&quot;python&quot;]</span></span><br><span class="line">    <span class="comment"># keywords = [&quot;运维&quot;, &quot;测试&quot;,&quot;机器学习&quot;,&quot;算法工程师&quot;]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># spiderObj = spider(&quot;机器学习&quot;,&quot;1&quot;)</span></span><br><span class="line">    spiderObj = spider(<span class="string">&quot;算法工程师&quot;</span>,<span class="string">&quot;1&quot;</span>)</span><br><span class="line">    <span class="comment"># spiderObj.init()</span></span><br><span class="line">    <span class="comment"># spiderObj.main(10)</span></span><br><span class="line">    spiderObj.save_to_sql()</span><br></pre></td></tr></table></figure>]]></content>
+<h4 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a><strong>响应报文</strong></h4><ol>
+<li><strong>状态行</strong>：包含 HTTP 版本、状态码和状态描述。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br></pre></td></tr></table></figure></li>
+<li><strong>响应头</strong>：包含服务器信息、响应内容类型等。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Content-Type: text/html</span><br><span class="line">Content-Length: 1234</span><br></pre></td></tr></table></figure></li>
+<li><strong>响应体</strong>：可选，包含返回的数据（如 HTML 页面或 JSON 数据）。</li>
+</ol>
+<h4 id="内容类型标识"><a href="#内容类型标识" class="headerlink" title="内容类型标识"></a><strong>内容类型标识</strong></h4><p>• 通过 <code>Content-Type</code> 头字段标识报文体的格式，例如：<br>  • <code>text/html</code>：HTML 文档<br>  • <code>application/json</code>：JSON 数据<br>  • <code>application/x-www-form-urlencoded</code>：表单数据<br>  • <code>multipart/form-data</code>：文件上传</p>
+<hr>
+<h3 id="2-如何判断请求体格式？"><a href="#2-如何判断请求体格式？" class="headerlink" title="2. 如何判断请求体格式？"></a><strong>2. 如何判断请求体格式？</strong></h3><p>判断请求体格式主要通过 <code>Content-Type</code> 头字段：</p>
+<ol>
+<li><strong>检查 <code>Content-Type</code> 头字段</strong>：例如：<br>• <code>application/json</code>：请求体是 JSON 格式。<br>• <code>application/x-www-form-urlencoded</code>：请求体是键值对形式的表单数据。<br>• <code>multipart/form-data</code>：请求体包含文件上传。</li>
+<li><strong>解析请求体</strong>：根据 <code>Content-Type</code> 的值，使用相应的解析方式：<br>• JSON 格式：使用 JSON 解析库（如 <code>Jackson</code>、<code>Gson</code>）解析。<br>• 表单数据：通过框架（如 Spring MVC）自动解析为 <code>Map</code> 或对象。<br>• 文件上传：通过 <code>MultipartFile</code> 处理。</li>
+</ol>
+<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>• 如果 <code>Content-Type</code> 是 <code>application/json</code>，请求体可能是：<br>  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">30</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><br>• 如果 <code>Content-Type</code> 是 <code>application/x-www-form-urlencoded</code>，请求体可能是：<br>  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name=John&amp;age=30</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>就业</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>毕业设计02_论文</title>
+    <url>/2025/05/21/2025_5/%E8%AE%BA%E6%96%87/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>毕业设计</category>
       </categories>
@@ -1132,125 +1262,6 @@
       </categories>
       <tags>
         <tag>就业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>spring面试题</title>
-    <url>/2025/04/11/2025_4/01%20spring/</url>
-    <content><![CDATA[<h1 id="牛客论坛01-Spring常见面试题"><a href="#牛客论坛01-Spring常见面试题" class="headerlink" title="牛客论坛01-Spring常见面试题"></a>牛客论坛01-Spring常见面试题</h1><h2 id="Spring中的IoC和AOP是什么？它们的作用是什么？"><a href="#Spring中的IoC和AOP是什么？它们的作用是什么？" class="headerlink" title="Spring中的IoC和AOP是什么？它们的作用是什么？"></a>Spring中的IoC和AOP是什么？它们的作用是什么？</h2><blockquote>
-<p><strong>IoC（Inversion of Control:控制反转）</strong> 是一种设计思想，而不是一个具体的技术实现。IoC 的思想就是将原本在程序中手动创建对象的控制权，交由 Spring 框架来管理。不过， IoC 并非 Spring 特有，在其他语言中也有应用。所以说，控制反转是一种思想，目的是为了<strong>降低了代码耦合度，提升了系统的灵活性和可维护性</strong>。</p>
-<p>在<strong>没有IoC容器</strong>的情况下，比如类A通过<code>new</code>关键字直接实例化类B，对象创建和依赖关系由开发者手动控制，代码耦合度高，难以维护和扩展。而在<strong>有IoC容器</strong>的情况下，IoC容器负责实例化类A和类B，并管理它们的依赖关系，主函数只需从容器中获取所需对象，无需手动创建。</p>
-<p>所谓控制，就是指的是对象的创建（实例化，管理什么的），反转指的是将控制权交给外部框架（spring框架，IoC容器）。IoC 容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件&#x2F;注解即可，完全不用考虑对象是如何被创建出来的。在实际项目中一个 Service 类可能依赖了很多其他的类，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把人逼疯。如果利用 IoC 的话，你只需要配置好，然后在需要的地方引用就行了，这大大增加了项目的可维护性且降低了开发难度。</p>
-<p>其实在spring中IoC就是一个实现IoC的载体，是一个Map，其中存放着各种对象，早期是通过XML来配置的Bean，后面SpringBoot注解配置更好，只需加上 <code>@Autowired</code> 或 <code>@Resource</code>，Spring 就会自动注入依赖对象慢慢流行起来。</p>
-<hr>
-<p>AOP是面向切面编程，能够将那些与业务无关，却为业务模块所共同调用的逻辑或责任（例如事务处理、日志管理、权限控制等）封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性。Spring AOP 就是基于动态代理的，如果要代理的对象，实现了某个接口，那么 Spring AOP 会使用 JDK 动态代理，去创建代理对象，而对于没有实现接口的对象，就无法进行代理了，这时候 Spring AOP 会使用 <strong>Cglib</strong> 生成一个被代理对象的子类来作为代理。</p>
-</blockquote>
-<h2 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h2><p>其流程大概是以下几个步骤：</p>
-<p><img src="https://oss.javaguide.cn/github/javaguide/system-design/framework/spring/de6d2b213f112297298f3e223bf08f28.png" alt="img"></p>
-<p><strong>流程说明（重要）：</strong></p>
-<ol>
-<li>客户端（浏览器）发送请求， <code>DispatcherServlet</code>拦截请求。（dis po cher servlet）</li>
-<li><code>DispatcherServlet</code> 根据请求信息调用 <code>HandlerMapping</code> 。<code>HandlerMapping</code> 根据 URL 去匹配查找能处理的 <code>Handler</code>（也就是我们平常说的 <code>Controller</code> 控制器） ，并会将请求涉及到的拦截器和 <code>Handler</code> 一起封装。</li>
-<li><code>DispatcherServlet</code> 调用 <code>HandlerAdapter</code>适配器执行 <code>Handler</code> 。</li>
-<li><code>Handler</code> 完成对用户请求的处理后，会返回一个 <code>ModelAndView</code> 对象给<code>DispatcherServlet</code>，<code>ModelAndView</code> 顾名思义，包含了数据模型以及相应的视图的信息。<code>Model</code> 是返回的数据对象，<code>View</code> 是个逻辑上的 <code>View</code>。</li>
-<li><code>ViewResolver</code> 会根据逻辑 <code>View</code> 查找实际的 <code>View</code>。</li>
-<li><code>DispaterServlet</code> 把返回的 <code>Model</code> 传给 <code>View</code>（视图渲染）。</li>
-<li>把 <code>View</code> 返回给请求者（浏览器）</li>
-</ol>
-<p>上述流程是传统开发模式（JSP，Thymeleaf 【time leaf】等）的工作原理。然而现在主流的开发方式是前后端分离，这种情况下 Spring MVC 的 <code>View</code> 概念发生了一些变化。由于 <code>View</code> 通常由前端框架（Vue, React 等）来处理，后端不再负责渲染页面，而是只负责提供数据，因此：</p>
-<ul>
-<li>前后端分离时，后端通常不再返回具体的视图，而是返回<strong>纯数据</strong>（通常是 JSON 格式），由前端负责渲染和展示。</li>
-<li><code>View</code> 的部分在前后端分离的场景下往往不需要设置，Spring MVC 的控制器方法只需要返回数据，不再返回 <code>ModelAndView</code>，而是直接返回数据，Spring 会自动将其转换为 JSON 格式。相应的，<code>ViewResolver</code> 也将不再被使用。</li>
-</ul>
-<p>怎么做到呢？</p>
-<ul>
-<li>使用 <code>@RestController</code> 注解代替传统的 <code>@Controller</code> 注解，这样所有方法默认会返回 JSON 格式的数据，而不是试图解析视图。</li>
-<li>如果你使用的是 <code>@Controller</code>，可以结合 <code>@ResponseBody</code> 注解来返回 JSON。</li>
-</ul>
-<blockquote>
-<p>“在传统 Spring MVC 中，<code>DispatcherServlet</code> 拦截请求后，通过 <code>HandlerMapping</code> 查找 <code>Controller</code>，执行处理并返回 <code>ModelAndView</code>，最后由 <code>ViewResolver</code> 解析视图并渲染返回。而在前后端分离模式下，后端通过 <code>@RestController</code> 或 <code>@ResponseBody</code> 直接返回 JSON 数据，由前端负责渲染，<code>ViewResolver</code> 和视图渲染流程不再需要。这种模式更符合现代开发需求，提升了开发效率和系统灵活性。”</p>
-</blockquote>
-<h2 id="Spring-Spring-MVC-SpringBoot直接有什么关系？"><a href="#Spring-Spring-MVC-SpringBoot直接有什么关系？" class="headerlink" title="Spring, Spring MVC, SpringBoot直接有什么关系？"></a>Spring, Spring MVC, SpringBoot直接有什么关系？</h2><blockquote>
-<p>Spring 是一个开源的 Java 企业级开发框架，主要提供 IoC（控制反转）和 AOP（面向切面编程）功能，简化 Java 开发。Spring MVC 是 Spring 框架中的一个子模块，专门用于构建 Web 应用，它基于 MVC（Model-View-Controller）设计模式，提供了强大的请求处理、数据绑定、视图解析等功能，适用于开发传统的 Java Web 应用。而 Spring Boot 是在 Spring 基础上发展而来的，它简化了 Spring 的配置，提供了一套开箱即用的默认配置，并且内置了 Tomcat 等 Web 服务器，让开发者可以快速构建独立运行的 Spring 应用，而无需手动配置 XML 或复杂的 Bean 管理。简单来说，Spring 是一个大框架，Spring MVC 负责 Web 层，而 Spring Boot 进一步简化了 Spring 的使用，提升了开发效率。</p>
-</blockquote>
-<h2 id="Spring框架中用了哪些设计模式？"><a href="#Spring框架中用了哪些设计模式？" class="headerlink" title="Spring框架中用了哪些设计模式？"></a>Spring框架中用了哪些设计模式？</h2><p><strong>工厂设计模式</strong> : Spring 使用工厂模式通过 <code>BeanFactory</code>、<code>ApplicationContext</code> 创建 bean 对象。</p>
-<p><strong>代理设计模式</strong> : Spring AOP 功能的实现。</p>
-<p><strong>单例设计模式</strong> : Spring 中的 Bean 默认都是单例的。</p>
-<p><strong>模板方法模式</strong> : Spring 中 <code>jdbcTemplate</code>、<code>hibernateTemplate</code> 等以 Template 结尾的对数据库操作的类，它们就使用到了模板模式。</p>
-<p><strong>包装器设计模式</strong> : 我们的项目需要连接多个数据库，而且不同的客户在每次访问中根据需要会去访问不同的数据库。这种模式让我们可以根据客户的需求能够动态切换不同的数据源。</p>
-<p><strong>观察者模式:</strong> Spring 事件驱动模型就是观察者模式很经典的一个应用。</p>
-<p><strong>适配器模式</strong> : Spring AOP 的增强或通知(Advice)使用到了适配器模式、spring MVC 中也是用到了适配器模式适配<code>Controller</code>。</p>
-<h2 id="什么是spring的bean？"><a href="#什么是spring的bean？" class="headerlink" title="什么是spring的bean？"></a>什么是spring的bean？</h2><blockquote>
-<p>Bean 代指的就是那些被 IoC 容器所管理的对象。</p>
-<p>我们需要告诉 IoC 容器帮助我们管理哪些对象，这个是通过配置元数据来定义的。配置元数据可以是 XML 文件、注解或者 Java 配置类。</p>
-</blockquote>
-<h2 id="Bean的注解有哪些？"><a href="#Bean的注解有哪些？" class="headerlink" title="Bean的注解有哪些？"></a>Bean的注解有哪些？</h2><blockquote>
-<p><code>@Component</code>：通用的注解，可标注任意类为 <code>Spring</code> 组件。如果一个 Bean 不知道属于哪个层，可以使用<code>@Component</code> 注解标注。</p>
-<p><code>@Repository</code> : 对应持久层即 Dao 层，主要用于数据库相关操作。</p>
-<p><code>@Service</code> : 对应服务层，主要涉及一些复杂的逻辑，需要用到 Dao 层。</p>
-<p><code>@Controller</code> : 对应 Spring MVC 控制层，主要用于接受用户请求并调用 <code>Service</code> 层返回数据给前端页面。</p>
-</blockquote>
-<h2 id="spring的事务"><a href="#spring的事务" class="headerlink" title="spring的事务"></a>spring的事务</h2><p><strong>事务是逻辑上的一组操作，要么都执行，要么都不执行。</strong></p>
-<h3 id="Spring-事务传播机制有哪些"><a href="#Spring-事务传播机制有哪些" class="headerlink" title="Spring 事务传播机制有哪些"></a>Spring 事务传播机制有哪些</h3><p>propagation 代表事务的传播行为，默认值为 <code>Propagation.REQUIRED</code>，其他的属性信息如下</p>
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e12eec102bf605fe084a3eb2aa0a8855.png" alt="image.png"></p>
-<h3 id="Transactional的其他属性有哪些？"><a href="#Transactional的其他属性有哪些？" class="headerlink" title="@Transactional的其他属性有哪些？"></a>@Transactional的其他属性有哪些？</h3><p><strong>timeout 属性</strong></p>
-<p>timeout ：事务的超时时间，默认值为 -1。如果超过该时间限制但事务还没有完成，则自动回滚事务。</p>
-<p><strong>readOnly 属性</strong></p>
-<p>readOnly ：指定事务是否为只读事务，默认值为 false；为了忽略那些不需要事务的方法，比如读取数据，可以设置 read-only 为 true。<br><strong>isolation 属性</strong></p>
-<p>isolation ：事务的隔离级别，默认值为Isolation.DEFAULT</p>
-<p>Isolation.DEFAULT：使用底层数据库默认的隔离级别。<br>Isolation.READ_UNCOMMITTED：读未提交<br>Isolation.READ_COMMITTED：读已提交<br>Isolation.REPEATABLE_READ：可重复读<br>Isolation.SERIALIZABLE：串行化<strong>rollbackFor 属性</strong></p>
-<p>rollbackFor ：用于指定能够触发事务回滚的异常类型，可以指定多个异常类型。</p>
-<p><strong>noRollbackFor属性</strong></p>
-<p>noRollbackFor：抛出指定的异常类型，不回滚事务，也可以指定多个异常类型。</p>
-<h2 id="MyBatis中的-和-的区别是什么？如何防止SQL注入？"><a href="#MyBatis中的-和-的区别是什么？如何防止SQL注入？" class="headerlink" title="MyBatis中的#{}和${}的区别是什么？如何防止SQL注入？"></a>MyBatis中的#{}和${}的区别是什么？如何防止SQL注入？</h2><blockquote>
-<p>在 MyBatis 中，<code>#&#123;&#125;</code> 和 <code>$&#123;&#125;</code> 是两种不同的参数占位符，它们的主要区别在于处理方式和安全性。<code>#&#123;&#125;</code> 是预编译占位符，MyBatis 会将其替换为 <code>?</code>，并通过 <code>PreparedStatement</code> 设置参数值，这种方式会对参数值进行转义，从而有效防止 SQL 注入，适合用于传递参数值，例如 <code>WHERE id = #&#123;id&#125;</code>。而 <code>$&#123;&#125;</code> 是字符串替换，MyBatis 会直接将值拼接到 SQL 语句中，这种方式不会对参数值进行转义，因此存在 SQL 注入风险，通常用于动态拼接表名、列名等场景，例如 <code>ORDER BY $&#123;columnName&#125;</code>。</p>
-<p>为了防止 SQL 注入，推荐优先使用 <code>#&#123;&#125;</code>，因为它能够自动处理参数值的转义，确保安全性。如果必须使用 <code>$&#123;&#125;</code>，应确保拼接的值是可信的，例如动态表名或列名，而不是用户输入的直接拼接。此外，还可以通过以下方式进一步增强安全性：严格校验用户输入，确保其符合预期格式；使用 MyBatis 的动态 SQL 标签（如 <code>&lt;if&gt;</code>、<code>&lt;choose&gt;</code>）生成安全的 SQL 语句，避免手动拼接 SQL；遵循最小权限原则，限制数据库用户的权限，避免使用高权限账号执行 SQL 操作。通过这些方法，可以有效防止 SQL 注入，确保应用的安全性。</p>
-</blockquote>
-<h2 id="Transactional失效场景与解决办法"><a href="#Transactional失效场景与解决办法" class="headerlink" title="@Transactional失效场景与解决办法"></a>@Transactional失效场景与解决办法</h2><p><strong><a href="https://blog.csdn.net/qq_57581439/article/details/132086303?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522f2084811286d77b37215da15ae86a796%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=f2084811286d77b37215da15ae86a796&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-132086303-null-null.142%5Ev102%5Epc_search_result_base4&utm_term=@Transactional&spm=1018.2226.3001.4187">链接</a></strong></p>
-<p>1、@Transactional 应用在非 public <strong>修饰的方法上</strong></p>
-<p>2、@Transactional 注解属性 propagation 设置错误</p>
-<p>3、@Transactional 注解属性 rollbackFor 设置错误</p>
-<p>4、同一个类中方法调用，导致@Transactional失效</p>
-<p>6、数据库引擎不支持事务</p>
-<h2 id="同一Service内方法A（无-Transactional）调用方法B（有-Transactional）是否生效？"><a href="#同一Service内方法A（无-Transactional）调用方法B（有-Transactional）是否生效？" class="headerlink" title="同一Service内方法A（无@Transactional）调用方法B（有@Transactional）是否生效？"></a>同一Service内方法A（无@Transactional）调用方法B（有@Transactional）是否生效？</h2><p>好的，面试官！我来具体回答这个问题。</p>
-<p>在同一 Service 内，如果方法 A（没有 <code>@Transactional</code>）调用方法 B（有 <code>@Transactional</code>），那么方法 B 的事务<strong>不会生效</strong>。原因是 Spring 的事务管理是基于代理机制实现的，当方法 A 直接调用方法 B 时，实际上是目标对象内部的方法调用，而不是通过代理对象调用，因此事务拦截器不会起作用。</p>
-<h3 id="为什么不会生效？"><a href="#为什么不会生效？" class="headerlink" title="为什么不会生效？"></a>为什么不会生效？</h3><p>• Spring 的事务是通过 AOP 动态代理实现的，代理对象会在方法调用前后添加事务管理的逻辑。<br>• 当方法 A 调用方法 B 时，是直接调用目标对象的方法，而不是通过代理对象调用，所以事务拦截器不会生效。</p>
-<h3 id="如何解决？"><a href="#如何解决？" class="headerlink" title="如何解决？"></a>如何解决？</h3><ol>
-<li><strong>将方法 A 和方法 B 拆分到不同的类中</strong>：通过代理对象调用方法 B，确保事务生效。</li>
-<li><strong>使用 <code>AopContext.currentProxy()</code> 获取当前代理对象</strong>：在方法 A 中通过代理对象调用方法 B。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">((YourService) AopContext.currentProxy()).methodB();</span><br></pre></td></tr></table></figure></li>
-<li><strong>在方法 A 上添加 <code>@Transactional</code> 注解</strong>：让整个调用链处于事务管理之下。</li>
-</ol>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>同一 Service 内方法 A 调用方法 B 时，方法 B 的事务不会生效，因为直接调用绕过了代理机制。需要通过拆分类、使用代理对象或在方法 A 上加事务注解来解决。</p>
-<p>以上就是我的回答，谢谢！</p>
-<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>超文本传输协议，用于传输HTML等内容的应用层协议，规定了浏览器和服务器之间如何通信的，以及通信时的数据格式。</p>
-<p>好的，面试官！我来回答这个问题。</p>
-<hr>
-<h3 id="1-HTTP-报文结构及内容类型标识？"><a href="#1-HTTP-报文结构及内容类型标识？" class="headerlink" title="1. HTTP 报文结构及内容类型标识？"></a><strong>1. HTTP 报文结构及内容类型标识？</strong></h3><p>HTTP 报文分为<strong>请求报文</strong>和<strong>响应报文</strong>，结构如下：</p>
-<h4 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a><strong>请求报文</strong></h4><ol>
-<li><strong>请求行</strong>：包含请求方法（如 <code>GET</code>、<code>POST</code>）、请求 URL 和 HTTP 版本。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GET /index.html HTTP/1.1</span><br></pre></td></tr></table></figure></li>
-<li><strong>请求头</strong>：包含客户端信息、请求内容类型等。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host: www.example.com</span><br><span class="line">Content-Type: application/json</span><br></pre></td></tr></table></figure></li>
-<li><strong>请求体</strong>：可选，用于传递数据（如 <code>POST</code> 请求中的表单或 JSON 数据）。</li>
-</ol>
-<h4 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a><strong>响应报文</strong></h4><ol>
-<li><strong>状态行</strong>：包含 HTTP 版本、状态码和状态描述。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br></pre></td></tr></table></figure></li>
-<li><strong>响应头</strong>：包含服务器信息、响应内容类型等。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Content-Type: text/html</span><br><span class="line">Content-Length: 1234</span><br></pre></td></tr></table></figure></li>
-<li><strong>响应体</strong>：可选，包含返回的数据（如 HTML 页面或 JSON 数据）。</li>
-</ol>
-<h4 id="内容类型标识"><a href="#内容类型标识" class="headerlink" title="内容类型标识"></a><strong>内容类型标识</strong></h4><p>• 通过 <code>Content-Type</code> 头字段标识报文体的格式，例如：<br>  • <code>text/html</code>：HTML 文档<br>  • <code>application/json</code>：JSON 数据<br>  • <code>application/x-www-form-urlencoded</code>：表单数据<br>  • <code>multipart/form-data</code>：文件上传</p>
-<hr>
-<h3 id="2-如何判断请求体格式？"><a href="#2-如何判断请求体格式？" class="headerlink" title="2. 如何判断请求体格式？"></a><strong>2. 如何判断请求体格式？</strong></h3><p>判断请求体格式主要通过 <code>Content-Type</code> 头字段：</p>
-<ol>
-<li><strong>检查 <code>Content-Type</code> 头字段</strong>：例如：<br>• <code>application/json</code>：请求体是 JSON 格式。<br>• <code>application/x-www-form-urlencoded</code>：请求体是键值对形式的表单数据。<br>• <code>multipart/form-data</code>：请求体包含文件上传。</li>
-<li><strong>解析请求体</strong>：根据 <code>Content-Type</code> 的值，使用相应的解析方式：<br>• JSON 格式：使用 JSON 解析库（如 <code>Jackson</code>、<code>Gson</code>）解析。<br>• 表单数据：通过框架（如 Spring MVC）自动解析为 <code>Map</code> 或对象。<br>• 文件上传：通过 <code>MultipartFile</code> 处理。</li>
-</ol>
-<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>• 如果 <code>Content-Type</code> 是 <code>application/json</code>，请求体可能是：<br>  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">30</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><br>• 如果 <code>Content-Type</code> 是 <code>application/x-www-form-urlencoded</code>，请求体可能是：<br>  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name=John&amp;age=30</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>就业</tag>
-        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -1921,8 +1932,8 @@
       </tags>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
+    <title>电影</title>
+    <url>/movies/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -1959,7 +1970,7 @@
 <li>生日：200X.04.24</li>
 <li>身份：某正在奋力考研的大四学生</li>
 <li>地点：暂时北方某地</li>
-<li>邮箱：<a href="mailto:&#51;&#50;&#48;&#x36;&#x30;&#54;&#51;&#49;&#x34;&#x35;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#51;&#50;&#48;&#x36;&#x30;&#54;&#51;&#49;&#x34;&#x35;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#x33;&#x31;&#x34;&#53;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#109;">&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#x33;&#x31;&#x34;&#53;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#109;</a></li>
 </ul>
 </div>
 
@@ -1973,8 +1984,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>友链</title>
-    <url>/link/index.html</url>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -1989,18 +2000,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>电影</title>
-    <url>/movies/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
+    <title>分类</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -2022,6 +2023,37 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>友链</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/js/title.js</url>
+    <content><![CDATA[//动态标题，恶搞标题
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        //离开当前页面时标签显示内容
+        document.title = '＞︿＜ 跑哪里去了~';
+        clearTimeout(titleTime);
+    } else {
+        //返回当前页面时标签显示内容
+        document.title = 'ヾ(≧▽≦*)o 抓到你啦～';
+        //两秒后变回正常标题
+        titleTime = setTimeout(function () {
+            document.title = OriginTitile;
+        }, 2000);
+    }
+});]]></content>
+  </entry>
+  <entry>
+    <title>音乐</title>
+    <url>/music/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
@@ -2100,6 +2132,115 @@
         min-height: 40px;
     }
 }]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps <= 5) {
+                var kd = `<span style="color:#bd0000">卡成ppt</span>`
+            } else if (fps <= 15) {
+                var kd = `<span style="color:red">电竞级帧率</span>`
+            } else if (fps <= 25) {
+                var kd = `<span style="color:orange">有点难受</span>`
+            } else if (fps < 35) {
+                var kd = `<span style="color:#9338e6">不太流畅</span>`
+            } else if (fps <= 45) {
+                var kd = `<span style="color:#08b7e4">还不错哦</span>`
+            } else {
+                var kd = `<span style="color:#39c5bb">十分流畅</span>`
+            }
+            document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;
+            frame = 0;
+            lastTime = now;
+        };
+
+        rAF(loop);
+    }
+
+    loop();
+} else {
+    document.getElementById("fps").style = "display:none!important"
+}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/config/js/chart.js</url>
+    <content><![CDATA[// 图表统计
+function switchPostChart () {
+    // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义
+    let color = document.documentElement.getAttribute('data-theme') === 'light' ? '#4C4948' : 'rgba(255,255,255,0.7)'
+    if (document.getElementById('posts-chart') && postsOption) {
+        try {
+            let postsOptionNew = postsOption
+            postsOptionNew.title.textStyle.color = color
+            postsOptionNew.xAxis.nameTextStyle.color = color
+            postsOptionNew.yAxis.nameTextStyle.color = color
+            postsOptionNew.xAxis.axisLabel.color = color
+            postsOptionNew.yAxis.axisLabel.color = color
+            postsOptionNew.xAxis.axisLine.lineStyle.color = color
+            postsOptionNew.yAxis.axisLine.lineStyle.color = color
+            postsOptionNew.series[0].markLine.data[0].label.color = color
+            postsChart.setOption(postsOptionNew)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    if (document.getElementById('tags-chart') && tagsOption) {
+        try {
+            let tagsOptionNew = tagsOption
+            tagsOptionNew.title.textStyle.color = color
+            tagsOptionNew.xAxis.nameTextStyle.color = color
+            tagsOptionNew.yAxis.nameTextStyle.color = color
+            tagsOptionNew.xAxis.axisLabel.color = color
+            tagsOptionNew.yAxis.axisLabel.color = color
+            tagsOptionNew.xAxis.axisLine.lineStyle.color = color
+            tagsOptionNew.yAxis.axisLine.lineStyle.color = color
+            tagsOptionNew.series[0].markLine.data[0].label.color = color
+            tagsChart.setOption(tagsOptionNew)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    if (document.getElementById('categories-chart') && categoriesOption) {
+        try {
+            let categoriesOptionNew = categoriesOption
+            categoriesOptionNew.title.textStyle.color = color
+            categoriesOptionNew.legend.textStyle.color = color
+            if (!categoryParentFlag) { categoriesOptionNew.series[0].label.color = color }
+            categoriesChart.setOption(categoriesOptionNew)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })
+]]></content>
   </entry>
   <entry>
     <title></title>
@@ -2371,6 +2512,56 @@ html[data-theme="dark"] .loading-bg {
   </entry>
   <entry>
     <title></title>
+    <url>/config/css/transpancy.css</url>
+    <content><![CDATA[/* 文章页背景，仅适用于白天模式 */
+:root:not([data-theme="dark"]) .layout_post>#post {
+    /* 以下代表透明度为0.7 可以自行修改 */
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* 所有页面背景，仅适用于白天模式 */
+:root:not([data-theme="dark"]) #aside_content .card-widget,
+:root:not([data-theme="dark"]) #recent-posts>.recent-post-item,
+:root:not([data-theme="dark"]) .layout_page>div:first-child:not(.recent-posts),
+:root:not([data-theme="dark"]) .layout_post>#page,
+:root:not([data-theme="dark"]) .layout_post>#post,
+:root:not([data-theme="dark"]) .read-mode .layout_post>#post {
+    /* 以下代表透明度为0.8 */
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* 侧边卡片的透明度，仅适用于白天模式 */
+:root:not([data-theme="dark"]) {
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* 页脚透明，仅适用于白天模式 */
+:root:not([data-theme="dark"]) #footer {
+    /* 以下代表透明度为0.1 */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 黑夜模式设置 */
+[data-theme="dark"] .layout_post>#post,
+[data-theme="dark"] #aside_content .card-widget,
+[data-theme="dark"] #recent-posts>.recent-post-item,
+[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),
+[data-theme="dark"] .layout_post>#page,
+[data-theme="dark"] .layout_post>#post,
+[data-theme="dark"] .read-mode .layout_post>#post,
+[data-theme="dark"] #footer {
+    /* 黑夜模式下的背景为纯黑（可根据需要调整） */
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* 黑夜模式侧边卡片 */
+[data-theme="dark"] {
+    --card-bg: rgba(0, 0, 0, 0.9);
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/config/css/progress_bar.css</url>
     <content><![CDATA[.pace {
     -webkit-pointer-events: none;
@@ -2442,185 +2633,5 @@ html[data-theme="dark"] .loading-bg {
     background: url(https://ccjinblog.oss-cn-beijing.aliyuncs.com/blogiamge/20250123182424614.webp) no-repeat center center;
     background-size: cover;
 }]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/js/chart.js</url>
-    <content><![CDATA[// 图表统计
-function switchPostChart () {
-    // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义
-    let color = document.documentElement.getAttribute('data-theme') === 'light' ? '#4C4948' : 'rgba(255,255,255,0.7)'
-    if (document.getElementById('posts-chart') && postsOption) {
-        try {
-            let postsOptionNew = postsOption
-            postsOptionNew.title.textStyle.color = color
-            postsOptionNew.xAxis.nameTextStyle.color = color
-            postsOptionNew.yAxis.nameTextStyle.color = color
-            postsOptionNew.xAxis.axisLabel.color = color
-            postsOptionNew.yAxis.axisLabel.color = color
-            postsOptionNew.xAxis.axisLine.lineStyle.color = color
-            postsOptionNew.yAxis.axisLine.lineStyle.color = color
-            postsOptionNew.series[0].markLine.data[0].label.color = color
-            postsChart.setOption(postsOptionNew)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    if (document.getElementById('tags-chart') && tagsOption) {
-        try {
-            let tagsOptionNew = tagsOption
-            tagsOptionNew.title.textStyle.color = color
-            tagsOptionNew.xAxis.nameTextStyle.color = color
-            tagsOptionNew.yAxis.nameTextStyle.color = color
-            tagsOptionNew.xAxis.axisLabel.color = color
-            tagsOptionNew.yAxis.axisLabel.color = color
-            tagsOptionNew.xAxis.axisLine.lineStyle.color = color
-            tagsOptionNew.yAxis.axisLine.lineStyle.color = color
-            tagsOptionNew.series[0].markLine.data[0].label.color = color
-            tagsChart.setOption(tagsOptionNew)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    if (document.getElementById('categories-chart') && categoriesOption) {
-        try {
-            let categoriesOptionNew = categoriesOption
-            categoriesOptionNew.title.textStyle.color = color
-            categoriesOptionNew.legend.textStyle.color = color
-            if (!categoryParentFlag) { categoriesOptionNew.series[0].label.color = color }
-            categoriesChart.setOption(categoriesOptionNew)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-}
-document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps <= 5) {
-                var kd = `<span style="color:#bd0000">卡成ppt</span>`
-            } else if (fps <= 15) {
-                var kd = `<span style="color:red">电竞级帧率</span>`
-            } else if (fps <= 25) {
-                var kd = `<span style="color:orange">有点难受</span>`
-            } else if (fps < 35) {
-                var kd = `<span style="color:#9338e6">不太流畅</span>`
-            } else if (fps <= 45) {
-                var kd = `<span style="color:#08b7e4">还不错哦</span>`
-            } else {
-                var kd = `<span style="color:#39c5bb">十分流畅</span>`
-            }
-            document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;
-            frame = 0;
-            lastTime = now;
-        };
-
-        rAF(loop);
-    }
-
-    loop();
-} else {
-    document.getElementById("fps").style = "display:none!important"
-}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/css/transpancy.css</url>
-    <content><![CDATA[/* 文章页背景，仅适用于白天模式 */
-:root:not([data-theme="dark"]) .layout_post>#post {
-    /* 以下代表透明度为0.7 可以自行修改 */
-    background: rgba(255, 255, 255, 0.9);
-}
-
-/* 所有页面背景，仅适用于白天模式 */
-:root:not([data-theme="dark"]) #aside_content .card-widget,
-:root:not([data-theme="dark"]) #recent-posts>.recent-post-item,
-:root:not([data-theme="dark"]) .layout_page>div:first-child:not(.recent-posts),
-:root:not([data-theme="dark"]) .layout_post>#page,
-:root:not([data-theme="dark"]) .layout_post>#post,
-:root:not([data-theme="dark"]) .read-mode .layout_post>#post {
-    /* 以下代表透明度为0.8 */
-    background: rgba(255, 255, 255, 0.9);
-}
-
-/* 侧边卡片的透明度，仅适用于白天模式 */
-:root:not([data-theme="dark"]) {
-    --card-bg: rgba(255, 255, 255, 0.9);
-}
-
-/* 页脚透明，仅适用于白天模式 */
-:root:not([data-theme="dark"]) #footer {
-    /* 以下代表透明度为0.1 */
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* 黑夜模式设置 */
-[data-theme="dark"] .layout_post>#post,
-[data-theme="dark"] #aside_content .card-widget,
-[data-theme="dark"] #recent-posts>.recent-post-item,
-[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),
-[data-theme="dark"] .layout_post>#page,
-[data-theme="dark"] .layout_post>#post,
-[data-theme="dark"] .read-mode .layout_post>#post,
-[data-theme="dark"] #footer {
-    /* 黑夜模式下的背景为纯黑（可根据需要调整） */
-    background: rgba(0, 0, 0, 0.9);
-}
-
-/* 黑夜模式侧边卡片 */
-[data-theme="dark"] {
-    --card-bg: rgba(0, 0, 0, 0.9);
-}
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/config/js/title.js</url>
-    <content><![CDATA[//动态标题，恶搞标题
-var OriginTitile = document.title;
-var titleTime;
-document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-        //离开当前页面时标签显示内容
-        document.title = '＞︿＜ 跑哪里去了~';
-        clearTimeout(titleTime);
-    } else {
-        //返回当前页面时标签显示内容
-        document.title = 'ヾ(≧▽≦*)o 抓到你啦～';
-        //两秒后变回正常标题
-        titleTime = setTimeout(function () {
-            document.title = OriginTitile;
-        }, 2000);
-    }
-});]]></content>
   </entry>
 </search>
