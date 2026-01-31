@@ -2057,7 +2057,10 @@
   <entry>
     <title>关于</title>
     <url>/about/index.html</url>
-    <content><![CDATA[<div class="note warning modern"><p><b>🍭非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
+    <content><![CDATA[<div class="tip warning faa-horizontal animated-hover"><p>warning</p>
+</div>
+<p><b>🍭非商免字体、网图</b><br>等资源未经授权仅限个人使用，不得用于商业用途。本站平时仅用于交流和学习，如涉及侵权请联系站长删除对应资源，谢谢！ —— 致版权方</p>
+<div class="tip ban faa-flash animated-hover"><p>ban</p>
 </div>
 
 <details class="folding-tag" purple><summary> 查看网站更新日志 </summary>
@@ -2088,7 +2091,7 @@
 <li>生日：200X.04.24</li>
 <li>身份：某正在奋力考研的大四学生</li>
 <li>地点：暂时北方某地</li>
-<li>邮箱：<a href="mailto:&#51;&#x32;&#48;&#x36;&#48;&#x36;&#51;&#49;&#x34;&#x35;&#64;&#113;&#113;&#x2e;&#99;&#111;&#x6d;">&#51;&#x32;&#48;&#x36;&#48;&#x36;&#51;&#49;&#x34;&#x35;&#64;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#51;&#x31;&#x34;&#53;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;">&#51;&#x32;&#x30;&#x36;&#x30;&#x36;&#51;&#x31;&#x34;&#53;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;</a></li>
 </ul>
 </div>
 
