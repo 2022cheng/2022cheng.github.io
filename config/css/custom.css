@@ -203,26 +203,6 @@ div#archive {
 .page:not(.page.home) .aside-content {
     display: none;
 }
-
-/* 强制让图表容器居中或靠右 */ /*2026年考完研新加的*/
-@media screen and (min-width: 1200px) {
-    body[data-type="archive"] .main-content,
-    body[data-type="category"] .main-content,
-    body[data-type="tag"] .main-content {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 80% !important;
-        max-width: 1000px !important;
-    }
-
-    /* 直接针对图表元素 */
-    body[data-type="archive"] #posts-chart,
-    body[data-type="category"] #posts-chart,
-    body[data-type="tag"] #posts-chart {
-        margin: 0 auto !important;
-        display: block !important;
-    }
-}
 /*----------*/
 
 /*--------加载动画-------------*/
@@ -251,7 +231,6 @@ html[data-theme="dark"] .loading-bg {
     padding: 4px;
     border-radius: 4px;
 }
-
 /*----------*/
 
 
