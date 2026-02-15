@@ -2639,36 +2639,29 @@
               <div class="timeline  blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>魔改ing</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2026-01-31</p></div></div><div class='timeline-item-content'><ol><li>优化了<code>about（关于）</code>页面</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2026-01-29</p></div></div><div class='timeline-item-content'><ol><li>续费了域名<code>ccjinblog.top</code>一年，重新部署到vercel与github</li><li>为了方便维护，删除了评论功能</li><li>修改了主页信息</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-02-05</p></div></div><div class='timeline-item-content'><ol><li>在左下角添加了<code>FPS</code></li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-27</p></div></div><div class='timeline-item-content'><ol><li>参考 Fomalhaut🥝大佬 网站的公告栏进行修改</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-25</p></div></div><div class='timeline-item-content'><ol><li>添加了双评论，<code>gitalk</code>和<code>twikoo</code>，同时解决<code>twikoo</code>因为<code>vercel</code>被墙导致的国内评论失败的问题</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-24</p></div></div><div class='timeline-item-content'><ol><li>页面样式调节 -详见butterfly魔改教程（二）</li><li>博客宽屏适配（自用） -详见butterfly魔改教程（二）暂时使用 </li><li>增加了加载动画，优化了加载动画背景</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-23  备用网址最终样式</p></div></div><div class='timeline-item-content'><ol><li>增加了gitalk自动提交<code>issues</code>的配置，在<code>_config.butterfly.yml</code>中的<code>gitalk</code>配置项中加入 <code>createIssueManually: false</code></li><li>个人信息卡片背景图</li><li>增加了页脚Github徽标，没有采用时钟样式，配置在<code>_config.yml</code>文件中，采用插件<code>npm install hexo-butterfly-footer-beautify --save</code></li><li>在<code>custom.css</code>中添加了部分样式，对小冰分类分类磁铁黑夜模式适配代码调整</li><li>在<code>custom.css</code>中添加了部分样式，加入了<code>关于页面区块</code>的样式</li><li>加入渐变色版权美化（店长+微调）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-22</p></div></div><div class='timeline-item-content'><ol><li>首页样式的修改</li><li>butterfly魔改时间轴的插入（外挂标签的应用）</li><li>分栏<code>tab</code>（外挂标签的应用）</li><li><code>hexo-magnet</code> 插件 的使用：<ul><li>自定义 tags 或 categories 的排列和展示</li><li>自定义 tags 或 categories 的展示图标，名称</li><li>自定义排列的行数，默认 2 行</li></ul></li><li>首页轮播图的插入</li><li>卡片透明度的的修改（暂时弃用）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-21</p></div></div><div class='timeline-item-content'><ol><li>外挂标签的引入（店长）</li><li>网站恶搞标题</li><li>gitalk评论系统</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-01-20</p></div></div><div class='timeline-item-content'><ol><li>文章标题居中显示</li><li>文章页波浪线（安知鱼）</li></ol></div></div></div>
               </div>
             </details>
-<h2 id="技术栈-amp-框架"><a href="#技术栈-amp-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><div class="about_page">
-
-* 博客框架：[Hexo  7.3.0](https://github.com/hexojs/hexo)
-* 主题：[Butterfly 5.2.2](https://butterfly.js.org/)
-* 源码仓库：[Github](https://github.com/)
-* 图床：阿里云oss存储平台
-* 图片压缩：[Imagine](https://github.com/meowtec/Imagine)有损压缩技术 + [imagesTool](https://imagestool.com/zh_CN/index.html)转化图片格式为webp
-* 评论系统（暂时关闭）：[Twikoo](https://twikoo.js.org/)系统 + [Vercel](https://vercel.com/)部署 + [MongoDB](https://www.mongodb.com/)提供存储服务 / [gitalk](https://github.com/gitalk/gitalk)
-* 开发语言：HTML5 + CSS3 + JavaScript + Pug + YML等
-* 版权声明：详见[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-* 维护日志：见本页面最上面的`查看网站更新日志`
-</div>
-
-<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><div class="about_page">
-
-* 昵称：未闻花名
-* 性别：♂
-* 生日：200X.04.24
-* 身份：某正在奋力考研的大四学生
-* 地点：暂时北方某地
-* 邮箱：3206063145@qq.com
-
-</div>
-
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><div class="about_page">
-
-* Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）
-* [yyyz](https://www.yyyzyyyz.cn/about/) （参考up将本站部署到阿里云服务器）
-
-</div>
+<h2 id="技术栈-amp-框架"><a href="#技术栈-amp-框架" class="headerlink" title="技术栈&amp;框架"></a>技术栈&amp;框架</h2><ul>
+<li>博客框架：<a href="https://github.com/hexojs/hexo">Hexo  7.3.0</a></li>
+<li>主题：<a href="https://butterfly.js.org/">Butterfly 5.2.2</a></li>
+<li>源码仓库：<a href="https://github.com/">Github</a></li>
+<li>图床：阿里云oss存储平台</li>
+<li>图片压缩：<a href="https://github.com/meowtec/Imagine">Imagine</a>有损压缩技术 + <a href="https://imagestool.com/zh_CN/index.html">imagesTool</a>转化图片格式为webp</li>
+<li>评论系统（暂时关闭）：<a href="https://twikoo.js.org/">Twikoo</a>系统 + <a href="https://vercel.com/">Vercel</a>部署 + <a href="https://www.mongodb.com/">MongoDB</a>提供存储服务 / <a href="https://github.com/gitalk/gitalk">gitalk</a></li>
+<li>开发语言：HTML5 + CSS3 + JavaScript + Pug + YML等</li>
+<li>版权声明：详见<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
+<li>维护日志：见本页面最上面的<code>查看网站更新日志</code></li>
+</ul>
+<h2 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h2><ul>
+<li>昵称：未闻花名</li>
+<li>性别：♂</li>
+<li>生日：200X.04.24</li>
+<li>身份：某正在奋力考研的大四学生</li>
+<li>地点：暂时北方某地</li>
+<li>邮箱：3206063145@qq.com</li>
+</ul>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><ul>
+<li>Fomalhaut🥝（详见友链，参考up的博客进行修改，非常感谢up的帮助）</li>
+<li><a href="https://www.yyyzyyyz.cn/about/">yyyz</a> （参考up将本站部署到阿里云服务器）</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
